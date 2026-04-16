@@ -24,9 +24,11 @@ RESEND_API_KEY=
 CONTACT_TO_EMAIL=
 N8N_WEBHOOK_FORMULARIO=
 NEXT_PUBLIC_GA_ID=
+NEXT_PUBLIC_SITE_URL=
 ```
 
 - `RESEND_API_KEY`: obligatoria para enviar el formulario.
 - `CONTACT_TO_EMAIL`: destino de los leads. Si no se define, usa `hola@automatizacionesmsl.com`.
 - `N8N_WEBHOOK_FORMULARIO`: opcional, para reenviar el lead a n8n.
 - `NEXT_PUBLIC_GA_ID`: opcional, activa Google Analytics.
+- `NEXT_PUBLIC_SITE_URL`: recomendable para canonical, sitemap y robots. Ejemplo: `https://automatizaciones-msl.vercel.app` o tu dominio final.
