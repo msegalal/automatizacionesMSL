@@ -8,14 +8,15 @@ export default function ContactSection() {
         <div className="rounded-[2.4rem] bg-slate-950 px-6 py-8 text-white md:px-8 md:py-10">
           <div className="mb-6 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-300">
-            siguiente paso
+            propuesta
           </p>
           <h2 className="mt-4 text-balance text-4xl font-semibold text-white md:text-5xl">
-            Si la solucion ya ha sido comprada una vez, toca presentarla como una herramienta facil de volver a vender.
+            Pide una propuesta para tu agencia y te diremos por donde empezar.
           </h2>
           <p className="mt-5 max-w-xl text-base leading-8 text-white/72">
-            Puedo ayudarte a bajar todo a negocio: mensaje, propuesta, web y forma de contacto.
-            Y mientras no haya integraciones externas, la propia web seguira teniendo una salida funcional.
+            Si encaja, bajamos el mensaje, la web y la parte operativa a una propuesta clara. Y
+            si aun no tienes integraciones activas, el contacto sigue funcionando por email sin
+            perder leads.
           </p>
 
           <div className="mt-10 space-y-4">
@@ -30,10 +31,10 @@ export default function ContactSection() {
             </a>
             <div className="rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4">
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-300">
-                Enfoque
+                Que revisamos
               </p>
               <p className="mt-2 text-sm leading-6 text-white/84">
-                Herramienta, produccion, orden interno y propuesta comercial.
+                Volumen, seguimiento, tareas repetitivas y forma de presentar la herramienta.
               </p>
             </div>
             <a
@@ -41,10 +42,11 @@ export default function ContactSection() {
               className="block rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4 transition-colors hover:bg-white/12"
             >
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-300">
-                Accion
+                Siguiente paso
               </p>
               <p className="mt-2 text-sm leading-6 text-white/84">
-                Rellena el formulario y, si hace falta, se abrira tambien tu app de correo con el mensaje listo.
+                Sales de aqui con una propuesta mas clara: web, herramienta, automatizacion o pack
+                completo.
               </p>
             </a>
           </div>

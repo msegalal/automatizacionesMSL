@@ -100,21 +100,23 @@ export default function ContactForm() {
           contacto
         </p>
         <h2 className="mt-3 text-3xl font-semibold text-slate-950">
-          Cuentame que quieres vender mejor y donde hoy se atasca la operativa.
+          Cuentame como trabaja hoy tu agencia y que parte quieres ordenar primero.
         </h2>
       </div>
 
       <div aria-live="polite" className="space-y-4">
         {status === "success" ? (
           <div className="rounded-[1.4rem] border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
-            Solicitud recibida. Si no hay integracion activa, la web ha preparado tambien el correo para que puedas enviarlo igualmente.
+            Solicitud recibida. Si no hay integracion activa, la web ha preparado tambien el
+            correo para que puedas enviarlo igualmente.
           </div>
         ) : null}
 
         {fallbackDelivery ? (
           <div className="rounded-[1.4rem] border border-slate-200 bg-slate-50 px-4 py-4 text-sm text-slate-800">
             <p className="font-semibold text-slate-950">
-              Fallback activo: se abrira tu app de correo hacia {fallbackDelivery.recipient}.
+              Contacto preparado por email: se abrira tu app de correo hacia{" "}
+              {fallbackDelivery.recipient}.
             </p>
             <div className="mt-3 flex flex-wrap gap-3">
               <a
@@ -203,7 +205,7 @@ export default function ContactForm() {
             <option value="" disabled>
               --
             </option>
-            <option value="producto">Propuesta y producto</option>
+            <option value="producto">Herramienta y propuesta</option>
             <option value="web">Web comercial</option>
             <option value="automatizacion">Automatizacion</option>
             <option value="pack">Pack completo</option>
@@ -220,7 +222,7 @@ export default function ContactForm() {
           <textarea
             id="mensaje"
             rows={6}
-            placeholder="Que has vendido ya, que quieres convertir en herramienta y donde hoy se frena la productividad o el seguimiento."
+            placeholder="Explica que parte del trabajo manual, del seguimiento o de la propuesta comercial quieres resolver primero."
             {...register("mensaje")}
             className="w-full rounded-[1.15rem] border border-slate-200 bg-white/90 px-4 py-3 text-sm leading-7 text-slate-950 outline-none focus:border-orange-500"
           />
@@ -235,7 +237,7 @@ export default function ContactForm() {
         disabled={status === "loading"}
         className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-orange-500 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {status === "loading" ? "Preparando contacto..." : "Enviar solicitud"}
+        {status === "loading" ? "Preparando contacto..." : "Pedir propuesta para mi agencia"}
       </button>
     </form>
   );

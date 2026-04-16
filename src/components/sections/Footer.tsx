@@ -5,11 +5,12 @@ export default function Footer() {
         <div>
           <p className="text-lg font-semibold text-slate-950">automatizacionesMSL</p>
           <p className="mt-1 text-sm text-slate-600">
-            Producto, web y automatización para vender mejor soluciones B2B.
+            Herramienta y automatizacion para agencias de viajes que quieren mas orden y menos
+            trabajo manual.
           </p>
         </div>
         <a href="#contacto" className="text-sm font-semibold text-slate-950 transition-colors hover:text-orange-500">
-          Solicitar propuesta
+          Pedir propuesta
         </a>
       </div>
     </footer>

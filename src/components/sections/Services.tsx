@@ -11,12 +11,12 @@ export default function Services() {
               servicios
             </p>
             <h2 className="mt-4 max-w-xl text-balance text-4xl font-semibold text-slate-950 md:text-5xl">
-              Diseñamos la oferta, la web y la automatizacion para que la agencia entienda el valor sin friccion.
+              La agencia tiene que entender en pocos segundos que gana mas tiempo, mas orden y menos friccion comercial.
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-8 text-slate-600 lg:justify-self-end">
-            Si una solucion mejora la produccion pero no se sabe explicar, se vende peor. Aqui
-            montamos una capa comercial que traduce el trabajo tecnico en beneficios que una agencia compra.
+            No presentamos un sistema modular ni una tecnologia compleja. Presentamos una
+            herramienta que mejora el dia a dia y facilita la decision de compra desde negocio.
           </p>
         </div>
 

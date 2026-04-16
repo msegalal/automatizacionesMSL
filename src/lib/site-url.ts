@@ -1,4 +1,4 @@
-export const fallbackSiteUrl = "https://automatizaciones-msl.vercel.app";
+export const fallbackSiteUrl = "https://automatizacionesmsl.com";
 
 export function getSiteUrl() {
   const configuredUrl =

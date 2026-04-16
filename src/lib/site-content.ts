@@ -2,7 +2,7 @@ export const defaultContactEmail = "hola@automatizacionesmsl.com";
 
 export const navItems = [
   { label: "Servicios", href: "#servicios" },
-  { label: "Herramienta", href: "#producto" },
+  { label: "Resultados", href: "#producto" },
   { label: "Proceso", href: "#proceso" },
   { label: "FAQ", href: "#faq" }
 ];
@@ -10,131 +10,131 @@ export const navItems = [
 export const trustPoints = [
   {
     value: "01",
-    title: "Primera venta real",
-    body: "iReViajes fue la primera agencia que compro esta solucion. No hablamos de una idea: hablamos de algo ya vendido y en uso."
+    title: "Caso real de partida",
+    body: "iReViajes fue la primera agencia en comprar esta herramienta. La propuesta nace de una implantacion real, no de una demo inventada."
   },
   {
     value: "02",
-    title: "Menos trabajo manual",
-    body: "La herramienta esta pensada para que el equipo produzca mas sin depender tanto de tareas repetitivas."
+    title: "Menos carga manual",
+    body: "La herramienta esta pensada para ahorrar tiempo en tareas repetitivas y dejar mas espacio a la venta y al seguimiento."
   },
   {
     value: "03",
-    title: "Mas control del dia a dia",
-    body: "Consultas, seguimiento y ritmo interno quedan mas ordenados para que se pierda menos tiempo operativo."
+    title: "Mas orden en la operativa",
+    body: "Consultas, respuestas y siguientes pasos quedan mas claros para que el equipo trabaje con mas control."
   },
   {
     value: "04",
-    title: "Mensaje orientado a gerencia",
-    body: "La web vende claridad, productividad y orden. No se presenta como una solucion tecnica para perfiles tecnicos."
+    title: "Pensado para gerencia",
+    body: "La web vende resultados de negocio: tiempo, orden y seguimiento. No obliga a entender tecnologia para ver el valor."
   }
 ];
 
 export const serviceCards = [
   {
     kicker: "Web comercial",
-    title: "Una web que explica mejor la herramienta",
-    body: "Bajamos una solucion compleja a una propuesta que una agencia entiende rapido: que mejora, que ahorro genera y por que merece una demo.",
+    title: "Una propuesta que una agencia entiende en segundos",
+    body: "Bajamos la herramienta a un mensaje claro: que hace, para quien encaja y que mejora en el dia a dia de la agencia.",
     bullets: [
       "Mensaje claro para direccion y gerencia",
-      "CTA preparados para pedir propuesta o demo",
-      "Diseño con foco en confianza y conversion"
+      "CTA orientados a pedir propuesta o demo",
+      "Mas confianza desde la primera lectura"
     ]
   },
   {
     kicker: "Herramienta de trabajo",
-    title: "Mas orden interno y mejor ritmo de produccion",
-    body: "La propuesta deja de vender tecnologia y pasa a vender una herramienta que ayuda a responder mejor, seguir mejor y trabajar con mas control.",
+    title: "Menos caos interno y mejor seguimiento diario",
+    body: "La propuesta se presenta como una ayuda real para responder antes, seguir mejor cada oportunidad y trabajar con mas control.",
     bullets: [
-      "Menos dependencia de chats y notas sueltas",
-      "Mas visibilidad sobre tareas y seguimiento",
-      "Menos fuga de oportunidades por desorden"
+      "Menos dependencia de mensajes y notas sueltas",
+      "Mas visibilidad sobre cada siguiente paso",
+      "Menos olvidos en la operativa comercial"
     ]
   },
   {
     kicker: "Automatizacion util",
-    title: "Tareas repetitivas mas ligeras para el equipo",
-    body: "Automatizamos avisos, respuestas iniciales y pasos internos para descargar al equipo y acelerar la operativa.",
+    title: "Automatizacion solo donde de verdad libera tiempo",
+    body: "No se trata de complicar la operativa. Se trata de quitar pasos manuales que frenan al equipo y no aportan valor.",
     bullets: [
-      "La entrada del lead queda mejor organizada",
-      "Se reducen pasos manuales que no aportan valor",
-      "El seguimiento sale con menos friccion"
+      "Entradas, avisos y pasos iniciales mejor organizados",
+      "Menos carga manual en tareas repetitivas",
+      "Seguimiento mas constante con menos friccion"
     ]
   }
 ];
 
 export const productModules = [
   {
-    title: "Captar mejor",
+    title: "Captar consultas con mas claridad",
     body: "La agencia explica mejor lo que ofrece y convierte mas interes en conversaciones utiles."
   },
   {
     title: "Responder antes",
-    body: "La entrada de consultas se organiza para no perder tiempo ni dejar leads sin atender."
+    body: "La entrada de consultas se ordena para que el equipo tarde menos en reaccionar."
   },
   {
-    title: "Trabajar con mas orden",
-    body: "El equipo gana visibilidad y reduce el caos operativo del dia a dia."
+    title: "Seguir cada oportunidad",
+    body: "Los siguientes pasos quedan mas visibles para que el seguimiento no dependa de la memoria."
   },
   {
-    title: "Hacer seguimiento sin olvidos",
-    body: "La herramienta ayuda a mantener el ritmo comercial y operativo con menos trabajo repetido."
+    title: "Trabajar con mas control",
+    body: "La operativa gana orden y el equipo sabe mejor que toca en cada momento."
   }
 ];
 
 export const fitCards = [
   {
-    title: "Agencias boutique",
-    body: "Equipos que venden experiencia premium y necesitan una herramienta que sostenga mejor la produccion."
+    title: "Se adapta a la operativa",
+    body: "No hace falta que todas las agencias trabajen igual. La herramienta se aterriza a la forma real de trabajar de cada equipo."
   },
   {
-    title: "Agencias con mas volumen",
-    body: "Negocios donde ya se nota que el trabajo manual frena la respuesta, el control y el seguimiento."
+    title: "Empieza por el mayor atasco",
+    body: "Podemos arrancar por captacion, seguimiento o trabajo interno, segun donde mas tiempo se este perdiendo hoy."
   },
   {
-    title: "Soluciones ya validadas",
-    body: "Si una agencia ya ha comprado la solucion, el siguiente paso es convertirla en una oferta mas clara y replicable."
+    title: "Pensado para adopcion real",
+    body: "La prioridad no es sonar tecnica. La prioridad es que el equipo entienda rapido para que sirve y la quiera usar."
   }
 ];
 
 export const processSteps = [
   {
     step: "01",
-    title: "Entendemos lo que ya se ha vendido",
-    body: "Partimos de la solucion que iReViajes ya compro para identificar que valor percibe una agencia de verdad."
+    title: "Detectamos donde se pierde tiempo",
+    body: "Vemos en que punto la agencia sufre mas carga manual, retrasos o olvidos de seguimiento."
   },
   {
     step: "02",
-    title: "Traducimos la oferta a negocio",
-    body: "Cambiamos lenguaje tecnico por mensajes de productividad, orden interno y mejora operativa."
+    title: "Traducimos la herramienta a negocio",
+    body: "La explicamos con beneficios claros: menos trabajo manual, mas orden y mejor respuesta al cliente."
   },
   {
     step: "03",
-    title: "Construimos la web para vender mejor",
-    body: "La web se diseña para explicar, filtrar interes y empujar a una siguiente conversacion comercial."
+    title: "Montamos la web y la propuesta",
+    body: "La landing y los CTA se alinean para que la siguiente accion natural sea pedir propuesta o demo."
   },
   {
     step: "04",
-    title: "Dejamos el contacto funcionando",
-    body: "La captacion queda conectada para que cada boton y cada CTA lleven a una accion real."
+    title: "Dejamos el contacto operativo",
+    body: "Formulario, email y automatizaciones basicas quedan listos para captar interes real desde el primer dia."
   }
 ];
 
 export const faqs = [
   {
-    question: "¿iReViajes es el producto?",
-    answer: "No. iReViajes es la primera agencia que compro esta solucion. La web vende la herramienta que nace de ese primer caso real."
+    question: "iReViajes es el producto?",
+    answer: "No. iReViajes es la primera agencia que compro esta herramienta. Se usa como caso real de partida, no como nombre del producto."
   },
   {
-    question: "¿La propuesta esta pensada para perfiles tecnicos?",
-    answer: "No. La narrativa esta orientada a negocio: mas orden, mejor produccion, menos trabajo manual y mejor seguimiento."
+    question: "Cuanto hay que cambiar dentro de la agencia?",
+    answer: "La idea no es romper la operativa. La herramienta se adapta a la forma de trabajar actual y se empieza por el punto donde mas valor aporta."
   },
   {
-    question: "¿Se puede adaptar a otras agencias?",
-    answer: "Si. La base ya esta validada en una primera agencia y se plantea como una herramienta ajustable a otras operativas."
+    question: "Se puede adaptar a otra forma de trabajar?",
+    answer: "Si. La base ya esta validada en una primera agencia y se plantea para ajustarse a equipos, volumenes y ritmos diferentes."
   },
   {
-    question: "¿Que pasa si todavia no hay integraciones externas activas?",
-    answer: "La web sigue funcionando igualmente y el contacto puede resolverse por email mientras se activan automatizaciones mas avanzadas."
+    question: "Que pasa si aun no quiero automatizaciones avanzadas?",
+    answer: "La web y el contacto pueden funcionar igualmente por email mientras se activan automatizaciones mas avanzadas cuando tenga sentido."
   }
 ];
