@@ -10,7 +10,7 @@ export default function Process() {
             proceso
           </p>
           <h2 className="mt-4 max-w-3xl text-balance text-4xl font-semibold text-slate-950 md:text-5xl">
-            Montamos una web que no solo se ve bien: vende mejor lo que ya sabes construir.
+            Montamos una web que no solo se vea bien: tiene que dejar claro por que la herramienta mejora el trabajo de la agencia.
           </h2>
         </div>
 

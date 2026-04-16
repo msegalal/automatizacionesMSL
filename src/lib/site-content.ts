@@ -1,6 +1,8 @@
+export const defaultContactEmail = "hola@automatizacionesmsl.com";
+
 export const navItems = [
   { label: "Servicios", href: "#servicios" },
-  { label: "Producto", href: "#producto" },
+  { label: "Herramienta", href: "#producto" },
   { label: "Proceso", href: "#proceso" },
   { label: "FAQ", href: "#faq" }
 ];
@@ -8,131 +10,131 @@ export const navItems = [
 export const trustPoints = [
   {
     value: "01",
-    title: "Sistema ya probado",
-    body: "iReViajes sirve como producto base real sobre el que empaquetamos una oferta replicable para otras agencias."
+    title: "Primera venta real",
+    body: "iReViajes fue la primera agencia que compro esta solucion. No hablamos de una idea: hablamos de algo ya vendido y en uso."
   },
   {
     value: "02",
-    title: "Venta por fases",
-    body: "No hace falta vender ni implantar todo de golpe. Puedes entrar por web, soporte o automatizacion."
+    title: "Menos trabajo manual",
+    body: "La herramienta esta pensada para que el equipo produzca mas sin depender tanto de tareas repetitivas."
   },
   {
     value: "03",
-    title: "Operacion conectada",
-    body: "Captacion, respuesta, tickets, CRM y seguimiento dejan de vivir en herramientas separadas."
+    title: "Mas control del dia a dia",
+    body: "Consultas, seguimiento y ritmo interno quedan mas ordenados para que se pierda menos tiempo operativo."
   },
   {
     value: "04",
-    title: "Orientado a negocio",
-    body: "La web no vende tecnologia. Vende menos fuga de leads, mas orden interno y mas capacidad comercial."
+    title: "Mensaje orientado a gerencia",
+    body: "La web vende claridad, productividad y orden. No se presenta como una solucion tecnica para perfiles tecnicos."
   }
 ];
 
 export const serviceCards = [
   {
-    kicker: "Web + posicionamiento",
-    title: "Landing comercial para vender mejor el producto",
-    body: "Diseñamos una web que explica el valor real, filtra mejor al lead y convierte una solucion compleja en una oferta entendible.",
+    kicker: "Web comercial",
+    title: "Una web que explica mejor la herramienta",
+    body: "Bajamos una solucion compleja a una propuesta que una agencia entiende rapido: que mejora, que ahorro genera y por que merece una demo.",
     bullets: [
-      "Copy orientado a decisores de agencia",
-      "Arquitectura clara de oferta y CTA",
-      "Base tecnica ligera en Next.js"
+      "Mensaje claro para direccion y gerencia",
+      "CTA preparados para pedir propuesta o demo",
+      "Diseño con foco en confianza y conversion"
     ]
   },
   {
-    kicker: "Producto base",
-    title: "iReViajes como blueprint vendible",
-    body: "Tomamos el sistema ya desarrollado para una agencia real y lo reempaquetamos como solucion adaptable a otras agencias.",
+    kicker: "Herramienta de trabajo",
+    title: "Mas orden interno y mejor ritmo de produccion",
+    body: "La propuesta deja de vender tecnologia y pasa a vender una herramienta que ayuda a responder mejor, seguir mejor y trabajar con mas control.",
     bullets: [
-      "Web, CRM, tickets e IA conversacional",
-      "Flujos listos para personalizar",
-      "Capacidad de versionar por cliente"
+      "Menos dependencia de chats y notas sueltas",
+      "Mas visibilidad sobre tareas y seguimiento",
+      "Menos fuga de oportunidades por desorden"
     ]
   },
   {
-    kicker: "Automatizacion",
-    title: "n8n, formularios y backoffice sin trabajo repetitivo",
-    body: "Conectamos entradas, respuestas, tickets y notificaciones para que el equipo comercial no pierda contexto ni tiempo.",
+    kicker: "Automatizacion util",
+    title: "Tareas repetitivas mas ligeras para el equipo",
+    body: "Automatizamos avisos, respuestas iniciales y pasos internos para descargar al equipo y acelerar la operativa.",
     bullets: [
-      "Lead entra una vez, se usa en todas partes",
-      "Escalados automaticos y avisos al equipo",
-      "Seguimiento postventa y recordatorios"
+      "La entrada del lead queda mejor organizada",
+      "Se reducen pasos manuales que no aportan valor",
+      "El seguimiento sale con menos friccion"
     ]
   }
 ];
 
 export const productModules = [
   {
-    title: "Captacion",
-    body: "Web clara, rápida y pensada para filtrar oportunidades reales."
+    title: "Captar mejor",
+    body: "La agencia explica mejor lo que ofrece y convierte mas interes en conversaciones utiles."
   },
   {
-    title: "Respuesta inicial",
-    body: "WhatsApp o canales conversacionales con IA para primeras respuestas y clasificación."
+    title: "Responder antes",
+    body: "La entrada de consultas se organiza para no perder tiempo ni dejar leads sin atender."
   },
   {
-    title: "Operacion interna",
-    body: "CRM, tickets y estados visibles para todo el equipo."
+    title: "Trabajar con mas orden",
+    body: "El equipo gana visibilidad y reduce el caos operativo del dia a dia."
   },
   {
-    title: "Automatizaciones",
-    body: "n8n conectando leads, emails, avisos, recordatorios y tareas."
+    title: "Hacer seguimiento sin olvidos",
+    body: "La herramienta ayuda a mantener el ritmo comercial y operativo con menos trabajo repetido."
   }
 ];
 
 export const fitCards = [
   {
     title: "Agencias boutique",
-    body: "Equipos pequeños que venden experiencia premium y necesitan una capa digital a la altura."
+    body: "Equipos que venden experiencia premium y necesitan una herramienta que sostenga mejor la produccion."
   },
   {
-    title: "Agencias MICE",
-    body: "Operativas con mas volumen, mas coordinación y mas necesidad de orden comercial y operativo."
+    title: "Agencias con mas volumen",
+    body: "Negocios donde ya se nota que el trabajo manual frena la respuesta, el control y el seguimiento."
   },
   {
-    title: "Negocios que quieren productizar",
-    body: "Si ya has validado una solucion en un cliente, te ayudamos a convertirla en oferta replicable."
+    title: "Soluciones ya validadas",
+    body: "Si una agencia ya ha comprado la solucion, el siguiente paso es convertirla en una oferta mas clara y replicable."
   }
 ];
 
 export const processSteps = [
   {
     step: "01",
-    title: "Leemos el producto actual",
-    body: "Extraemos lo que ya funciona de iReViajes y definimos que parte es vendible como sistema."
+    title: "Entendemos lo que ya se ha vendido",
+    body: "Partimos de la solucion que iReViajes ya compro para identificar que valor percibe una agencia de verdad."
   },
   {
     step: "02",
-    title: "Convertimos complejidad en oferta",
-    body: "Bajamos modulos, casos de uso, promesa comercial y CTA a una narrativa que se entiende."
+    title: "Traducimos la oferta a negocio",
+    body: "Cambiamos lenguaje tecnico por mensajes de productividad, orden interno y mejora operativa."
   },
   {
     step: "03",
-    title: "Diseñamos la web y el flujo de lead",
-    body: "No solo la interfaz: tambien el formulario, la segmentacion y el siguiente paso comercial."
+    title: "Construimos la web para vender mejor",
+    body: "La web se diseña para explicar, filtrar interes y empujar a una siguiente conversacion comercial."
   },
   {
     step: "04",
-    title: "Integramos automatizacion",
-    body: "Conectamos la entrada del lead con email, n8n o el sistema que vayas a usar."
+    title: "Dejamos el contacto funcionando",
+    body: "La captacion queda conectada para que cada boton y cada CTA lleven a una accion real."
   }
 ];
 
 export const faqs = [
   {
-    question: "¿La web es solo para enseñar el producto?",
-    answer: "No. Está planteada para captar leads, cualificarlos y preparar la siguiente conversación comercial."
+    question: "¿iReViajes es el producto?",
+    answer: "No. iReViajes es la primera agencia que compro esta solucion. La web vende la herramienta que nace de ese primer caso real."
   },
   {
-    question: "¿iReViajes sigue siendo un producto a medida?",
-    answer: "Sigue existiendo una capa de personalizacion, pero la idea es vender una base modular y no rehacer todo desde cero cada vez."
+    question: "¿La propuesta esta pensada para perfiles tecnicos?",
+    answer: "No. La narrativa esta orientada a negocio: mas orden, mejor produccion, menos trabajo manual y mejor seguimiento."
   },
   {
-    question: "¿Podemos empezar sin CRM propio?",
-    answer: "Sí. Se puede empezar por web, formularios y automatizaciones, y dejar la parte interna para una segunda fase."
+    question: "¿Se puede adaptar a otras agencias?",
+    answer: "Si. La base ya esta validada en una primera agencia y se plantea como una herramienta ajustable a otras operativas."
   },
   {
-    question: "¿Esto sirve fuera del sector viajes?",
-    answer: "Sí, pero la web que estamos construyendo se enfoca en agencias de viajes porque es donde el producto ya tiene validacion real."
+    question: "¿Que pasa si todavia no hay integraciones externas activas?",
+    answer: "La web sigue funcionando igualmente y el contacto puede resolverse por email mientras se activan automatizaciones mas avanzadas."
   }
 ];

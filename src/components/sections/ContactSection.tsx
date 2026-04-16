@@ -1,4 +1,5 @@
 import ContactForm from "@/components/sections/ContactForm";
+import { defaultContactEmail } from "@/lib/site-content";
 
 export default function ContactSection() {
   return (
@@ -10,34 +11,42 @@ export default function ContactSection() {
             siguiente paso
           </p>
           <h2 className="mt-4 text-balance text-4xl font-semibold text-white md:text-5xl">
-            Si ya hay producto real, toca construir la capa comercial que lo hace escalable.
+            Si la solucion ya ha sido comprada una vez, toca presentarla como una herramienta facil de volver a vender.
           </h2>
           <p className="mt-5 max-w-xl text-base leading-8 text-white/72">
-            Puedo ayudarte a convertir una solución validada en una oferta clara, una web
-            que la venda y un flujo operativo que no dependa del caos interno.
+            Puedo ayudarte a bajar todo a negocio: mensaje, propuesta, web y forma de contacto.
+            Y mientras no haya integraciones externas, la propia web seguira teniendo una salida funcional.
           </p>
 
           <div className="mt-10 space-y-4">
-            <div className="rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4">
+            <a
+              href={`mailto:${defaultContactEmail}`}
+              className="block rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4 transition-colors hover:bg-white/12"
+            >
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-300">
                 Email
               </p>
-              <p className="mt-2 text-sm leading-6 text-white/84">hola@automatizacionesmsl.com</p>
-            </div>
+              <p className="mt-2 text-sm leading-6 text-white/84">{defaultContactEmail}</p>
+            </a>
             <div className="rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4">
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-300">
                 Enfoque
               </p>
               <p className="mt-2 text-sm leading-6 text-white/84">
-                Producto, web comercial, automatización y hoja de ruta.
+                Herramienta, produccion, orden interno y propuesta comercial.
               </p>
             </div>
-            <div className="rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4">
+            <a
+              href="#contacto"
+              className="block rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4 transition-colors hover:bg-white/12"
+            >
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-300">
-                Respuesta
+                Accion
               </p>
-              <p className="mt-2 text-sm leading-6 text-white/84">24-48 horas laborables.</p>
-            </div>
+              <p className="mt-2 text-sm leading-6 text-white/84">
+                Rellena el formulario y, si hace falta, se abrira tambien tu app de correo con el mensaje listo.
+              </p>
+            </a>
           </div>
         </div>
 

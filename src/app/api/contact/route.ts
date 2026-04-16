@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { Resend } from "resend";
 import { z } from "zod";
+import { defaultContactEmail } from "@/lib/site-content";
 
 const contactSchema = z.object({
   nombre: z.string().min(1),
@@ -20,22 +21,31 @@ function escapeHtml(value: string): string {
 }
 
 const interestLabels = {
-  producto: "Producto / packaging",
+  producto: "Propuesta y producto",
   web: "Web comercial",
   automatizacion: "Automatizacion",
   pack: "Pack completo"
 } as const;
 
+function buildSummary(data: z.infer<typeof contactSchema>) {
+  return [
+    "Nuevo lead desde automatizacionesMSL",
+    "",
+    `Nombre: ${data.nombre}`,
+    `Email: ${data.email}`,
+    `Empresa: ${data.empresa}`,
+    `Interes: ${interestLabels[data.interes]}`,
+    "",
+    "Contexto:",
+    data.mensaje
+  ].join("\n");
+}
+
+function buildMailtoUrl(recipient: string, subject: string, body: string) {
+  return `mailto:${encodeURIComponent(recipient)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 export async function POST(request: NextRequest): Promise<Response> {
-  const apiKey = process.env.RESEND_API_KEY;
-
-  if (!apiKey) {
-    return Response.json(
-      { success: false, error: "RESEND_API_KEY no esta configurada" },
-      { status: 500 }
-    );
-  }
-
   let body: unknown;
   try {
     body = await request.json();
@@ -55,13 +65,39 @@ export async function POST(request: NextRequest): Promise<Response> {
   }
 
   const { nombre, email, empresa, interes, mensaje } = parsed.data;
+  const summary = buildSummary(parsed.data);
+  const recipient = process.env.CONTACT_TO_EMAIL || defaultContactEmail;
+  const subject = `Nuevo lead automatizacionesMSL - ${interestLabels[interes]}`;
+  const mailtoUrl = buildMailtoUrl(recipient, subject, summary);
+  const apiKey = process.env.RESEND_API_KEY;
+
+  const webhook = process.env.N8N_WEBHOOK_FORMULARIO;
+  if (webhook) {
+    fetch(webhook, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(parsed.data)
+    }).catch(() => {
+      // No bloqueamos la respuesta por integraciones secundarias.
+    });
+  }
+
+  if (!apiKey) {
+    return Response.json({
+      success: true,
+      delivery: "mailto",
+      mailtoUrl,
+      recipient,
+      summary
+    });
+  }
+
   const resend = new Resend(apiKey);
-  const to = process.env.CONTACT_TO_EMAIL || "hola@automatizacionesmsl.com";
 
   const { error } = await resend.emails.send({
     from: "onboarding@resend.dev",
-    to,
-    subject: `Nuevo lead automatizacionesMSL - ${interestLabels[interes]}`,
+    to: recipient,
+    subject,
     html: `
       <h2>Nuevo lead desde automatizacionesMSL</h2>
       <table cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
@@ -75,22 +111,14 @@ export async function POST(request: NextRequest): Promise<Response> {
   });
 
   if (error) {
-    return Response.json(
-      { success: false, error: "No se ha podido enviar el email" },
-      { status: 500 }
-    );
-  }
-
-  const webhook = process.env.N8N_WEBHOOK_FORMULARIO;
-  if (webhook) {
-    fetch(webhook, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(parsed.data)
-    }).catch(() => {
-      // No bloquear la respuesta al usuario por un fallo secundario.
+    return Response.json({
+      success: true,
+      delivery: "mailto",
+      mailtoUrl,
+      recipient,
+      summary
     });
   }
 
-  return Response.json({ success: true });
+  return Response.json({ success: true, delivery: "resend" });
 }

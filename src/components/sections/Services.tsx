@@ -11,12 +11,12 @@ export default function Services() {
               servicios
             </p>
             <h2 className="mt-4 max-w-xl text-balance text-4xl font-semibold text-slate-950 md:text-5xl">
-              Diseñamos la oferta, la web y la automatización como una sola cosa.
+              Diseñamos la oferta, la web y la automatizacion para que la agencia entienda el valor sin friccion.
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-8 text-slate-600 lg:justify-self-end">
-            Si el producto es bueno pero está mal contado, se vende peor. Si la web es bonita
-            pero no prepara el siguiente paso comercial, sirve de poco. Aquí montamos las dos capas.
+            Si una solucion mejora la produccion pero no se sabe explicar, se vende peor. Aqui
+            montamos una capa comercial que traduce el trabajo tecnico en beneficios que una agencia compra.
           </p>
         </div>
 

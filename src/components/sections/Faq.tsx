@@ -10,7 +10,7 @@ export default function Faq() {
             faq
           </p>
           <h2 className="max-w-2xl text-balance text-4xl font-semibold text-slate-950 md:text-5xl">
-            Dudas normales cuando un servicio personalizado quiere volverse producto.
+            Las dudas normales cuando una solucion ya vendida quiere presentarse mejor a otras agencias.
           </h2>
         </div>
 

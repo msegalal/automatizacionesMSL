@@ -39,16 +39,16 @@ export default function Hero() {
           <div>
             <div className="mb-7 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />
             <p className="mb-5 text-xs font-semibold uppercase tracking-[0.34em] text-orange-500">
-              Sistemas digitales para vender mejor a agencias de viajes
+              Herramientas que mejoran la produccion de agencias de viajes
             </p>
             <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-[1.01] text-slate-950 sm:text-6xl xl:text-7xl">
-              Convertimos una solución validada en cliente en una{" "}
-              <span className="text-orange-500">oferta vendible, clara y escalable</span>.
+              Convertimos una solucion ya vendida a una primera agencia en una{" "}
+              <span className="text-orange-500">herramienta clara, util y vendible</span>.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              automatizacionesMSL empaqueta producto, web y automatización para que
-              dejes de vender “cosas sueltas” y empieces a vender un sistema con valor
-              real para agencias. iReViajes es el punto de partida, no el límite.
+              automatizacionesMSL te ayuda a presentar una solucion real como una herramienta
+              que mejora el ritmo de trabajo, reduce tareas manuales y da mas control a la agencia.
+              iReViajes fue la primera empresa que la compro; ahora toca venderla mejor a mas agencias.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -62,22 +62,22 @@ export default function Hero() {
                 href="#producto"
                 className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/75 px-6 py-3.5 text-sm font-semibold text-slate-950 transition-colors hover:border-orange-500 hover:text-orange-500"
               >
-                Ver estructura del producto
+                Ver como se presenta la herramienta
               </a>
             </div>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               <div className="rounded-[1.8rem] border border-white/70 bg-white/75 px-5 py-5 shadow-[0_18px_50px_rgba(8,19,33,0.08)] backdrop-blur-xl">
                 <p className="text-2xl font-semibold text-slate-950">1</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">producto base validado en sector viajes</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">primera agencia cliente: iReViajes</p>
               </div>
               <div className="rounded-[1.8rem] border border-white/70 bg-white/75 px-5 py-5 shadow-[0_18px_50px_rgba(8,19,33,0.08)] backdrop-blur-xl">
-                <p className="text-2xl font-semibold text-slate-950">4</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">capas conectadas: web, IA, operacion y automatizacion</p>
+                <p className="text-2xl font-semibold text-slate-950">+ orden</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">una herramienta pensada para mejorar produccion, seguimiento y control</p>
               </div>
               <div className="rounded-[1.8rem] border border-white/70 bg-white/75 px-5 py-5 shadow-[0_18px_50px_rgba(8,19,33,0.08)] backdrop-blur-xl">
                 <p className="text-2xl font-semibold text-slate-950">B2B</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">posicionamiento orientado a agencias, no al cliente final</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">lenguaje pensado para negocio, no para perfiles tecnicos</p>
               </div>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function Hero() {
             <div className="rounded-[2.25rem] border border-white/75 bg-white/72 p-6 shadow-[0_24px_80px_rgba(8,19,33,0.12)] backdrop-blur-xl">
               <div className="flex items-center justify-between gap-4">
                 <span className="rounded-full bg-orange-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-600">
-                  blueprint comercial
+                  primera implantacion
                 </span>
                 <span className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400">
                   iReViajes
@@ -94,48 +94,48 @@ export default function Hero() {
               </div>
 
               <h2 className="mt-6 max-w-md text-3xl font-semibold leading-tight text-slate-950">
-                Lo que hoy es un proyecto personalizado puede venderse como sistema modular.
+                La primera venta ya existe. El siguiente paso es convertirla en una herramienta facil de entender y facil de vender.
               </h2>
 
               <div className="mt-8 grid gap-4">
                 <div className="rounded-[1.7rem] border border-slate-200 bg-white/85 p-5">
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
-                    Captación
+                    Mas interes util
                   </p>
                   <p className="mt-2 text-base leading-7 text-slate-900">
-                    Web que explica mejor el producto y prepara la conversación de venta.
+                    Una web que explica mejor la propuesta y prepara mejor la conversacion comercial.
                   </p>
                 </div>
                 <div className="rounded-[1.7rem] border border-slate-200 bg-white/85 p-5">
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
-                    Operación
+                    Mas orden interno
                   </p>
                   <p className="mt-2 text-base leading-7 text-slate-900">
-                    CRM, tickets y seguimiento para que no se pierda contexto interno.
+                    El equipo trabaja con mas control y menos dependencia de procesos manuales.
                   </p>
                 </div>
                 <div className="rounded-[1.7rem] border border-slate-200 bg-white/85 p-5">
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
-                    Automatización
+                    Menos carga repetitiva
                   </p>
                   <p className="mt-2 text-base leading-7 text-slate-900">
-                    n8n conectando formularios, avisos, soporte y postventa sin trabajo repetitivo.
+                    Parte del trabajo que hoy quita tiempo puede resolverse con una herramienta mejor planteada.
                   </p>
                 </div>
               </div>
 
               <div className="mt-8 rounded-[1.8rem] bg-slate-950 px-5 py-5 text-white">
                 <p className="text-sm font-semibold uppercase tracking-[0.24em] text-orange-300">
-                  secuencia
+                  resultado esperado
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-white/80">
-                  <span className="rounded-full bg-white/8 px-3 py-2">lead entra</span>
+                  <span className="rounded-full bg-white/8 px-3 py-2">entra una consulta</span>
                   <span>→</span>
-                  <span className="rounded-full bg-white/8 px-3 py-2">se clasifica</span>
+                  <span className="rounded-full bg-white/8 px-3 py-2">se entiende rapido</span>
                   <span>→</span>
-                  <span className="rounded-full bg-white/8 px-3 py-2">se opera</span>
+                  <span className="rounded-full bg-white/8 px-3 py-2">se trabaja con orden</span>
                   <span>→</span>
-                  <span className="rounded-full bg-white/8 px-3 py-2">se sigue</span>
+                  <span className="rounded-full bg-white/8 px-3 py-2">se hace seguimiento</span>
                 </div>
               </div>
             </div>
