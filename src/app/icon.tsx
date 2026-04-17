@@ -17,37 +17,48 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#0f172a",
-          borderRadius: "18px",
-          position: "relative",
-          overflow: "hidden"
+          background: "transparent",
+          position: "relative"
         }}
       >
         <div
           style={{
-            position: "absolute",
-            inset: "10px",
-            borderRadius: "16px",
-            background:
-              "linear-gradient(135deg, rgba(249,115,22,1) 0%, rgba(251,146,60,1) 58%, rgba(255,237,213,1) 100%)"
-          }}
-        />
-        <div
-          style={{
-            position: "relative",
+            width: 54,
+            height: 54,
+            borderRadius: "999px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            width: "100%",
-            height: "100%",
-            color: "#0f172a",
-            fontSize: 34,
-            fontWeight: 800,
-            letterSpacing: "-3px",
-            fontFamily: "Arial, sans-serif"
+            background:
+              "linear-gradient(145deg, rgba(255,247,237,1) 0%, rgba(255,237,213,1) 100%)",
+            border: "4px solid #f97316",
+            boxShadow: "0 8px 18px rgba(15,23,42,0.14)",
+            position: "relative"
           }}
         >
-          M
+          <div
+            style={{
+              position: "absolute",
+              top: 8,
+              right: 8,
+              width: 8,
+              height: 8,
+              borderRadius: "999px",
+              background: "#fb923c"
+            }}
+          />
+          <div
+            style={{
+              color: "#0f172a",
+              fontSize: 30,
+              fontWeight: 800,
+              letterSpacing: "-3px",
+              fontFamily: "Arial, sans-serif",
+              lineHeight: 1
+            }}
+          >
+            M
+          </div>
         </div>
       </div>
     ),
