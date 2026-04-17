@@ -2,7 +2,7 @@ import { processSteps } from "@/lib/site-content";
 
 export default function Process() {
   return (
-    <section id="proceso" className="px-6 py-24">
+    <section id="proceso" className="scroll-mt-24 px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12">
           <div className="mb-6 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />

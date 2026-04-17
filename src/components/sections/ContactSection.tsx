@@ -3,7 +3,7 @@ import { defaultContactEmail } from "@/lib/site-content";
 
 export default function ContactSection() {
   return (
-    <section id="contacto" className="px-6 pb-24 pt-10">
+    <section id="contacto" className="scroll-mt-24 px-6 pb-24 pt-10">
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-[2.4rem] bg-slate-950 px-6 py-8 text-white md:px-8 md:py-10">
           <div className="mb-6 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />

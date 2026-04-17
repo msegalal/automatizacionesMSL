@@ -2,7 +2,7 @@ import { caseStudy, trustPoints } from "@/lib/site-content";
 
 export default function TrustGrid() {
   return (
-    <section id="prueba" className="px-6 pb-6">
+    <section id="prueba" className="scroll-mt-24 px-6 pb-6">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
           <article className="rounded-[2.3rem] bg-slate-950 px-6 py-8 text-white shadow-[0_24px_80px_rgba(8,19,33,0.14)] md:px-8">

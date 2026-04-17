@@ -2,7 +2,7 @@ import { serviceCards } from "@/lib/site-content";
 
 export default function Services() {
   return (
-    <section id="servicios" className="px-6 py-24">
+    <section id="servicios" className="scroll-mt-24 px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>

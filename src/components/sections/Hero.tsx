@@ -3,11 +3,11 @@ import { navItems } from "@/lib/site-content";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden px-6 pb-18 pt-6 lg:pb-24 lg:pt-8">
-      <div className="absolute inset-x-0 top-0 h-[28rem] bg-[linear-gradient(rgba(14,26,43,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(14,26,43,0.07)_1px,transparent_1px)] bg-[size:34px_34px] [mask-image:linear-gradient(180deg,rgba(0,0,0,0.9),transparent)]" />
-      <div className="absolute -left-12 top-20 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(255,110,64,0.22)_0%,transparent_72%)] blur-2xl" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] bg-[linear-gradient(rgba(14,26,43,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(14,26,43,0.07)_1px,transparent_1px)] bg-[size:34px_34px] [mask-image:linear-gradient(180deg,rgba(0,0,0,0.9),transparent)]" />
+      <div className="pointer-events-none absolute -left-12 top-20 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(255,110,64,0.22)_0%,transparent_72%)] blur-2xl" />
 
-      <div className="mx-auto max-w-7xl">
-        <header className="mb-14 flex flex-wrap items-center justify-between gap-6">
+      <div className="relative z-10 mx-auto max-w-7xl">
+        <header className="relative z-20 mb-14 flex flex-wrap items-center justify-between gap-6">
           <a href="#" className="flex items-center gap-3 text-slate-950">
             <span className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-orange-300/60 bg-orange-100 text-sm font-semibold text-orange-600">
               MSL

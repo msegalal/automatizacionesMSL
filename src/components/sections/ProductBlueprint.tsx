@@ -2,7 +2,7 @@ import { fitCards, productModules } from "@/lib/site-content";
 
 export default function ProductBlueprint() {
   return (
-    <section id="producto" className="px-6 py-24">
+    <section id="producto" className="scroll-mt-24 px-6 py-24">
       <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.6rem] bg-slate-950 px-6 py-10 text-white md:px-10 md:py-14">
         <div className="grid gap-12 lg:grid-cols-[0.92fr_1.08fr]">
           <div>
