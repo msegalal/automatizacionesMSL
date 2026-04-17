@@ -5,12 +5,12 @@ export default function Footer() {
         <div>
           <p className="text-lg font-semibold text-slate-950">automatizacionesMSL</p>
           <p className="mt-1 text-sm text-slate-600">
-            Herramienta y automatizacion para agencias de viajes que quieren mas orden y menos
-            trabajo manual.
+            Herramienta, implantacion y automatizacion util para agencias de viajes que quieren
+            mas control y menos carga manual.
           </p>
         </div>
         <a href="#contacto" className="text-sm font-semibold text-slate-950 transition-colors hover:text-orange-500">
-          Pedir propuesta
+          Quiero ver si encaja
         </a>
       </div>
     </footer>

@@ -12,8 +12,8 @@ export default function HomePage() {
     <>
       <main className="overflow-hidden">
         <Hero />
-        <TrustGrid />
         <Services />
+        <TrustGrid />
         <ProductBlueprint />
         <Process />
         <Faq />

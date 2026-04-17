@@ -31,7 +31,7 @@ export default function Hero() {
             href="#contacto"
             className="rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-orange-500"
           >
-            Pedir propuesta
+            Quiero ver si encaja
           </a>
         </header>
 
@@ -39,17 +39,19 @@ export default function Hero() {
           <div>
             <div className="mb-7 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />
             <p className="mb-5 text-xs font-semibold uppercase tracking-[0.34em] text-orange-500">
-              Herramienta para agencias de viajes
+              Herramienta + implantacion para agencias de viajes
             </p>
             <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-[1.01] text-slate-950 sm:text-6xl xl:text-7xl">
-              Reduce tareas manuales, ordena el seguimiento y trabaja con{" "}
-              <span className="text-orange-500">mas control en tu agencia</span>.
+              Una herramienta para que tu agencia trabaje{" "}
+              <span className="text-orange-500">
+                mas rapido, con menos tareas manuales y mejor seguimiento
+              </span>
+              .
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              automatizacionesMSL convierte una necesidad operativa en una herramienta clara,
-              util y facil de adoptar. La primera implantacion ya existe en iReViajes; ahora la
-              propuesta se presenta para que mas agencias entiendan rapido que ganan tiempo,
-              orden y capacidad de seguimiento.
+              automatizacionesMSL combina herramienta, implantacion y automatizacion util para
+              ordenar consultas, dar mas control al equipo y presentar mejor la propuesta. La
+              validacion ya existe: iReViajes fue la primera agencia en comprarla.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -57,38 +59,38 @@ export default function Hero() {
                 href="#contacto"
                 className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-orange-500"
               >
-                Pedir propuesta para mi agencia
+                Quiero ver si encaja con mi agencia
               </a>
               <a
-                href="#producto"
+                href="#prueba"
                 className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/75 px-6 py-3.5 text-sm font-semibold text-slate-950 transition-colors hover:border-orange-500 hover:text-orange-500"
               >
-                Ver resultados clave
+                Ver el caso real
               </a>
             </div>
 
             <p className="mt-4 text-sm leading-7 text-slate-500">
-              Mensaje comercial, herramienta y contacto real alineados para una venta B2B mas
-              clara.
+              Herramienta, implantacion y automatizacion ligera. No es software generico ni una
+              promesa abstracta.
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               <div className="rounded-[1.8rem] border border-white/70 bg-white/75 px-5 py-5 shadow-[0_18px_50px_rgba(8,19,33,0.08)] backdrop-blur-xl">
-                <p className="text-2xl font-semibold text-slate-950">Caso real</p>
+                <p className="text-2xl font-semibold text-slate-950">Agencias</p>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
-                  primera agencia cliente: iReViajes
+                  pensado para agencias de viajes, no para un sector generico
                 </p>
               </div>
               <div className="rounded-[1.8rem] border border-white/70 bg-white/75 px-5 py-5 shadow-[0_18px_50px_rgba(8,19,33,0.08)] backdrop-blur-xl">
-                <p className="text-2xl font-semibold text-slate-950">Menos manual</p>
+                <p className="text-2xl font-semibold text-slate-950">Caso real</p>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
-                  mas tiempo para responder, vender y seguir cada oportunidad
+                  primera implantacion ya vendida: iReViajes
                 </p>
               </div>
               <div className="rounded-[1.8rem] border border-white/70 bg-white/75 px-5 py-5 shadow-[0_18px_50px_rgba(8,19,33,0.08)] backdrop-blur-xl">
                 <p className="text-2xl font-semibold text-slate-950">Mas control</p>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
-                  seguimiento, operativa y propuesta comercial mas ordenados
+                  menos friccion en seguimiento, operativa y propuesta comercial
                 </p>
               </div>
             </div>
@@ -98,61 +100,52 @@ export default function Hero() {
             <div className="rounded-[2.25rem] border border-white/75 bg-white/72 p-6 shadow-[0_24px_80px_rgba(8,19,33,0.12)] backdrop-blur-xl">
               <div className="flex items-center justify-between gap-4">
                 <span className="rounded-full bg-orange-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-600">
-                  caso real
+                  que resuelve
                 </span>
                 <span className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400">
-                  iReViajes
+                  para agencias
                 </span>
               </div>
 
               <h2 className="mt-6 max-w-md text-3xl font-semibold leading-tight text-slate-950">
-                Una herramienta valida no se vende mejor por sonar tecnica, sino por dejar claro
-                que ahorra tiempo y ordena la operativa.
+                Tres fricciones habituales que esta herramienta ataca desde el primer dia.
               </h2>
 
               <div className="mt-8 grid gap-4">
                 <div className="rounded-[1.7rem] border border-slate-200 bg-white/85 p-5">
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
-                    Menos tiempo perdido
+                    Consultas dispersas
                   </p>
                   <p className="mt-2 text-base leading-7 text-slate-900">
-                    La agencia entiende rapido que problema resuelve y donde gana tiempo.
+                    Cuando la informacion entra mal ordenada, responder bien y rapido cuesta mas.
                   </p>
                 </div>
                 <div className="rounded-[1.7rem] border border-slate-200 bg-white/85 p-5">
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
-                    Seguimiento mas estable
+                    Seguimiento irregular
                   </p>
                   <p className="mt-2 text-base leading-7 text-slate-900">
-                    Consultas y oportunidades avanzan con menos olvidos y menos friccion interna.
+                    Si el seguimiento depende de recordar cada paso, es facil perder ritmo y oportunidades.
                   </p>
                 </div>
                 <div className="rounded-[1.7rem] border border-slate-200 bg-white/85 p-5">
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
-                    Adopcion mas facil
+                    Demasiadas tareas manuales
                   </p>
                   <p className="mt-2 text-base leading-7 text-slate-900">
-                    El equipo ve para que sirve la herramienta sin sentirse frente a un sistema
-                    complejo.
+                    Cuando todo pasa por copiar, perseguir o revisar a mano, la productividad cae.
                   </p>
                 </div>
               </div>
 
               <div className="mt-8 rounded-[1.8rem] bg-slate-950 px-5 py-5 text-white">
                 <p className="text-sm font-semibold uppercase tracking-[0.24em] text-orange-300">
-                  resultado esperado
+                  prueba real
                 </p>
-                <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-white/80">
-                  <span className="rounded-full bg-white/8 px-3 py-2">entra una consulta</span>
-                  <span>{"->"}</span>
-                  <span className="rounded-full bg-white/8 px-3 py-2">
-                    se entiende el contexto
-                  </span>
-                  <span>{"->"}</span>
-                  <span className="rounded-full bg-white/8 px-3 py-2">se responde antes</span>
-                  <span>{"->"}</span>
-                  <span className="rounded-full bg-white/8 px-3 py-2">se hace seguimiento</span>
-                </div>
+                <p className="mt-4 text-sm leading-7 text-white/80">
+                  iReViajes fue la primera implantacion. Eso permite vender con un caso del sector
+                  real, no con una promesa sin validar.
+                </p>
               </div>
             </div>
           </div>

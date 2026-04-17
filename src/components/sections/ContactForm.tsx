@@ -100,7 +100,7 @@ export default function ContactForm() {
           contacto
         </p>
         <h2 className="mt-3 text-3xl font-semibold text-slate-950">
-          Cuentame como trabaja hoy tu agencia y que parte quieres ordenar primero.
+          Cuentame que problema quieres resolver y te diremos si encaja.
         </h2>
       </div>
 
@@ -194,7 +194,7 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="interes" className="mb-2 block text-sm font-medium text-slate-950">
-            Que quieres activar primero
+            Que quieres valorar primero
           </label>
           <select
             id="interes"
@@ -205,8 +205,8 @@ export default function ContactForm() {
             <option value="" disabled>
               --
             </option>
-            <option value="producto">Herramienta y propuesta</option>
-            <option value="web">Web comercial</option>
+            <option value="producto">Herramienta</option>
+            <option value="web">Implantacion y propuesta</option>
             <option value="automatizacion">Automatizacion</option>
             <option value="pack">Pack completo</option>
           </select>
@@ -222,7 +222,7 @@ export default function ContactForm() {
           <textarea
             id="mensaje"
             rows={6}
-            placeholder="Explica que parte del trabajo manual, del seguimiento o de la propuesta comercial quieres resolver primero."
+            placeholder="Explica si hoy el problema esta en captacion, seguimiento, orden interno, carga manual o en como se presenta la propuesta."
             {...register("mensaje")}
             className="w-full rounded-[1.15rem] border border-slate-200 bg-white/90 px-4 py-3 text-sm leading-7 text-slate-950 outline-none focus:border-orange-500"
           />
@@ -237,7 +237,7 @@ export default function ContactForm() {
         disabled={status === "loading"}
         className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-orange-500 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {status === "loading" ? "Preparando contacto..." : "Pedir propuesta para mi agencia"}
+        {status === "loading" ? "Preparando contacto..." : "Quiero ver si encaja con mi agencia"}
       </button>
     </form>
   );

@@ -11,12 +11,12 @@ export default function ContactSection() {
             propuesta
           </p>
           <h2 className="mt-4 text-balance text-4xl font-semibold text-white md:text-5xl">
-            Pide una propuesta para tu agencia y te diremos por donde empezar.
+            Cuentanos tu caso y te diremos si encaja con tu agencia.
           </h2>
           <p className="mt-5 max-w-xl text-base leading-8 text-white/72">
-            Si encaja, bajamos el mensaje, la web y la parte operativa a una propuesta clara. Y
-            si aun no tienes integraciones activas, el contacto sigue funcionando por email sin
-            perder leads.
+            Revisamos si necesitas herramienta, implantacion, automatizacion o un pack completo.
+            Y si aun no tienes integraciones activas, el contacto sigue funcionando por email sin
+            perder oportunidades.
           </p>
 
           <div className="mt-10 space-y-4">
@@ -31,24 +31,22 @@ export default function ContactSection() {
             </a>
             <div className="rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4">
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-300">
+                Que recibes
+              </p>
+              <p className="mt-2 text-sm leading-6 text-white/84">
+                Una orientacion clara sobre encaje, punto de partida y formato de propuesta mas
+                recomendable.
+              </p>
+            </div>
+            <div className="rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-300">
                 Que revisamos
               </p>
               <p className="mt-2 text-sm leading-6 text-white/84">
-                Volumen, seguimiento, tareas repetitivas y forma de presentar la herramienta.
+                Captacion, seguimiento, carga manual y forma de presentar la herramienta a tus
+                clientes.
               </p>
             </div>
-            <a
-              href="#contacto"
-              className="block rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4 transition-colors hover:bg-white/12"
-            >
-              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-300">
-                Siguiente paso
-              </p>
-              <p className="mt-2 text-sm leading-6 text-white/84">
-                Sales de aqui con una propuesta mas clara: web, herramienta, automatizacion o pack
-                completo.
-              </p>
-            </a>
           </div>
         </div>
 

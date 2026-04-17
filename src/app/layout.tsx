@@ -7,7 +7,7 @@ import "./globals.css";
 const siteUrl = getSiteUrl();
 const siteTitle = "automatizacionesMSL | Herramientas para agencias de viajes";
 const siteDescription =
-  "AutomatizacionesMSL ayuda a agencias de viajes a reducir trabajo manual, ordenar su operativa y ganar tiempo con una herramienta ya validada en negocio real.";
+  "AutomatizacionesMSL ofrece herramienta, implantacion y automatizacion util para agencias de viajes que quieren menos carga manual, mejor seguimiento y mas control operativo.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

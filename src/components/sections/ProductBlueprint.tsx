@@ -8,14 +8,14 @@ export default function ProductBlueprint() {
           <div>
             <div className="mb-6 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-orange-300">
-              resultados
+              encaje
             </p>
             <h2 className="mt-4 text-balance text-4xl font-semibold text-white md:text-5xl">
-              Lo que mejora cuando la herramienta encaja en la agencia.
+              Encaja especialmente cuando la agencia ya nota estas fricciones.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-white/72">
-              iReViajes fue la primera agencia en comprarla. Ese punto de partida permite vender
-              con un caso real y adaptar la herramienta a otras operativas sin empezar de cero.
+              Si hoy el problema ya se nota en el dia a dia, la herramienta tiene una forma clara
+              de entrar y generar valor sin complicar mas la operativa.
             </p>
 
             <div className="mt-8 grid gap-4">
@@ -29,6 +29,15 @@ export default function ProductBlueprint() {
           </div>
 
           <div className="grid gap-5">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-orange-300">
+                que hace exactamente
+              </p>
+              <h3 className="mt-4 max-w-xl text-balance text-3xl font-semibold text-white md:text-4xl">
+                Asi se traduce la herramienta en la operativa diaria.
+              </h3>
+            </div>
+
             {productModules.map((module, index) => (
               <article
                 key={module.title}

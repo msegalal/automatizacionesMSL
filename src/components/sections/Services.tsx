@@ -8,15 +8,15 @@ export default function Services() {
           <div>
             <div className="mb-6 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-orange-500">
-              servicios
+              oferta
             </p>
             <h2 className="mt-4 max-w-xl text-balance text-4xl font-semibold text-slate-950 md:text-5xl">
-              La agencia tiene que entender en pocos segundos que gana mas tiempo, mas orden y menos friccion comercial.
+              Que compras exactamente y como se adapta a tu agencia.
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-8 text-slate-600 lg:justify-self-end">
-            No presentamos un sistema modular ni una tecnologia compleja. Presentamos una
-            herramienta que mejora el dia a dia y facilita la decision de compra desde negocio.
+            Aqui no hay que adivinar si se vende herramienta, servicio o automatizacion. Lo
+            dejamos claro para que la decision de compra sea mas facil desde negocio.
           </p>
         </div>
 

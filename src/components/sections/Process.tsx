@@ -10,7 +10,7 @@ export default function Process() {
             proceso
           </p>
           <h2 className="mt-4 max-w-3xl text-balance text-4xl font-semibold text-slate-950 md:text-5xl">
-            Asi aterrizamos la herramienta para que una agencia la entienda y quiera dar el siguiente paso.
+            Asi se implanta la propuesta sin meter mas complejidad en la agencia.
           </h2>
         </div>
 
