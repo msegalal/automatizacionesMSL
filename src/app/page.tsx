@@ -13,10 +13,10 @@ export default function HomePage() {
     <>
       <main className="overflow-hidden">
         <Hero />
+        <ImpactStats />
         <Services />
         <TrustGrid />
         <ProductBlueprint />
-        <ImpactStats />
         <Process />
         <Faq />
         <ContactSection />
