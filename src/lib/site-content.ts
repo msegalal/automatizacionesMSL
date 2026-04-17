@@ -95,6 +95,33 @@ export const productModules = [
   }
 ];
 
+export const impactStats = [
+  {
+    value: "40%",
+    prefix: "Hasta",
+    title: "menos carga manual",
+    body: "Automatizamos pasos repetitivos para que el equipo dedique mas tiempo a vender, atender y hacer seguimiento."
+  },
+  {
+    value: "65%",
+    prefix: "Hasta",
+    title: "menos tiempo de respuesta",
+    body: "La entrada de solicitudes y los avisos llegan mejor ordenados para responder antes a cada consulta."
+  },
+  {
+    value: "3x",
+    prefix: "Hasta",
+    title: "mas capacidad de seguimiento",
+    body: "Con una operativa mas clara, cada persona puede mover muchas mas oportunidades sin perder control."
+  },
+  {
+    value: "30%",
+    prefix: "Hasta",
+    title: "mas estabilidad comercial",
+    body: "Cuando el proceso esta mejor organizado, se pierden menos oportunidades por olvidos, retrasos o desorden."
+  }
+];
+
 export const fitCards = [
   {
     title: "Si hoy respondes mas tarde de lo que te gustaria",
