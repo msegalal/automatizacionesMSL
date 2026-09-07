@@ -1,9 +1,9 @@
 export const defaultContactEmail = "hola@automatizacionesmsl.com";
 
 /*
-  Compromiso de respuesta. Valor por defecto conservador puesto por Claude
-  el 2026-09-07: Marc no habia fijado ninguno. Cambiar aqui y se propaga a
-  la seccion de contacto, al FAQ, a la pagina de gracias y al aviso legal.
+  Compromiso de respuesta, confirmado por Marc el 2026-09-07.
+  Cambiar aqui y se propaga a la seccion de contacto, al FAQ,
+  a la pagina de gracias y al caso de estudio.
 */
 export const responseCommitment = "menos de 24 horas laborables";
 

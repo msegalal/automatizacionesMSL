@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
-import { defaultContactEmail } from "@/lib/site-content";
+import LegalIdentityList from "@/components/LegalIdentityList";
+import { legalIdentity } from "@/lib/legal";
 
 export const metadata: Metadata = {
   title: "Aviso legal | automatizacionesMSL",
@@ -18,19 +19,12 @@ export default function AvisoLegalPage() {
         En cumplimiento de la Ley 34/2002 de servicios de la sociedad de la informacion y de
         comercio electronico, se facilitan los siguientes datos identificativos:
       </p>
-      <ul>
-        <li>
-          Denominacion: <span className="pendiente">PENDIENTE razon social</span>
-        </li>
-        <li>
-          NIF: <span className="pendiente">PENDIENTE NIF</span>
-        </li>
-        <li>
-          Domicilio: <span className="pendiente">PENDIENTE domicilio fiscal</span>
-        </li>
-        <li>Correo de contacto: {defaultContactEmail}</li>
-        <li>Nombre comercial: automatizacionesMSL</li>
-      </ul>
+      <LegalIdentityList />
+
+      <p>
+        Nombre comercial: {legalIdentity.nombreComercial}. El titular es persona fisica y
+        ejerce como profesional autonomo.
+      </p>
 
       <h2>Objeto</h2>
       <p>

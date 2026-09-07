@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
+import LegalIdentityList from "@/components/LegalIdentityList";
 import { defaultContactEmail } from "@/lib/site-content";
 
 export const metadata: Metadata = {
@@ -14,18 +15,7 @@ export default function PrivacidadPage() {
   return (
     <LegalPage title="Politica de privacidad" href="/privacidad" updatedAt="2026-09-07">
       <h2>Responsable del tratamiento</h2>
-      <ul>
-        <li>
-          Responsable: <span className="pendiente">PENDIENTE razon social</span>
-        </li>
-        <li>
-          NIF: <span className="pendiente">PENDIENTE NIF</span>
-        </li>
-        <li>
-          Domicilio: <span className="pendiente">PENDIENTE domicilio fiscal</span>
-        </li>
-        <li>Correo de contacto: {defaultContactEmail}</li>
-      </ul>
+      <LegalIdentityList />
 
       <h2>Que datos recogemos</h2>
       <p>
