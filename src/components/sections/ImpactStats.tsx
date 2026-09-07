@@ -1,45 +1,38 @@
 import { impactStats } from "@/lib/site-content";
 
+/* Familia de layout: banda numerica dividida por filetes. Sin tarjetas. */
 export default function ImpactStats() {
   return (
-    <section className="px-6 py-24">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-12 grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-end">
-          <div>
-            <div className="mb-6 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-orange-500">
-              impacto
-            </p>
-            <h2 className="mt-4 max-w-xl text-balance text-4xl font-semibold text-slate-950 md:text-5xl">
-              Resultados que se notan en la operativa desde las primeras semanas.
-            </h2>
-          </div>
-
-          <p className="max-w-2xl text-base leading-8 text-slate-600 lg:justify-self-end">
-            No vendemos automatizacion por postureo. Vendemos una mejora real en tiempo,
-            seguimiento, control y capacidad comercial para la agencia.
+    <section className="border-b border-rule bg-surface">
+      <div className="mx-auto max-w-[1240px] px-5 py-20 lg:px-8 lg:py-24">
+        <div className="max-w-[46ch]">
+          <h2 className="text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
+            La mejora se mide en tiempo, seguimiento y control
+          </h2>
+          <p className="mt-4 text-base leading-7 text-ink-soft">
+            Son estimaciones de techo. El resultado real depende del punto de partida de cada agencia.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <dl className="mt-14 grid grid-cols-1 gap-px border-t border-rule-strong sm:grid-cols-2 xl:grid-cols-4">
           {impactStats.map((stat) => (
-            <article
+            <div
               key={stat.title}
-              className="rounded-[2rem] border border-slate-200/80 bg-white/82 p-6 shadow-[0_18px_50px_rgba(8,19,33,0.05)] backdrop-blur-xl"
+              className="border-b border-rule-strong pb-8 pt-8 xl:border-b-0 xl:border-r xl:pr-6 xl:last:border-r-0 xl:[&:not(:first-child)]:pl-6"
             >
-              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-500">
+              <dt className="text-xs font-medium uppercase tracking-[0.16em] text-ink-faint">
                 {stat.prefix}
-              </p>
-              <div className="mt-3 flex items-end gap-2">
-                <span className="text-5xl font-semibold leading-none text-slate-950">
+              </dt>
+              <dd>
+                <p className="tabular mt-3 font-display text-6xl leading-none text-accent">
                   {stat.value}
-                </span>
-              </div>
-              <h3 className="mt-4 text-xl font-semibold text-slate-950">{stat.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600">{stat.body}</p>
-            </article>
+                </p>
+                <p className="mt-4 text-lg leading-7 text-ink">{stat.title}</p>
+                <p className="mt-3 max-w-[38ch] text-sm leading-6 text-ink-soft">{stat.body}</p>
+              </dd>
+            </div>
           ))}
-        </div>
+        </dl>
       </div>
     </section>
   );

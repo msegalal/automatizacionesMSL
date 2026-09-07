@@ -1,5 +1,6 @@
 export const defaultContactEmail = "hola@automatizacionesmsl.com";
 
+/* Los anchors se mantienen estables: hay SEO y enlaces vivos apuntando aqui. */
 export const navItems = [
   { label: "Oferta", href: "#servicios" },
   { label: "Caso real", href: "#prueba" },
@@ -8,15 +9,21 @@ export const navItems = [
   { label: "FAQ", href: "#faq" }
 ];
 
+export const legalLinks = [
+  { label: "Aviso legal", href: "/aviso-legal" },
+  { label: "Privacidad", href: "/privacidad" },
+  { label: "Cookies", href: "/cookies" }
+];
+
 export const caseStudy = {
   kicker: "caso real",
   title: "Primera implantacion en iReViajes",
   body:
-    "La herramienta no nace en frio. La primera venta fue a una agencia de viajes real y el punto de partida fue claro: reducir carga manual, ordenar seguimiento y presentar mejor la propuesta.",
+    "La primera venta fue a una agencia de viajes en activo. El punto de partida estaba claro: reducir carga manual, ordenar el seguimiento y presentar mejor la propuesta al cliente final.",
   bullets: [
-    "Caso del sector viajes, no una demo generica",
-    "Validacion real antes de salir a otras agencias",
-    "Base lista para adaptarse a operativas diferentes"
+    "Caso real del sector viajes",
+    "Validado antes de salir a otras agencias",
+    "Base preparada para operativas distintas"
   ]
 };
 
@@ -29,17 +36,17 @@ export const trustPoints = [
   {
     value: "02",
     title: "Problema concreto",
-    body: "Se plantea para atacar tres fricciones habituales: tareas manuales, seguimiento irregular y operativa dispersa."
+    body: "Ataca tres fricciones habituales: tareas manuales, seguimiento irregular y operativa dispersa."
   },
   {
     value: "03",
     title: "Pensado para negocio",
-    body: "El mensaje se entiende desde gerencia porque habla de tiempo, control y conversion, no de tecnologia por tecnologia."
+    body: "El mensaje se entiende desde gerencia porque habla de tiempo, control y conversion."
   },
   {
     value: "04",
     title: "Base adaptable",
-    body: "No se vende como una pieza rigida. Se adapta a la forma real de trabajar de cada agencia y puede crecer por fases."
+    body: "Se adapta a la forma real de trabajar de cada agencia y puede crecer por fases."
   }
 ];
 
@@ -47,19 +54,19 @@ export const serviceCards = [
   {
     kicker: "Herramienta",
     title: "La base para ordenar operativa y seguimiento",
-    body: "La herramienta concentra lo importante para que consultas, siguientes pasos y trabajo interno no dependan de mensajes sueltos o memoria.",
+    body: "Concentra lo importante para que consultas, siguientes pasos y trabajo interno dejen de depender de mensajes sueltos o de la memoria del equipo.",
     bullets: [
       "Mas claridad sobre cada solicitud y su estado",
       "Menos dependencia de chats, notas y recordatorios manuales",
-      "Una base facil de entender para el equipo"
+      "Una base facil de entender para todo el equipo"
     ]
   },
   {
     kicker: "Implantacion",
     title: "Adaptada a la forma real de trabajar de tu agencia",
-    body: "No se trata de enchufar algo generico. Bajamos la herramienta a tu operativa, tu ritmo de trabajo y la parte del proceso que hoy mas te frena.",
+    body: "Bajamos la herramienta a tu operativa, tu ritmo de trabajo y la parte del proceso que hoy mas te frena.",
     bullets: [
-      "Detectamos donde hoy se pierde mas tiempo",
+      "Detectamos donde se pierde mas tiempo hoy",
       "Aterrizamos el mensaje y la forma de uso",
       "La propuesta se entiende rapido desde negocio"
     ]
@@ -71,7 +78,7 @@ export const serviceCards = [
     bullets: [
       "Avisos, entradas y pasos iniciales mejor resueltos",
       "Menos tareas repetitivas que no aportan valor",
-      "Un pack completo si quieres herramienta, implantacion y automatizacion"
+      "Pack completo si quieres herramienta, implantacion y automatizacion"
     ]
   }
 ];
@@ -87,14 +94,18 @@ export const productModules = [
   },
   {
     title: "Seguir cada oportunidad",
-    body: "Los siguientes pasos quedan mas visibles para que el seguimiento no dependa de recordar quien tenia que hacer que."
+    body: "Los siguientes pasos quedan visibles para que el seguimiento no dependa de recordar quien tenia que hacer que."
   },
   {
     title: "Explicar mejor la propuesta",
-    body: "La solucion se presenta como una herramienta util y vendible, no como una automatizacion abstracta o tecnica."
+    body: "La solucion se presenta como una herramienta util y vendible, con un valor que se entiende desde gerencia."
   }
 ];
 
+/*
+  Cifras facilitadas por el cliente en el brief de marca.
+  Van prefijadas con "Hasta" porque son un techo estimado, no una media medida.
+*/
 export const impactStats = [
   {
     value: "40%",
@@ -106,19 +117,19 @@ export const impactStats = [
     value: "65%",
     prefix: "Hasta",
     title: "menos tiempo de respuesta",
-    body: "La entrada de solicitudes y los avisos llegan mejor ordenados para responder antes a cada consulta."
+    body: "La entrada de solicitudes y los avisos llegan ordenados para responder antes a cada consulta."
   },
   {
     value: "3x",
     prefix: "Hasta",
     title: "mas capacidad de seguimiento",
-    body: "Con una operativa mas clara, cada persona puede mover muchas mas oportunidades sin perder control."
+    body: "Con una operativa mas clara, cada persona mueve muchas mas oportunidades sin perder control."
   },
   {
     value: "30%",
     prefix: "Hasta",
     title: "mas estabilidad comercial",
-    body: "Cuando el proceso esta mejor organizado, se pierden menos oportunidades por olvidos, retrasos o desorden."
+    body: "Cuando el proceso esta mejor organizado, se pierden menos oportunidades por olvidos y retrasos."
   }
 ];
 
@@ -129,7 +140,7 @@ export const fitCards = [
   },
   {
     title: "Si el seguimiento depende demasiado de acordarse",
-    body: "Cuando no hay una base clara, el seguimiento se dispersa y se pierden pasos comerciales importantes."
+    body: "Sin una base clara, el seguimiento se dispersa y se pierden pasos comerciales importantes."
   },
   {
     title: "Si la propuesta cuesta explicar o vender",
@@ -163,22 +174,27 @@ export const processSteps = [
 export const faqs = [
   {
     question: "iReViajes es el producto?",
-    answer: "No. iReViajes es la primera agencia que compro esta herramienta. Se usa como caso real de partida, no como nombre del producto."
+    answer:
+      "No. iReViajes es la primera agencia que compro esta herramienta y se usa como caso real de partida. El producto es automatizacionesMSL."
   },
   {
     question: "Que se contrata exactamente?",
-    answer: "Puedes contratar la herramienta, la implantacion, la automatizacion o un pack completo. La idea es ajustar la propuesta a lo que mas sentido tenga para tu agencia."
+    answer:
+      "Puedes contratar la herramienta, la implantacion, la automatizacion o un pack completo. La propuesta se ajusta a lo que tenga mas sentido para tu agencia."
   },
   {
     question: "Cuanto hay que cambiar dentro de la agencia?",
-    answer: "La idea no es romper la operativa. La herramienta se adapta a la forma de trabajar actual y se empieza por el punto donde mas valor aporta."
+    answer:
+      "La herramienta se adapta a la forma de trabajar actual y se empieza por el punto donde mas valor aporta, sin romper la operativa existente."
   },
   {
     question: "Se puede adaptar a otra forma de trabajar?",
-    answer: "Si. La base ya esta validada en una primera agencia y se plantea para ajustarse a equipos, volumenes y ritmos diferentes."
+    answer:
+      "Si. La base ya esta validada en una primera agencia y esta planteada para ajustarse a equipos, volumenes y ritmos diferentes."
   },
   {
     question: "Que pasa si aun no quiero automatizaciones avanzadas?",
-    answer: "No pasa nada. La base puede arrancar con herramienta e implantacion, y el contacto seguir funcionando por email hasta que tenga sentido automatizar mas."
+    answer:
+      "La base puede arrancar solo con herramienta e implantacion, y el contacto sigue funcionando por email hasta que tenga sentido automatizar mas."
   }
 ];

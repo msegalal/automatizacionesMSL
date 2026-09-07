@@ -1,33 +1,26 @@
 import { processSteps } from "@/lib/site-content";
 
+/* Familia de layout: linea temporal horizontal. Sin cajas. */
 export default function Process() {
   return (
-    <section id="proceso" className="scroll-mt-24 px-6 py-24">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-12">
-          <div className="mb-6 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />
-          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-orange-500">
-            proceso
-          </p>
-          <h2 className="mt-4 max-w-3xl text-balance text-4xl font-semibold text-slate-950 md:text-5xl">
-            Asi se implanta la propuesta sin meter mas complejidad en la agencia.
-          </h2>
-        </div>
+    <section id="proceso" className="scroll-mt-4 border-b border-rule bg-surface">
+      <div className="mx-auto max-w-[1240px] px-5 py-20 lg:px-8 lg:py-24">
+        <h2 className="max-w-[24ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
+          Asi se implanta sin meter mas complejidad en la agencia
+        </h2>
 
-        <div className="grid gap-6 lg:grid-cols-4">
+        <ol className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[auto_auto_auto] lg:gap-8">
           {processSteps.map((step) => (
-            <article
+            <li
               key={step.step}
-              className="rounded-[1.9rem] border border-slate-200/80 bg-white/82 p-6 shadow-[0_18px_50px_rgba(8,19,33,0.05)] backdrop-blur-xl"
+              className="border-t-2 border-ink pt-5 lg:row-span-3 lg:grid lg:grid-rows-subgrid lg:gap-0"
             >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-orange-300/50 bg-orange-100 text-sm font-semibold text-orange-600">
-                {step.step}
-              </span>
-              <h3 className="mt-5 text-xl font-semibold text-slate-950">{step.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600">{step.body}</p>
-            </article>
+              <span className="tabular font-display text-sm text-accent">{step.step}</span>
+              <h3 className="mt-3 font-display text-xl leading-snug text-ink lg:mt-3">{step.title}</h3>
+              <p className="mt-2.5 text-sm leading-6 text-ink-soft">{step.body}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

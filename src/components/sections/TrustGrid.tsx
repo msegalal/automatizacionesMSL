@@ -1,27 +1,23 @@
 import { caseStudy, trustPoints } from "@/lib/site-content";
 
+/* Familia de layout: declaracion asimetrica mas rejilla 2x2 de hechos. */
 export default function TrustGrid() {
   return (
-    <section id="prueba" className="scroll-mt-24 px-6 pb-6">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-          <article className="rounded-[2.3rem] bg-slate-950 px-6 py-8 text-white shadow-[0_24px_80px_rgba(8,19,33,0.14)] md:px-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-orange-300">
+    <section id="prueba" className="scroll-mt-4 border-b border-rule bg-surface">
+      <div className="mx-auto max-w-[1240px] px-5 py-20 lg:px-8 lg:py-24">
+        <div className="grid gap-12 lg:grid-cols-[0.55fr_0.45fr] lg:gap-20">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-accent">
               {caseStudy.kicker}
             </p>
-            <h2 className="mt-4 max-w-xl text-balance text-4xl font-semibold md:text-5xl">
+            <h2 className="mt-6 max-w-[18ch] text-balance font-display text-4xl leading-[1.1] text-ink md:text-5xl">
               {caseStudy.title}
             </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/74">
-              {caseStudy.body}
-            </p>
+            <p className="mt-6 max-w-[54ch] text-lg leading-8 text-ink-soft">{caseStudy.body}</p>
 
-            <ul className="mt-8 grid gap-3 md:grid-cols-3">
+            <ul className="mt-8 max-w-[46ch] divide-y divide-rule border-y border-rule">
               {caseStudy.bullets.map((bullet) => (
-                <li
-                  key={bullet}
-                  className="rounded-[1.6rem] border border-white/12 bg-white/7 px-4 py-4 text-sm leading-7 text-white/82"
-                >
+                <li key={bullet} className="py-3.5 text-sm leading-6 text-ink">
                   {bullet}
                 </li>
               ))}
@@ -29,21 +25,18 @@ export default function TrustGrid() {
 
             <a
               href="#servicios"
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition-transform hover:-translate-y-0.5 hover:text-orange-500"
+              className="mt-8 inline-flex items-center border border-rule-strong px-6 py-3.5 text-sm font-medium text-ink hover:border-accent hover:text-accent"
             >
               Ver que incluye
             </a>
-          </article>
+          </div>
 
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-1">
+          <div className="grid gap-x-10 gap-y-9 sm:grid-cols-2">
             {trustPoints.map((item) => (
-              <article
-                key={item.title}
-                className="rounded-[1.9rem] border border-white/80 bg-white/72 px-5 py-6 shadow-[0_18px_50px_rgba(8,19,33,0.07)] backdrop-blur-xl"
-              >
-                <p className="text-5xl font-semibold leading-none text-slate-200">{item.value}</p>
-                <h2 className="mt-5 text-xl font-semibold text-slate-950">{item.title}</h2>
-                <p className="mt-3 text-sm leading-7 text-slate-600">{item.body}</p>
+              <article key={item.title} className="border-t border-rule-strong pt-5">
+                <p className="tabular font-display text-sm text-accent">{item.value}</p>
+                <h3 className="mt-3 font-display text-xl leading-snug text-ink">{item.title}</h3>
+                <p className="mt-2.5 text-sm leading-6 text-ink-soft">{item.body}</p>
               </article>
             ))}
           </div>

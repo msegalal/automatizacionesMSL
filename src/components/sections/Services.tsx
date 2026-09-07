@@ -1,45 +1,54 @@
 import { serviceCards } from "@/lib/site-content";
 
+/*
+  Familia de layout: filas editoriales a todo el ancho.
+  Sustituye a las tres tarjetas en fila del diseno anterior.
+*/
 export default function Services() {
   return (
-    <section id="servicios" className="scroll-mt-24 px-6 py-24">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-          <div>
-            <div className="mb-6 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-orange-500">
-              oferta
-            </p>
-            <h2 className="mt-4 max-w-xl text-balance text-4xl font-semibold text-slate-950 md:text-5xl">
-              Que compras exactamente y como se adapta a tu agencia.
-            </h2>
-          </div>
-          <p className="max-w-2xl text-base leading-8 text-slate-600 lg:justify-self-end">
+    <section id="servicios" className="scroll-mt-4 border-b border-rule">
+      <div className="mx-auto max-w-[1240px] px-5 py-20 lg:px-8 lg:py-24">
+        <div className="max-w-[52ch]">
+          <h2 className="text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
+            Que compras exactamente y como se adapta a tu agencia
+          </h2>
+          <p className="mt-4 text-base leading-7 text-ink-soft">
             Aqui no hay que adivinar si se vende herramienta, servicio o automatizacion. Lo
-            dejamos claro para que la decision de compra sea mas facil desde negocio.
+            dejamos claro para que la decision se tome desde negocio.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {serviceCards.map((card) => (
+        <div className="mt-14 border-t border-rule-strong">
+          {serviceCards.map((card, index) => (
             <article
               key={card.title}
-              className="rounded-[2rem] border border-slate-200/80 bg-white/80 p-7 shadow-[0_20px_60px_rgba(8,19,33,0.06)] backdrop-blur-xl"
+              className="grid gap-6 border-b border-rule py-10 lg:grid-cols-[0.4fr_0.6fr] lg:gap-16 lg:py-12"
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-500">
-                {card.kicker}
-              </p>
-              <h3 className="mt-4 text-2xl font-semibold text-slate-950">{card.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600">{card.body}</p>
+              <div>
+                <p className="tabular font-display text-sm text-accent">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-3 font-display text-2xl leading-snug text-ink md:text-3xl">
+                  {card.kicker}
+                </h3>
+              </div>
 
-              <ul className="mt-6 space-y-3">
-                {card.bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-3 text-sm leading-7 text-slate-900">
-                    <span className="mt-2 inline-flex h-2.5 w-2.5 rounded-full bg-orange-500" />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <p className="max-w-[58ch] font-display text-xl leading-snug text-ink">
+                  {card.title}
+                </p>
+                <p className="mt-4 max-w-[58ch] text-base leading-7 text-ink-soft">{card.body}</p>
+                <ul className="mt-6 space-y-2.5">
+                  {card.bullets.map((bullet) => (
+                    <li
+                      key={bullet}
+                      className="max-w-[58ch] text-sm leading-6 text-ink-soft"
+                    >
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </article>
           ))}
         </div>
