@@ -18,9 +18,9 @@ export interface LegalIdentity {
 }
 
 export const legalIdentity: LegalIdentity = {
-  denominacion: null,
+  denominacion: "Marc Segala Llorente",
   nif: "47423420L",
-  domicilio: "Gornetpujol 197",
+  domicilio: "Gorina y Pujol 197",
   /* Falta codigo postal y municipio. */
   domicilioCompleto: false,
   nombreComercial: "automatizacionesMSL"
