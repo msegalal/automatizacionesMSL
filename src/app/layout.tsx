@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { instrumentSans, newsreader } from "@/lib/fonts";
 import { getSiteUrl } from "@/lib/site-url";
 import ConsentGate from "@/components/ConsentGate";
+import StickyMobileCta from "@/components/StickyMobileCta";
 import "./globals.css";
 
 const siteUrl = getSiteUrl();
@@ -45,11 +46,12 @@ export default function RootLayout({
       lang="es"
       className={`${instrumentSans.variable} ${newsreader.variable} h-full`}
     >
-      <body className="min-h-full">
+      <body className="min-h-full pb-[4.25rem] lg:pb-0">
         <a href="#contenido" className="skip-link">
           Saltar al contenido
         </a>
         {children}
+        <StickyMobileCta />
         <ConsentGate />
       </body>
     </html>

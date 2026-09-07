@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function CookiesPage() {
   return (
-    <LegalPage title="Politica de cookies" updatedAt="2026-09-07">
+    <LegalPage title="Politica de cookies" href="/cookies" updatedAt="2026-09-07">
       <h2>Que usamos</h2>
       <p>
         Este sitio no instala ninguna cookie de medicion ni de publicidad hasta que aceptas el

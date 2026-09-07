@@ -26,12 +26,20 @@ export default function TrustGrid() {
               ))}
             </ul>
 
-            <Link
-              href="#servicios"
-              className="mt-8 inline-flex items-center border border-rule-strong px-6 py-3.5 text-sm font-medium text-ink hover:border-accent hover:text-accent"
-            >
-              Ver que incluye
-            </Link>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link
+                href="/casos/ireviajes"
+                className="inline-flex items-center justify-center whitespace-nowrap border border-ink bg-ink px-6 py-3.5 text-sm font-medium text-canvas hover:border-accent hover:bg-accent"
+              >
+                Ver el caso completo
+              </Link>
+              <Link
+                href="#servicios"
+                className="inline-flex items-center justify-center whitespace-nowrap border border-rule-strong px-6 py-3.5 text-sm font-medium text-ink hover:border-accent hover:text-accent"
+              >
+                Ver que incluye
+              </Link>
+            </div>
           </div>
 
           <div>

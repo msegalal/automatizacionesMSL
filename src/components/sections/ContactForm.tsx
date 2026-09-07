@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -50,6 +51,7 @@ function ResponseSkeleton() {
 }
 
 export default function ContactForm() {
+  const router = useRouter();
   const [status, setStatus] = useState<FormStatus>("idle");
   const [fallbackDelivery, setFallbackDelivery] = useState<FallbackDelivery | null>(null);
 
@@ -85,9 +87,12 @@ export default function ContactForm() {
             summary: json.summary
           });
           window.location.assign(json.mailtoUrl);
+          reset();
+          return;
         }
 
         reset();
+        router.push("/gracias");
         return;
       }
 

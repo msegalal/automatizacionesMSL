@@ -1,5 +1,5 @@
 import ContactForm from "@/components/sections/ContactForm";
-import { defaultContactEmail } from "@/lib/site-content";
+import { defaultContactEmail, responseCommitment } from "@/lib/site-content";
 
 /* Familia de layout: dos columnas, contexto a la izquierda y formulario a la derecha. */
 export default function ContactSection() {
@@ -16,6 +16,15 @@ export default function ContactSection() {
           </p>
 
           <dl className="mt-10 divide-y divide-rule border-y border-rule">
+            <div className="py-5">
+              <dt className="text-xs font-medium uppercase tracking-[0.16em] text-ink-faint">
+                Cuando respondemos
+              </dt>
+              <dd className="mt-2 max-w-[46ch] text-sm leading-6 text-ink-soft">
+                En {responseCommitment}, con nuestra lectura del caso y un punto de partida
+                concreto.
+              </dd>
+            </div>
             <div className="py-5">
               <dt className="text-xs font-medium uppercase tracking-[0.16em] text-ink-faint">
                 Email

@@ -2,20 +2,29 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import SiteHeader from "@/components/sections/SiteHeader";
 import Footer from "@/components/sections/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 interface LegalPageProps {
   title: string;
+  href: string;
   updatedAt: string;
   children: ReactNode;
 }
 
-export default function LegalPage({ title, updatedAt, children }: LegalPageProps) {
+export default function LegalPage({ title, href, updatedAt, children }: LegalPageProps) {
   return (
     <>
       <SiteHeader />
       <main id="contenido" className="border-b border-rule">
         <div className="mx-auto max-w-[1240px] px-5 py-16 lg:px-8 lg:py-20">
-          <div className="max-w-[70ch]">
+          <Breadcrumbs
+            crumbs={[
+              { label: "Inicio", href: "/" },
+              { label: title, href }
+            ]}
+          />
+
+          <div className="mt-10 max-w-[70ch]">
             <h1 className="text-balance font-display text-4xl leading-tight text-ink md:text-5xl">
               {title}
             </h1>

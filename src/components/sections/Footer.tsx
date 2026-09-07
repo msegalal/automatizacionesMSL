@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { defaultContactEmail, legalLinks } from "@/lib/site-content";
+import { defaultContactEmail, legalLinks, navItems } from "@/lib/site-content";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -32,7 +32,24 @@ export default function Footer() {
           </Link>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-rule-strong pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <nav aria-label="Secciones" className="mt-12 border-t border-rule-strong pt-6">
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link href={`/${item.href}`} className="text-xs text-ink-soft hover:text-accent">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/casos/ireviajes" className="text-xs text-ink-soft hover:text-accent">
+                Caso iReViajes
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+        <div className="mt-6 flex flex-col gap-4 border-t border-rule pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-ink-faint">
             {year} automatizacionesMSL. Todos los derechos reservados.
           </p>

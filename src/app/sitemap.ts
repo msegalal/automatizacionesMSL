@@ -13,6 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1
     },
     {
+      url: `${siteUrl}/casos/ireviajes`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8
+    },
+    {
       url: `${siteUrl}/aviso-legal`,
       lastModified,
       changeFrequency: "yearly",

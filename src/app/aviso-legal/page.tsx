@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function AvisoLegalPage() {
   return (
-    <LegalPage title="Aviso legal" updatedAt="2026-09-07">
+    <LegalPage title="Aviso legal" href="/aviso-legal" updatedAt="2026-09-07">
       <h2>Titular del sitio</h2>
       <p>
         En cumplimiento de la Ley 34/2002 de servicios de la sociedad de la informacion y de

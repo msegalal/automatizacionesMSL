@@ -1,0 +1,204 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import SiteHeader from "@/components/sections/SiteHeader";
+import Footer from "@/components/sections/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { caseStudySchema } from "@/lib/schema";
+import { responseCommitment } from "@/lib/site-content";
+import casoWeb from "@/../public/caso-ireviajes-web.jpg";
+import casoFormulario from "@/../public/caso-ireviajes-formulario.jpg";
+
+export const metadata: Metadata = {
+  title: "Caso iReViajes: primera implantacion | automatizacionesMSL",
+  description:
+    "Como una agencia de viajes de Barcelona ordeno la entrada de solicitudes y el seguimiento comercial. Punto de partida, que se hizo y que queda por delante.",
+  alternates: { canonical: "/casos/ireviajes" },
+  robots: { index: true, follow: true }
+};
+
+const situacion = [
+  {
+    title: "Las consultas entraban por muchos sitios",
+    body: "Correo, telefono, formulario y mensajes sueltos. Cada via aterrizaba en un lugar distinto, asi que el contexto de cada solicitud habia que reconstruirlo a mano."
+  },
+  {
+    title: "El seguimiento dependia de acordarse",
+    body: "Sin una base comun, saber quien tenia que dar el siguiente paso y cuando exigia preguntar. Las oportunidades se enfriaban sin que nadie lo viera venir."
+  },
+  {
+    title: "La propuesta costaba de presentar",
+    body: "El trabajo estaba hecho, pero llegaba al cliente final en un formato que no ayudaba a decidir rapido."
+  }
+];
+
+const intervencion = [
+  {
+    step: "01",
+    title: "Ordenar la entrada",
+    body: "Un unico punto donde aterrizan las solicitudes con el contexto ya recogido, en lugar de repartidas entre bandejas."
+  },
+  {
+    step: "02",
+    title: "Hacer visible el siguiente paso",
+    body: "Cada oportunidad lleva estado y responsable, de forma que el seguimiento deja de depender de la memoria del equipo."
+  },
+  {
+    step: "03",
+    title: "Quitar los pasos repetitivos",
+    body: "Automatizacion ligera solo donde ahorraba tiempo de verdad: avisos, entradas y primeros pasos."
+  },
+  {
+    step: "04",
+    title: "Mejorar como se presenta",
+    body: "Web y formulario de cualificacion alineados para que la solicitud llegue completa y la propuesta se entienda antes."
+  }
+];
+
+export default function CasoIreViajesPage() {
+  return (
+    <>
+      <JsonLd data={caseStudySchema()} />
+      <SiteHeader />
+      <main id="contenido" className="border-b border-rule">
+        <div className="mx-auto max-w-[1240px] px-5 py-16 lg:px-8 lg:py-20">
+          <Breadcrumbs
+            crumbs={[
+              { label: "Inicio", href: "/" },
+              { label: "Caso iReViajes", href: "/casos/ireviajes" }
+            ]}
+          />
+
+          <div className="mt-10 max-w-[46rem]">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-accent">
+              Caso real
+            </p>
+            <h1 className="mt-6 max-w-[22ch] text-balance font-display text-4xl leading-[1.06] text-ink md:text-5xl lg:text-6xl">
+              La primera agencia que implanto la herramienta
+            </h1>
+            <p className="mt-6 max-w-[54ch] text-lg leading-8 text-ink-soft">
+              iReViajes es una agencia boutique de Barcelona con mas de treinta anos organizando
+              incentivos, congresos y viajes de empresa.
+            </p>
+          </div>
+
+          <figure className="mt-14 lg:mt-16">
+            <div className="border border-rule-strong">
+              <Image
+                src={casoWeb}
+                alt="Portada de la web de iReViajes con el titular principal y los accesos a servicios, agencia y contacto."
+                placeholder="blur"
+                priority
+                sizes="(max-width: 1240px) 100vw, 1176px"
+                className="block h-auto w-full"
+              />
+            </div>
+            <figcaption className="mt-3 text-sm leading-6 text-ink-faint">
+              La portada, con el mensaje y la llamada a la accion en la primera pantalla.
+            </figcaption>
+          </figure>
+
+          <section className="mt-20 border-t border-rule-strong pt-12">
+            <h2 className="max-w-[24ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
+              De donde se partia
+            </h2>
+            <dl className="mt-10 grid gap-x-16 gap-y-9 md:grid-cols-3">
+              {situacion.map((item) => (
+                <div key={item.title} className="border-t border-rule pt-5">
+                  <dt className="max-w-[30ch] font-display text-xl leading-snug text-ink">
+                    {item.title}
+                  </dt>
+                  <dd className="mt-3 text-sm leading-6 text-ink-soft">{item.body}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+
+          <section className="mt-20 border-t border-rule-strong pt-12">
+            <div className="grid gap-14 lg:grid-cols-[0.45fr_0.55fr] lg:gap-16">
+              <div>
+                <h2 className="max-w-[20ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
+                  Que se hizo
+                </h2>
+                <p className="mt-6 max-w-[46ch] text-base leading-7 text-ink-soft">
+                  El orden de las fases importa: primero se ordena la entrada, despues se hace
+                  visible el seguimiento y solo al final se automatiza. Automatizar sobre una
+                  operativa desordenada multiplica el desorden.
+                </p>
+
+                <figure className="mt-10">
+                  <div className="border border-rule-strong bg-canvas">
+                    <Image
+                      src={casoFormulario}
+                      alt="Formulario de cualificacion de iReViajes con la seleccion de destinos y los campos del proyecto de viaje."
+                      placeholder="blur"
+                      sizes="(max-width: 1024px) 100vw, 500px"
+                      className="block h-auto w-full"
+                    />
+                  </div>
+                  <figcaption className="mt-3 text-sm leading-6 text-ink-faint">
+                    El formulario de cualificacion recoge la solicitud ya ordenada.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <ol className="border-t border-rule-strong">
+                {intervencion.map((item) => (
+                  <li
+                    key={item.step}
+                    className="grid grid-cols-[3rem_1fr] gap-x-5 border-b border-rule py-7"
+                  >
+                    <span className="tabular font-display text-2xl leading-none text-accent">
+                      {item.step}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-xl leading-snug text-ink">{item.title}</h3>
+                      <p className="mt-2.5 max-w-[54ch] text-sm leading-6 text-ink-soft">
+                        {item.body}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </section>
+
+          <section className="mt-20 border-t border-rule-strong pt-12">
+            <h2 className="max-w-[26ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
+              Que significa esto para otra agencia
+            </h2>
+            <p className="mt-6 max-w-[62ch] text-base leading-7 text-ink-soft">
+              La base ya esta probada contra una operativa real, con sus excepciones y su forma
+              de trabajar. Eso reduce el riesgo de la siguiente implantacion: no se parte de una
+              demo, se parte de algo que ya sostiene el dia a dia de una agencia.
+            </p>
+            <p className="mt-4 max-w-[62ch] text-base leading-7 text-ink-soft">
+              Lo que cambia de una agencia a otra es donde esta el cuello de botella. Por eso el
+              punto de partida se decide despues de mirar el caso, no antes.
+            </p>
+
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/#contacto"
+                className="inline-flex items-center justify-center whitespace-nowrap border border-ink bg-ink px-7 py-4 text-sm font-medium text-canvas hover:border-accent hover:bg-accent"
+              >
+                Quiero ver si encaja
+              </Link>
+              <Link
+                href="/#servicios"
+                className="inline-flex items-center justify-center whitespace-nowrap border border-rule-strong px-7 py-4 text-sm font-medium text-ink hover:border-accent hover:text-accent"
+              >
+                Ver que incluye
+              </Link>
+            </div>
+            <p className="mt-4 text-sm leading-6 text-ink-faint">
+              Respondemos en {responseCommitment}.
+            </p>
+          </section>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}

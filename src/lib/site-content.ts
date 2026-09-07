@@ -1,5 +1,12 @@
 export const defaultContactEmail = "hola@automatizacionesmsl.com";
 
+/*
+  Compromiso de respuesta. Valor por defecto conservador puesto por Claude
+  el 2026-09-07: Marc no habia fijado ninguno. Cambiar aqui y se propaga a
+  la seccion de contacto, al FAQ, a la pagina de gracias y al aviso legal.
+*/
+export const responseCommitment = "menos de 24 horas laborables";
+
 /* Los anchors se mantienen estables: hay SEO y enlaces vivos apuntando aqui. */
 export const navItems = [
   { label: "Oferta", href: "#servicios" },
@@ -191,6 +198,11 @@ export const faqs = [
     question: "Se puede adaptar a otra forma de trabajar?",
     answer:
       "Si. La base ya esta validada en una primera agencia y esta planteada para ajustarse a equipos, volumenes y ritmos diferentes."
+  },
+  {
+    question: "Cuanto tardais en responder?",
+    answer:
+      "Respondemos en menos de 24 horas laborables. En esa primera respuesta ya te decimos si vemos encaje y por donde tendria sentido empezar."
   },
   {
     question: "Que pasa si aun no quiero automatizaciones avanzadas?",
