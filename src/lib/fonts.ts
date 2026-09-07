@@ -1,13 +1,16 @@
-import { Fraunces, Space_Grotesk } from "next/font/google";
+import { Instrument_Sans, Newsreader } from "next/font/google";
 
-export const fraunces = Fraunces({
+export const newsreader = Newsreader({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-fraunces"
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-display-src"
 });
 
-export const spaceGrotesk = Space_Grotesk({
+export const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-space-grotesk"
+  weight: ["400", "500", "600"],
+  variable: "--font-body-src"
 });

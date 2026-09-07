@@ -1,80 +1,143 @@
 @import "tailwindcss";
 
+/*
+  automatizacionesMSL - sistema de diseno
+  Restricciones duras del cliente que este archivo hace cumplir:
+  sin gradientes, sin sombras, sin glass, sin radios blandos,
+  sin orbes radiales, sin rejillas decorativas, sin animacion de hover,
+  sin blanco puro, sin neon, sin pasteles.
+*/
+
 :root {
-  --color-brand: #ff6e40;
-  --color-brand-dark: #e35b30;
-  --color-ink: #0e1a2b;
-  --color-deep: #081321;
-  --color-muted: #5f7084;
-  --color-soft: #efe6dc;
-  --color-panel: rgba(255, 255, 255, 0.74);
-  --shadow-soft: 0 24px 80px rgba(8, 19, 33, 0.14);
+  /* Superficies. Ninguna es blanco puro. */
+  --canvas:        #faf8f4;
+  --surface:       #f4f1ea;
+  --surface-alt:   #efebe2;
+  --contrast:      #1c1815;
+
+  /* Texto */
+  --ink:           #171310;
+  --ink-soft:      #4a423b;
+  --ink-faint:     #6f665d;
+  --on-contrast:   #f4f1ea;
+  --on-contrast-soft: #b3aaa0;
+
+  /* Un solo acento en toda la pagina. 5.2:1 sobre --canvas. */
+  --accent:        #b4471f;
+  --accent-strong: #8f3617;
+
+  /* Lineas. El unico recurso de separacion que queda. */
+  --rule:          #ddd5c8;
+  --rule-strong:   #c4b9a8;
+  --rule-contrast: #3a332d;
+
+  /* Estados de formulario. Desaturados, no pastel. */
+  --ok:            #2f5d3f;
+  --ok-surface:    #e8efe6;
+  --bad:           #8f2d2d;
+  --bad-surface:   #f4e7e5;
+
+  --font-display: var(--font-display-src), Georgia, "Times New Roman", serif;
+  --font-body:    var(--font-body-src), Helvetica, Arial, sans-serif;
 }
 
 @theme {
-  --color-brand: #ff6e40;
-  --color-brand-dark: #e35b30;
-  --color-black: #0e1a2b;
-  --color-dark: #081321;
-  --color-gray: #5f7084;
-  --color-subtle: #94a3b8;
-  --color-border: #dbe1e8;
-  --color-bg-soft: #efe6dc;
-  --color-ink: #0e1a2b;
-  --color-deep: #081321;
-  --color-muted: #5f7084;
-  --font-serif: var(--font-fraunces), "Fraunces", Georgia, serif;
-  --font-sans: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
+  --color-canvas:      #faf8f4;
+  --color-surface:     #f4f1ea;
+  --color-surface-alt: #efebe2;
+  --color-contrast:    #1c1815;
+  --color-ink:         #171310;
+  --color-ink-soft:    #4a423b;
+  --color-ink-faint:   #6f665d;
+  --color-on-contrast: #f4f1ea;
+  --color-on-contrast-soft: #b3aaa0;
+  --color-accent:      #b4471f;
+  --color-accent-strong: #8f3617;
+  --color-rule:        #ddd5c8;
+  --color-rule-strong: #c4b9a8;
+  --color-rule-contrast: #3a332d;
+  --color-ok:          #2f5d3f;
+  --color-ok-surface:  #e8efe6;
+  --color-bad:         #8f2d2d;
+  --color-bad-surface: #f4e7e5;
+
+  --font-display: var(--font-display-src), Georgia, "Times New Roman", serif;
+  --font-body:    var(--font-body-src), Helvetica, Arial, sans-serif;
+
+  /* Bloqueo de forma: radio 0 en todo el sistema. */
+  --radius-none: 0px;
 }
 
 html {
-  font-family: var(--font-sans);
-  color: var(--color-ink);
-  background-color: #fcfaf6;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background-color: var(--canvas);
   -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, rgba(255, 110, 64, 0.14), transparent 28%),
-    radial-gradient(circle at 88% 14%, rgba(148, 163, 184, 0.16), transparent 24%),
-    linear-gradient(180deg, #fffdf9 0%, #fbf8f3 100%);
+  min-height: 100dvh;
+  background-color: var(--canvas);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-serif);
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.015em;
 }
 
-a,
-button,
-input,
-textarea,
-select {
-  transition:
-    color 180ms ease,
-    background-color 180ms ease,
-    border-color 180ms ease,
-    opacity 180ms ease,
-    transform 180ms ease;
+/* Cifras alineadas en columnas de datos. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/*
+  Bloqueo de forma. Cualquier utilidad de radio que se cuele
+  queda anulada aqui para que el sistema no se rompa por descuido.
+*/
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* El focus ring es accesibilidad, no decoracion, y se queda. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 ::selection {
-  background: rgba(255, 110, 64, 0.22);
-  color: var(--color-deep);
+  background: var(--accent);
+  color: var(--canvas);
+}
+
+/* Sin animacion de hover: el cambio de estado es instantaneo. */
+a, button, input, textarea, select, summary {
+  transition: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--contrast);
+  color: var(--on-contrast);
+  padding: 0.75rem 1rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   *,
   *::before,
   *::after {
@@ -83,4 +146,55 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Prosa de las paginas legales. Sin plugin de tipografia. */
+.legal-body h2 {
+  font-size: 1.35rem;
+  line-height: 1.35;
+  margin-top: 2.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.legal-body h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.legal-body p,
+.legal-body li {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.legal-body p {
+  margin-top: 1rem;
+}
+
+.legal-body ul {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.legal-body li {
+  padding-left: 1rem;
+  border-left: 2px solid var(--rule);
+}
+
+.legal-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Dato que solo puede rellenar el cliente. Visible a proposito. */
+.pendiente {
+  background: var(--bad-surface);
+  color: var(--bad);
+  padding: 0.1rem 0.4rem;
+  font-weight: 500;
 }
