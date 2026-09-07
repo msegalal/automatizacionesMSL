@@ -8,7 +8,8 @@ const contactSchema = z.object({
   email: z.string().email(),
   empresa: z.string().min(1),
   interes: z.enum(["producto", "web", "automatizacion", "pack"]),
-  mensaje: z.string().min(20)
+  mensaje: z.string().min(20),
+  consentimiento: z.literal(true)
 });
 
 function escapeHtml(value: string): string {
