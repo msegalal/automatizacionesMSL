@@ -26,7 +26,7 @@ export default function NotFound() {
             <Link href="/#contacto"
               className="inline-flex items-center justify-center whitespace-nowrap border border-rule-strong px-7 py-4 text-sm font-medium text-ink hover:border-accent hover:text-accent"
             >
-              Quiero ver si encaja
+              Solicitar diagnostico
             </Link>
           </div>
 

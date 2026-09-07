@@ -32,7 +32,7 @@ export default function StickyMobileCta() {
           href="/#contacto"
           className="inline-flex shrink-0 items-center justify-center whitespace-nowrap border border-ink bg-ink px-5 py-3 text-sm font-medium text-canvas"
         >
-          Quiero ver si encaja
+          Solicitar diagnostico
         </Link>
       </div>
     </div>

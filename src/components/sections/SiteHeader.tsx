@@ -29,7 +29,7 @@ export default function SiteHeader() {
           href="/#contacto"
           className="border border-ink bg-ink px-4 py-2.5 text-sm font-medium text-canvas hover:border-accent hover:bg-accent"
         >
-          Quiero ver si encaja
+          Solicitar diagnostico
         </Link>
       </div>
     </header>

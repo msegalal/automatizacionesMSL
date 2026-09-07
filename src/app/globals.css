@@ -10,30 +10,31 @@
 
 :root {
   /* Superficies. Ninguna es blanco puro. */
-  --canvas:        #faf8f4;
-  --surface:       #f4f1ea;
-  --surface-alt:   #efebe2;
-  --contrast:      #1c1815;
+  --canvas:        #f6f3ed;
+  --surface:       #eef0ea;
+  --surface-alt:   #e7ece8;
+  --contrast:      #1e2422;
 
   /* Texto */
-  --ink:           #171310;
-  --ink-soft:      #4a423b;
-  --ink-faint:     #6f665d;
-  --on-contrast:   #f4f1ea;
-  --on-contrast-soft: #b3aaa0;
+  --ink:           #1d1b18;
+  --ink-soft:      #4a463f;
+  --ink-faint:     #6f6a60;
+  --on-contrast:   #f6f3ed;
+  --on-contrast-soft: #a9b3ad;
 
   /* Un solo acento en toda la pagina. 5.2:1 sobre --canvas. */
-  --accent:        #b4471f;
-  --accent-strong: #8f3617;
+  --accent:        #a54b2a;
+  --accent-strong: #83381d;
+  --state:         #245b4a;
 
   /* Lineas. El unico recurso de separacion que queda. */
-  --rule:          #ddd5c8;
-  --rule-strong:   #c4b9a8;
-  --rule-contrast: #3a332d;
+  --rule:          #e2dcd1;
+  --rule-strong:   #d7d0c5;
+  --rule-contrast: #38423e;
 
   /* Estados de formulario. Desaturados, no pastel. */
-  --ok:            #2f5d3f;
-  --ok-surface:    #e8efe6;
+  --ok:            #245b4a;
+  --ok-surface:    #e7ece8;
   --bad:           #8f2d2d;
   --bad-surface:   #f4e7e5;
 
@@ -42,22 +43,23 @@
 }
 
 @theme {
-  --color-canvas:      #faf8f4;
-  --color-surface:     #f4f1ea;
-  --color-surface-alt: #efebe2;
-  --color-contrast:    #1c1815;
-  --color-ink:         #171310;
-  --color-ink-soft:    #4a423b;
-  --color-ink-faint:   #6f665d;
-  --color-on-contrast: #f4f1ea;
-  --color-on-contrast-soft: #b3aaa0;
-  --color-accent:      #b4471f;
-  --color-accent-strong: #8f3617;
-  --color-rule:        #ddd5c8;
-  --color-rule-strong: #c4b9a8;
-  --color-rule-contrast: #3a332d;
-  --color-ok:          #2f5d3f;
-  --color-ok-surface:  #e8efe6;
+  --color-canvas:      #f6f3ed;
+  --color-surface:     #eef0ea;
+  --color-surface-alt: #e7ece8;
+  --color-contrast:    #1e2422;
+  --color-ink:         #1d1b18;
+  --color-ink-soft:    #4a463f;
+  --color-ink-faint:   #6f6a60;
+  --color-on-contrast: #f6f3ed;
+  --color-on-contrast-soft: #a9b3ad;
+  --color-accent:      #a54b2a;
+  --color-accent-strong: #83381d;
+  --color-state:       #245b4a;
+  --color-rule:        #e2dcd1;
+  --color-rule-strong: #d7d0c5;
+  --color-rule-contrast: #38423e;
+  --color-ok:          #245b4a;
+  --color-ok-surface:  #e7ece8;
   --color-bad:         #8f2d2d;
   --color-bad-surface: #f4e7e5;
 

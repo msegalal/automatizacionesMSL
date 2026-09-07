@@ -7,12 +7,13 @@ import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { contactOptions } from "@/lib/site-content";
 
 const contactSchema = z.object({
   nombre: z.string().min(1, "El nombre es obligatorio"),
   email: z.string().min(1, "El email es obligatorio").email("Introduce un email valido"),
   empresa: z.string().min(1, "La empresa es obligatoria"),
-  interes: z.enum(["producto", "web", "automatizacion", "pack"], {
+  interes: z.enum(["entrada", "seguimiento", "propuesta", "carga", "no_claro"], {
     error: "Selecciona el tipo de interes"
   }),
   mensaje: z.string().min(20, "Necesito un poco mas de contexto"),
@@ -118,7 +119,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-7">
       <div>
         <h3 className="font-display text-2xl leading-snug text-ink">
-          Cuentanos que problema quieres resolver
+          Solicitar diagnostico
         </h3>
       </div>
 
@@ -127,8 +128,8 @@ export default function ContactForm() {
 
         {status === "success" ? (
           <div className="border border-ok bg-ok-surface px-4 py-3 text-sm leading-6 text-ok">
-            Solicitud recibida. Si no hay integracion activa, la web prepara tambien el correo
-            para que puedas enviarlo igualmente.
+            Hemos recibido tu caso. Revisaremos el contexto y responderemos en menos de 24 h
+            laborables.
           </div>
         ) : null}
 
@@ -212,7 +213,7 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="interes" className={labelClass}>
-            Que quieres valorar primero
+            Que quieres revisar primero
           </label>
           <select
             id="interes"
@@ -224,10 +225,11 @@ export default function ContactForm() {
             <option value="" disabled>
               Selecciona una opcion
             </option>
-            <option value="producto">Herramienta</option>
-            <option value="web">Implantacion y propuesta</option>
-            <option value="automatizacion">Automatizacion</option>
-            <option value="pack">Pack completo</option>
+            {contactOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
           </select>
           {errors.interes ? <p className={errorClass}>{errors.interes.message}</p> : null}
         </div>
@@ -245,8 +247,8 @@ export default function ContactForm() {
             className={`${fieldClass} leading-7`}
           />
           <p id="mensaje-ayuda" className="mt-2 text-xs leading-5 text-ink-faint">
-            Explica si hoy el problema esta en captacion, seguimiento, orden interno, carga
-            manual o en como se presenta la propuesta.
+            Por ejemplo: las solicitudes entran por varios canales, no vemos el siguiente paso o
+            la propuesta tarda demasiado.
           </p>
           {errors.mensaje ? <p className={errorClass}>{errors.mensaje.message}</p> : null}
         </div>
@@ -279,7 +281,7 @@ export default function ContactForm() {
         disabled={status === "loading"}
         className="inline-flex w-full items-center justify-center border border-ink bg-ink px-7 py-4 text-sm font-medium text-canvas hover:border-accent hover:bg-accent disabled:cursor-not-allowed disabled:border-rule-strong disabled:bg-rule-strong disabled:text-ink-soft sm:w-auto"
       >
-        {status === "loading" ? "Enviando" : "Quiero ver si encaja"}
+        {status === "loading" ? "Enviando" : "Solicitar diagnostico"}
       </button>
     </form>
   );

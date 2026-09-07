@@ -2,11 +2,13 @@ import JsonLd from "@/components/JsonLd";
 import { faqSchema, organizationSchema, websiteSchema } from "@/lib/schema";
 import SiteHeader from "@/components/sections/SiteHeader";
 import Hero from "@/components/sections/Hero";
-import ImpactStats from "@/components/sections/ImpactStats";
-import Services from "@/components/sections/Services";
-import TrustGrid from "@/components/sections/TrustGrid";
-import ProductBlueprint from "@/components/sections/ProductBlueprint";
-import Process from "@/components/sections/Process";
+import FlowBand from "@/components/sections/FlowBand";
+import BeforeAfter from "@/components/sections/BeforeAfter";
+import Method from "@/components/sections/Method";
+import Offer from "@/components/sections/Offer";
+import CaseHighlight from "@/components/sections/CaseHighlight";
+import Indicators from "@/components/sections/Indicators";
+import About from "@/components/sections/About";
 import Faq from "@/components/sections/Faq";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/sections/Footer";
@@ -18,11 +20,13 @@ export default function HomePage() {
       <SiteHeader />
       <main id="contenido">
         <Hero />
-        <ImpactStats />
-        <Services />
-        <TrustGrid />
-        <ProductBlueprint />
-        <Process />
+        <FlowBand />
+        <BeforeAfter />
+        <Method />
+        <Offer />
+        <CaseHighlight />
+        <Indicators />
+        <About />
         <Faq />
         <ContactSection />
       </main>

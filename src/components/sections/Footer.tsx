@@ -28,7 +28,7 @@ export default function Footer() {
             href="/#contacto"
             className="inline-flex items-center justify-center whitespace-nowrap border border-ink bg-ink px-6 py-3.5 text-sm font-medium text-canvas hover:border-accent hover:bg-accent"
           >
-            Quiero ver si encaja
+            Solicitar diagnostico
           </Link>
         </div>
 

@@ -1,28 +1,39 @@
 import { faqs } from "@/lib/site-content";
 
 /*
-  Familia de layout: lista de definicion a dos columnas.
-  Sustituye al acordeon: sin apertura animada y todo el contenido
-  visible de golpe, que en cinco preguntas se lee antes.
+  Familia de layout: acordeon accesible con details y summary.
+  Nativo a proposito: el contenido queda en el HTML, es indexable,
+  se abre con teclado y no necesita JavaScript ni animacion.
 */
 export default function Faq() {
   return (
     <section id="faq" className="scroll-mt-4 border-b border-rule">
       <div className="mx-auto max-w-[1240px] px-5 py-20 lg:px-8 lg:py-24">
-        <h2 className="max-w-[24ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
-          Dudas habituales antes de implantar en otra agencia
-        </h2>
+        <div className="grid gap-12 lg:grid-cols-[0.34fr_0.66fr] lg:gap-16">
+          <h2 className="max-w-[16ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
+            Preguntas antes de empezar
+          </h2>
 
-        <dl className="mt-12 grid gap-x-16 gap-y-10 md:grid-cols-2">
-          {faqs.map((item) => (
-            <div key={item.question} className="border-t border-rule-strong pt-5">
-              <dt className="max-w-[38ch] font-display text-xl leading-snug text-ink">
-                {item.question}
-              </dt>
-              <dd className="mt-3 max-w-[52ch] text-sm leading-6 text-ink-soft">{item.answer}</dd>
-            </div>
-          ))}
-        </dl>
+          <div className="border-t border-rule-strong">
+            {faqs.map((item) => (
+              <details key={item.question} className="group border-b border-rule">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-5 text-left">
+                  <span className="max-w-[46ch] font-display text-lg leading-snug text-ink">
+                    {item.question}
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="mt-1 shrink-0 font-display text-xl leading-none text-accent"
+                  >
+                    <span className="group-open:hidden">+</span>
+                    <span className="hidden group-open:inline">&minus;</span>
+                  </span>
+                </summary>
+                <p className="max-w-[62ch] pb-6 text-sm leading-7 text-ink-soft">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
