@@ -20,8 +20,9 @@ export interface LegalIdentity {
 export const legalIdentity: LegalIdentity = {
   denominacion: "Marc Segalà Llorente",
   nif: "47423420L",
-  domicilio: "Gorina i Pujol 197",
-  /* Falta codigo postal y municipio. */
-  domicilioCompleto: false,
+  /* CP y municipio confirmados por Marc el 2026-09-08. El 08203 es de
+     Sabadell, no de Barcelona ciudad: Barcelona aqui es la provincia. */
+  domicilio: "Gorina i Pujol 197, 08203 Sabadell, Barcelona",
+  domicilioCompleto: true,
   nombreComercial: "automatizacionesMSL"
 };
