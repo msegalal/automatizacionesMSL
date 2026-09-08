@@ -152,3 +152,17 @@ select {
   font-weight: 600;
   padding: 0.1rem 0.4rem;
 }
+
+/*
+  Hueco inferior para la barra fija de movil. Sin esto, la barra tapa el
+  pie y el ultimo campo del formulario en pantallas pequenas.
+*/
+.tiene-cta-movil {
+  padding-bottom: 4.5rem;
+}
+
+@media (min-width: 1024px) {
+  .tiene-cta-movil {
+    padding-bottom: 0;
+  }
+}

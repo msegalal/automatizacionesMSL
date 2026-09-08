@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { fraunces, spaceGrotesk } from "@/lib/fonts";
 import { getSiteUrl } from "@/lib/site-url";
 import ConsentGate from "@/components/ConsentGate";
+import StickyMobileCta from "@/components/StickyMobileCta";
 import "./globals.css";
 
 const siteUrl = getSiteUrl();
@@ -42,8 +43,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${spaceGrotesk.variable} ${fraunces.variable} h-full antialiased`}>
-      <body className="min-h-full font-sans">
+      <body className="tiene-cta-movil min-h-full font-sans">
         {children}
+        <StickyMobileCta />
         <ConsentGate />
       </body>
     </html>

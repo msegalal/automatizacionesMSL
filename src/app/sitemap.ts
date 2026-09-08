@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1
     },
+    {
+      url: `${siteUrl}/casos/ireviajes`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.8
+    },
     ...legalRoutes.map((route) => ({
       url: `${siteUrl}${route}`,
       lastModified,

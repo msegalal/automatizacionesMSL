@@ -95,32 +95,39 @@ export const productModules = [
   }
 ];
 
+/*
+  Indicadores sin cifra. Los antiguos 40, 65, 3x y 30 se retiran porque no
+  tienen periodo, linea base ni fuente, y el aviso legal afirma que no se
+  publican porcentajes sin medicion documentada. No reincorporarlos sin ella.
+*/
 export const impactStats = [
   {
-    value: "40%",
-    prefix: "Hasta",
-    title: "menos carga manual",
-    body: "Automatizamos pasos repetitivos para que el equipo dedique mas tiempo a vender, atender y hacer seguimiento."
+    prefix: "entrada",
+    title: "Solicitudes completas",
+    body: "Los datos que hacen falta se piden en la entrada, no tres correos despues."
   },
   {
-    value: "65%",
-    prefix: "Hasta",
-    title: "menos tiempo de respuesta",
-    body: "La entrada de solicitudes y los avisos llegan mejor ordenados para responder antes a cada consulta."
+    prefix: "seguimiento",
+    title: "Siguiente paso visible",
+    body: "Cada oportunidad muestra en que fase esta y que accion queda pendiente."
   },
   {
-    value: "3x",
-    prefix: "Hasta",
-    title: "mas capacidad de seguimiento",
-    body: "Con una operativa mas clara, cada persona puede mover muchas mas oportunidades sin perder control."
+    prefix: "reparto",
+    title: "Responsable asignado",
+    body: "Nadie tiene que preguntar a quien le toca mover un expediente."
   },
   {
-    value: "30%",
-    prefix: "Hasta",
-    title: "mas estabilidad comercial",
-    body: "Cuando el proceso esta mejor organizado, se pierden menos oportunidades por olvidos, retrasos o desorden."
+    prefix: "automatizacion",
+    title: "Avisos pertinentes",
+    body: "Solo se automatiza el paso que quita trabajo manual, no todo el proceso."
   }
 ];
+
+export const impactNote =
+  "No publicamos porcentajes de mejora porque todavia no tenemos una medicion con periodo y linea base que los respalde.";
+
+/* Compromiso de respuesta, confirmado por Marc el 2026-09-07. Fuente unica. */
+export const responseCommitment = "menos de 24 h laborables";
 
 export const fitCards = [
   {

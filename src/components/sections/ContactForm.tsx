@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -37,6 +38,7 @@ type ContactApiResponse =
   | { success: false; error?: string };
 
 export default function ContactForm() {
+  const router = useRouter();
   const [status, setStatus] = useState<FormStatus>("idle");
   const [fallbackDelivery, setFallbackDelivery] = useState<FallbackDelivery | null>(null);
 
@@ -64,6 +66,17 @@ export default function ContactForm() {
 
       if (json.success) {
         setStatus("success");
+
+        /*
+         * Con envio real llevamos a /gracias, que explica que pasa ahora.
+         * Con la alternativa manual no: ahi el usuario todavia tiene que
+         * abrir su correo, asi que la pantalla debe quedarse donde esta.
+         */
+        if (json.delivery === "resend") {
+          reset();
+          router.push("/gracias");
+          return;
+        }
 
         if (json.delivery === "mailto") {
           const fallback = {

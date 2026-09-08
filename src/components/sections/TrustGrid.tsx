@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { caseStudy, trustPoints } from "@/lib/site-content";
 
 export default function TrustGrid() {
@@ -27,12 +28,20 @@ export default function TrustGrid() {
               ))}
             </ul>
 
-            <a
-              href="#servicios"
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition-transform hover:-translate-y-0.5 hover:text-orange-500"
-            >
-              Ver que incluye
-            </a>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/casos/ireviajes"
+                className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition-transform hover:-translate-y-0.5 hover:text-orange-500"
+              >
+                Ver el caso completo
+              </Link>
+              <a
+                href="#servicios"
+                className="inline-flex items-center justify-center rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-orange-300 hover:text-orange-300"
+              >
+                Ver que incluye
+              </a>
+            </div>
           </article>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-1">

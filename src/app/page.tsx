@@ -1,3 +1,5 @@
+import JsonLd from "@/components/JsonLd";
+import { organizationSchema, websiteSchema, faqSchema } from "@/lib/schema";
 import Hero from "@/components/sections/Hero";
 import TrustGrid from "@/components/sections/TrustGrid";
 import Services from "@/components/sections/Services";
@@ -11,6 +13,7 @@ import Footer from "@/components/sections/Footer";
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={[organizationSchema(), websiteSchema(), faqSchema()]} />
       <main className="overflow-hidden">
         <Hero />
         <ImpactStats />

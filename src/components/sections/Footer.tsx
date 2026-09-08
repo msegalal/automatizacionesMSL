@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { legalIdentity } from "@/lib/legal";
 
+const siteLinks = [{ href: "/casos/ireviajes", label: "Caso iReViajes" }];
+
 const legalLinks = [
   { href: "/aviso-legal", label: "Aviso legal" },
   { href: "/privacidad", label: "Politica de privacidad" },
@@ -30,9 +32,9 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-3 border-t border-white/70 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <nav aria-label="Enlaces legales">
+          <nav aria-label="Enlaces del sitio">
             <ul className="flex flex-wrap gap-x-6 gap-y-2">
-              {legalLinks.map((link) => (
+              {[...siteLinks, ...legalLinks].map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
