@@ -1,14 +1,9 @@
-import JsonLd from "@/components/JsonLd";
-import { faqSchema, organizationSchema, websiteSchema } from "@/lib/schema";
-import SiteHeader from "@/components/sections/SiteHeader";
 import Hero from "@/components/sections/Hero";
-import FlowBand from "@/components/sections/FlowBand";
-import BeforeAfter from "@/components/sections/BeforeAfter";
-import Method from "@/components/sections/Method";
-import Offer from "@/components/sections/Offer";
-import CaseHighlight from "@/components/sections/CaseHighlight";
-import Indicators from "@/components/sections/Indicators";
-import About from "@/components/sections/About";
+import TrustGrid from "@/components/sections/TrustGrid";
+import Services from "@/components/sections/Services";
+import ProductBlueprint from "@/components/sections/ProductBlueprint";
+import ImpactStats from "@/components/sections/ImpactStats";
+import Process from "@/components/sections/Process";
 import Faq from "@/components/sections/Faq";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/sections/Footer";
@@ -16,17 +11,13 @@ import Footer from "@/components/sections/Footer";
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={[organizationSchema(), websiteSchema(), faqSchema()]} />
-      <SiteHeader />
-      <main id="contenido">
+      <main className="overflow-hidden">
         <Hero />
-        <FlowBand />
-        <BeforeAfter />
-        <Method />
-        <Offer />
-        <CaseHighlight />
-        <Indicators />
-        <About />
+        <ImpactStats />
+        <Services />
+        <TrustGrid />
+        <ProductBlueprint />
+        <Process />
         <Faq />
         <ContactSection />
       </main>

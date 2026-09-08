@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { instrumentSans, newsreader } from "@/lib/fonts";
+import { fraunces, spaceGrotesk } from "@/lib/fonts";
 import { getSiteUrl } from "@/lib/site-url";
-import ConsentGate from "@/components/ConsentGate";
-import StickyMobileCta from "@/components/StickyMobileCta";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 
 const siteUrl = getSiteUrl();
 const siteTitle = "automatizacionesMSL | Herramientas para agencias de viajes";
 const siteDescription =
-  "Herramienta, implantacion y automatizacion para agencias de viajes que quieren menos carga manual, mejor seguimiento y mas control operativo.";
+  "AutomatizacionesMSL ofrece herramienta, implantacion y automatizacion util para agencias de viajes que quieren menos carga manual, mejor seguimiento y mas control operativo.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -42,17 +41,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="es"
-      className={`${instrumentSans.variable} ${newsreader.variable} h-full`}
-    >
-      <body className="min-h-full pb-[4.25rem] lg:pb-0">
-        <a href="#contenido" className="skip-link">
-          Saltar al contenido
-        </a>
+    <html lang="es" className={`${spaceGrotesk.variable} ${fraunces.variable} h-full antialiased`}>
+      <body className="min-h-full font-sans">
         {children}
-        <StickyMobileCta />
-        <ConsentGate />
+        <GoogleAnalytics />
       </body>
     </html>
   );

@@ -11,6 +11,3 @@ yarn-error.log*
 pnpm-debug.log*
 dist
 coverage
-
-# build info de TypeScript
-tsconfig.tsbuildinfo

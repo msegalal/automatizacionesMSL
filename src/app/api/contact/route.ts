@@ -7,9 +7,8 @@ const contactSchema = z.object({
   nombre: z.string().min(1),
   email: z.string().email(),
   empresa: z.string().min(1),
-  interes: z.enum(["entrada", "seguimiento", "propuesta", "carga", "no_claro"]),
-  mensaje: z.string().min(20),
-  consentimiento: z.literal(true)
+  interes: z.enum(["producto", "web", "automatizacion", "pack"]),
+  mensaje: z.string().min(20)
 });
 
 function escapeHtml(value: string): string {
@@ -22,11 +21,10 @@ function escapeHtml(value: string): string {
 }
 
 const interestLabels = {
-  entrada: "Entrada de solicitudes",
-  seguimiento: "Seguimiento comercial",
-  propuesta: "Propuesta al cliente",
-  carga: "Carga manual",
-  no_claro: "No lo tiene claro"
+  producto: "Propuesta y producto",
+  web: "Web comercial",
+  automatizacion: "Automatizacion",
+  pack: "Pack completo"
 } as const;
 
 function buildSummary(data: z.infer<typeof contactSchema>) {

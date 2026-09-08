@@ -1,54 +1,56 @@
 import ContactForm from "@/components/sections/ContactForm";
-import { defaultContactEmail, responseCommitment } from "@/lib/site-content";
+import { defaultContactEmail } from "@/lib/site-content";
 
-/* Familia de layout: contexto a la izquierda, formulario a la derecha. */
 export default function ContactSection() {
   return (
-    <section id="contacto" className="scroll-mt-4 border-b border-rule bg-surface">
-      <div className="mx-auto grid max-w-[1240px] gap-14 px-5 py-20 lg:grid-cols-[0.42fr_0.58fr] lg:gap-16 lg:px-8 lg:py-24">
-        <div>
-          <h2 className="max-w-[20ch] text-balance font-display text-3xl leading-[1.12] text-ink md:text-4xl">
-            Cuentanos donde se pierde hoy el seguimiento
+    <section id="contacto" className="scroll-mt-24 px-6 pb-24 pt-10">
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="rounded-[2.4rem] bg-slate-950 px-6 py-8 text-white md:px-8 md:py-10">
+          <div className="mb-6 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-300">
+            propuesta
+          </p>
+          <h2 className="mt-4 text-balance text-4xl font-semibold text-white md:text-5xl">
+            Cuentanos tu caso y te diremos si encaja con tu agencia.
           </h2>
-          <p className="mt-6 max-w-[50ch] text-lg leading-8 text-ink-soft">
-            En {responseCommitment} te diremos si vemos encaje y por donde tendria sentido
-            empezar.
+          <p className="mt-5 max-w-xl text-base leading-8 text-white/72">
+            Revisamos si necesitas herramienta, implantacion, automatizacion o un pack completo.
+            Y si aun no tienes integraciones activas, el contacto sigue funcionando por email sin
+            perder oportunidades.
           </p>
 
-          <dl className="mt-10 border-t border-rule">
-            <div className="border-b border-rule py-5">
-              <dt className="text-xs font-medium uppercase tracking-[0.16em] text-ink-faint">
-                Que recibes en la primera respuesta
-              </dt>
-              <dd className="mt-2 max-w-[46ch] text-sm leading-6 text-ink-soft">
-                Lectura del problema, recomendacion de punto de partida y siguiente paso.
-              </dd>
-            </div>
-            <div className="border-b border-rule py-5">
-              <dt className="text-xs font-medium uppercase tracking-[0.16em] text-ink-faint">
-                Que no incluye
-              </dt>
-              <dd className="mt-2 max-w-[46ch] text-sm leading-6 text-ink-soft">
-                No es una auditoria formal ni una demo del sistema. Es una lectura de encaje.
-              </dd>
-            </div>
-            <div className="border-b border-rule py-5">
-              <dt className="text-xs font-medium uppercase tracking-[0.16em] text-ink-faint">
+          <div className="mt-10 space-y-4">
+            <a
+              href={`mailto:${defaultContactEmail}`}
+              className="block rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4 transition-colors hover:bg-white/12"
+            >
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-300">
                 Email
-              </dt>
-              <dd className="mt-2">
-                <a
-                  href={`mailto:${defaultContactEmail}`}
-                  className="text-base text-ink hover:text-accent"
-                >
-                  {defaultContactEmail}
-                </a>
-              </dd>
+              </p>
+              <p className="mt-2 text-sm leading-6 text-white/84">{defaultContactEmail}</p>
+            </a>
+            <div className="rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-300">
+                Que recibes
+              </p>
+              <p className="mt-2 text-sm leading-6 text-white/84">
+                Una orientacion clara sobre encaje, punto de partida y formato de propuesta mas
+                recomendable.
+              </p>
             </div>
-          </dl>
+            <div className="rounded-[1.5rem] border border-white/12 bg-white/7 px-4 py-4">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-orange-300">
+                Que revisamos
+              </p>
+              <p className="mt-2 text-sm leading-6 text-white/84">
+                Captacion, seguimiento, carga manual y forma de presentar la herramienta a tus
+                clientes.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="border border-rule-strong bg-canvas p-6 md:p-9">
+        <div className="rounded-[2.4rem] border border-white/75 bg-white/78 px-5 py-6 shadow-[0_24px_80px_rgba(8,19,33,0.1)] backdrop-blur-xl md:px-8 md:py-8">
           <ContactForm />
         </div>
       </div>
