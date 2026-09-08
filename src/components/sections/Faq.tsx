@@ -10,7 +10,7 @@ export default function Faq() {
     <section id="faq" className="scroll-mt-4 border-b border-rule">
       <div className="mx-auto max-w-[1240px] px-5 py-20 lg:px-8 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-[0.34fr_0.66fr] lg:gap-16">
-          <h2 className="max-w-[16ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
+          <h2 className="section-title max-w-[16ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
             Preguntas antes de empezar
           </h2>
 

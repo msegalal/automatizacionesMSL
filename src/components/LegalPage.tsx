@@ -11,7 +11,12 @@ interface LegalPageProps {
   children: ReactNode;
 }
 
-export default function LegalPage({ title, href, updatedAt, children }: LegalPageProps) {
+export default function LegalPage({
+  title,
+  href,
+  updatedAt,
+  children,
+}: LegalPageProps) {
   return (
     <>
       <SiteHeader />
@@ -20,17 +25,22 @@ export default function LegalPage({ title, href, updatedAt, children }: LegalPag
           <Breadcrumbs
             crumbs={[
               { label: "Inicio", href: "/" },
-              { label: title, href }
+              { label: title, href },
             ]}
           />
 
-          <div className="mt-10 max-w-[70ch]">
-            <h1 className="text-balance font-display text-4xl leading-tight text-ink md:text-5xl">
-              {title}
-            </h1>
-            <p className="mt-4 text-sm text-ink-faint">Ultima actualizacion: {updatedAt}</p>
+          <div className="legal-layout mt-10">
+            <div className="legal-heading">
+              <p className="eyebrow mb-6">Información y transparencia</p>
+              <h1 className="text-balance font-display text-4xl leading-tight text-ink md:text-5xl">
+                {title}
+              </h1>
+              <p className="mt-4 text-sm text-ink-faint">
+                Última actualización: {updatedAt}
+              </p>
+            </div>
 
-            <div className="legal-body mt-12">{children}</div>
+            <div className="legal-body">{children}</div>
 
             <Link
               href="/"

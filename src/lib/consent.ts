@@ -6,6 +6,33 @@ export type ConsentValue = "granted" | "denied";
 export const CONSENT_UNKNOWN = "unknown";
 export type ConsentState = ConsentValue | null | typeof CONSENT_UNKNOWN;
 
+let memoryConsent: ConsentValue | null = null;
+
+export function disableAnalytics(gaId: string | undefined): void {
+  if (typeof window === "undefined") return;
+  if (gaId)
+    (window as unknown as Record<string, unknown>)[`ga-disable-${gaId}`] = true;
+  // Clear GA's first-party cookies on the current host and possible parent domains.
+  const hostParts = window.location.hostname.split(".");
+  const domains = [
+    "",
+    ...hostParts.map(
+      (_, index) => `; domain=${hostParts.slice(index).join(".")}`,
+    ),
+  ];
+  document.cookie.split(";").forEach((cookie) => {
+    const name = cookie.split("=")[0].trim();
+    if (!/^_ga(?:_|$)/.test(name)) return;
+    domains.forEach((domain) => {
+      document.cookie = `${name}=; Max-Age=0; path=/${domain}; SameSite=Lax`;
+    });
+  });
+}
+
+export function enableAnalytics(gaId: string): void {
+  (window as unknown as Record<string, unknown>)[`ga-disable-${gaId}`] = false;
+}
+
 /*
  * El consentimiento vive solo en el navegador de quien visita.
  * Cualquier acceso va envuelto porque en modo privado o con el
@@ -20,7 +47,7 @@ export function readConsent(): ConsentValue | null {
     const stored = window.localStorage.getItem(CONSENT_STORAGE_KEY);
     return stored === "granted" || stored === "denied" ? stored : null;
   } catch {
-    return null;
+    return memoryConsent;
   }
 }
 
@@ -55,16 +82,20 @@ export function getConsentServerSnapshot(): ConsentState {
 }
 
 export function writeConsent(value: ConsentValue): void {
+  memoryConsent = value;
+  if (value === "denied") disableAnalytics(process.env.NEXT_PUBLIC_GA_ID);
   try {
     window.localStorage.setItem(CONSENT_STORAGE_KEY, value);
   } catch {
-    // Sin almacenamiento disponible el aviso reaparecera. Es el fallo seguro.
+    // Honor the current choice in memory even when persistence is blocked.
   }
 
   emit();
 }
 
 export function clearConsent(): void {
+  disableAnalytics(process.env.NEXT_PUBLIC_GA_ID);
+  memoryConsent = null;
   try {
     window.localStorage.removeItem(CONSENT_STORAGE_KEY);
   } catch {

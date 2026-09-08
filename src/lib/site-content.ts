@@ -5,9 +5,9 @@ export const responseCommitment = "menos de 24 h laborables";
 
 /* Los ids de ancla se mantienen: hay enlaces vivos apuntando a ellos. */
 export const navItems = [
-  { label: "Que resuelve", href: "#producto" },
-  { label: "Metodo", href: "#proceso" },
-  { label: "Que incluye", href: "#servicios" },
+  { label: "Qué resuelve", href: "#producto" },
+  { label: "Método", href: "#proceso" },
+  { label: "Qué incluye", href: "#servicios" },
   { label: "Caso iReViajes", href: "#prueba" },
   { label: "Preguntas", href: "#faq" }
 ];
@@ -19,8 +19,9 @@ export const legalLinks = [
 ];
 
 export const hero = {
-  eyebrow: "Automatizacion para agencias de viajes",
-  title: "Cada solicitud clara. Cada oportunidad con siguiente paso.",
+  eyebrow: "Automatización para agencias de viajes",
+  titleLead: "Cada solicitud, clara.",
+  titleAccent: "Cada oportunidad, con siguiente paso.",
   subtitle:
     "Ordenamos la entrada, el seguimiento y los avisos de tu agencia para que el equipo responda antes y deje de depender de mensajes, notas y memoria.",
   microcopy: `Te respondemos en ${responseCommitment} con un punto de partida concreto.`,
@@ -47,48 +48,48 @@ export const flowSteps = [
   },
   {
     step: "Propuesta",
-    body: "El equipo llega antes y con mas contexto al cliente."
+    body: "El equipo llega antes y con más contexto al cliente."
   }
 ];
 
-export const flowNote = "La automatizacion llega despues de ordenar la operativa.";
+export const flowNote = "La automatización llega después de ordenar la operativa.";
 
 export const beforeAfter = {
   before: {
     label: "Antes",
-    channels: ["Correo", "Telefono", "WhatsApp", "Formulario", "Notas sueltas"],
-    body: "La informacion se reconstruye a mano y cada seguimiento depende de acordarse."
+    channels: ["Correo", "Teléfono", "WhatsApp", "Formulario", "Notas sueltas"],
+    body: "La información se reconstruye a mano y cada seguimiento depende de acordarse."
   },
   after: {
-    label: "Despues",
+    label: "Después",
     fields: ["Ficha de oportunidad", "Responsable", "Estado", "Siguiente paso", "Aviso"],
-    body: "La agencia ve el contexto, quien actua y que toca hacer despues."
+    body: "La agencia ve el contexto, quién actúa y qué toca hacer después."
   }
 };
 
 export const microcases = [
-  "Una solicitud de incentivo llega sin numero de asistentes.",
+  "Una solicitud de incentivo llega sin número de asistentes.",
   "Un viaje de empresa queda pendiente de respuesta tras una llamada.",
   "Una propuesta necesita seguirse sin preguntar a todo el equipo."
 ];
 
 /*
-  Indicadores operativos. Sustituyen a los porcentajes que habia antes:
-  no habia fuente, periodo ni linea base que los respaldara. Decision
+  Indicadores operativos. Sustituyen a los porcentajes que había antes:
+  no había fuente, periodo ni línea base que los respaldara. Decisión
   de Marc el 2026-09-07 tras la auditoria.
 */
 export const indicators = [
   {
     title: "Solicitudes completas",
-    body: "Los datos que hacen falta se piden en la entrada, no tres correos despues."
+    body: "Los datos que hacen falta se piden en la entrada, no tres correos después."
   },
   {
     title: "Siguiente paso visible",
-    body: "Cada oportunidad muestra en que fase esta y que accion queda pendiente."
+    body: "Cada oportunidad muestra en qué fase está y qué acción queda pendiente."
   },
   {
     title: "Responsable asignado",
-    body: "Nadie tiene que preguntar a quien le toca mover un expediente."
+    body: "Nadie tiene que preguntar a quién le toca mover un expediente."
   },
   {
     title: "Avisos pertinentes",
@@ -97,161 +98,153 @@ export const indicators = [
 ];
 
 export const indicatorsNote =
-  "No publicamos porcentajes de mejora porque todavia no tenemos una medicion con periodo y linea base que los respalde.";
+  "No publicamos porcentajes de mejora porque todavía no tenemos una medición con periodo y línea base que los respalde.";
 
 export const methodSteps = [
   {
     step: "01",
-    title: "Mapeamos el punto de perdida",
-    body: "Identificamos donde se rompe hoy: la captacion, la respuesta, el seguimiento o la propuesta."
+    title: "Mapeamos el punto de pérdida",
+    body: "Identificamos dónde se rompe hoy: la captación, la respuesta, el seguimiento o la propuesta."
   },
   {
     step: "02",
     title: "Ordenamos la entrada",
-    body: "Definimos que informacion debe llegar completa y en que unico sitio se centraliza."
+    body: "Definimos qué información debe llegar completa y en qué único sitio se centraliza."
   },
   {
     step: "03",
     title: "Hacemos visible el seguimiento",
-    body: "Cada oportunidad pasa a tener estado, responsable y siguiente accion."
+    body: "Cada oportunidad pasa a tener estado, responsable y siguiente acción."
   },
   {
     step: "04",
     title: "Automatizamos solo lo repetitivo",
-    body: "Avisos, entradas y primeros pasos, cuando reducen trabajo manual sin anadir complejidad."
+    body: "Avisos, entradas y primeros pasos, cuando reducen trabajo manual sin añadir complejidad."
   }
 ];
 
-/* Oferta como tabla de decision. Incluye que NO cubre cada opcion. */
-export const offerColumns = ["Herramienta", "Implantacion", "Automatizacion"] as const;
+/* Oferta como tabla de decisión. Incluye que NO cubre cada opcion. */
+export const offerColumns = ["Herramienta", "Implantación", "Automatización"] as const;
 
 export const offerRows = [
   {
-    label: "Para que sirve",
+    label: "Para qué sirve",
     values: [
-      "Ordenar operativa y seguimiento en un unico sitio.",
-      "Adaptar esa base a como trabaja tu agencia de verdad.",
+      "Ordenar operativa y seguimiento en un único sitio.",
+      "Adaptar esa base a cómo trabaja tu agencia de verdad.",
       "Quitar los pasos repetitivos que no aportan criterio."
     ]
   },
   {
-    label: "Que se configura",
+    label: "Qué se configura",
     values: [
       "Fases, estados, responsables y ficha de oportunidad.",
       "Campos de entrada, permisos y forma de uso del equipo.",
-      "Avisos, entradas automaticas y primeros pasos."
+      "Avisos, entradas automáticas y primeros pasos."
     ]
   },
   {
-    label: "Que recibe el equipo",
+    label: "Qué recibe el equipo",
     values: [
-      "Una vista comun de todo lo que esta en marcha.",
+      "Una vista común de todo lo que está en marcha.",
       "Una forma de trabajar acordada, no impuesta.",
-      "Menos tareas manuales en los puntos de mas friccion."
+      "Menos tareas manuales en los puntos de más fricción."
     ]
   },
   {
-    label: "Cuando conviene",
+    label: "Cuándo conviene",
     values: [
-      "El trabajo esta repartido entre bandejas y notas.",
+      "El trabajo está repartido entre bandejas y notas.",
       "Ya hay una base, pero cada persona la usa distinto.",
-      "El proceso esta ordenado y aun sobra trabajo manual."
+      "El proceso está ordenado y aún sobra trabajo manual."
     ]
   },
   {
-    label: "Que no incluye",
+    label: "Qué no incluye",
     values: [
-      "Migrar historico ni sustituir tu sistema de reservas.",
-      "Formacion continua mas alla de la puesta en marcha.",
-      "Automatizar decisiones comerciales ni contacto en frio."
+      "Migrar histórico ni sustituir tu sistema de reservas.",
+      "Formación continua más allá de la puesta en marcha.",
+      "Automatizar decisiones comerciales ni contacto en frío."
     ]
   }
 ];
 
 export const offerFallback = {
-  title: "Diagnostico primero",
-  body: "Si no tienes claro cual de las tres necesitas, empieza por aqui. Miramos el caso y te decimos por donde tendria sentido empezar, sin compromiso."
+  title: "Diagnóstico primero",
+  body: "Si no tienes claro cuál de las tres necesitas, empieza por aquí. Miramos el caso y te decimos por dónde tendría sentido empezar, sin compromiso."
 };
 
 export const caseStudy = {
   kicker: "Caso real · iReViajes",
-  title: "Una primera implantacion en una agencia que trabaja con viajes complejos",
+  title: "Una primera implantación en una agencia que trabaja con viajes complejos",
   body:
-    "iReViajes, agencia boutique de Barcelona con mas de treinta anos organizando incentivos, congresos y viajes de empresa, partia de consultas dispersas y un seguimiento dificil de visualizar.",
+    "iReViajes, agencia boutique de Barcelona con más de treinta años organizando incentivos, congresos y viajes de empresa, partía de consultas dispersas y un seguimiento difícil de visualizar.",
   blocks: [
     {
-      label: "Situacion inicial",
-      body: "Cuatro canales de entrada, contexto reconstruido a mano y seguimiento que dependia de la memoria del equipo."
+      label: "Situación inicial",
+      body: "Cuatro canales de entrada, contexto reconstruido a mano y seguimiento que dependía de la memoria del equipo."
     },
     {
-      label: "Intervencion",
+      label: "Intervención",
       body: "Formulario cualificado, ficha de oportunidad con responsable y estado, avisos donde ahorran tiempo y propuesta alineada."
     },
     {
       label: "Resultado",
-      body: "La primera implantacion valido el metodo en una operativa real. Los indicadores cuantitativos se publicaran cuando esten documentados."
+      body: "La primera implantación validó el método en una operativa real. Los indicadores cuantitativos se publicarán cuando estén documentados."
     }
   ]
 };
 
 /* Quien hay detras. Solo lo que se puede afirmar. */
 export const aboutBlock = {
-  title: "Quien esta detras",
+  title: "Quién está detrás",
   body:
-    "automatizacionesMSL lo lleva Marc Segala, que trabaja directamente con la agencia en cada implantacion. No hay capas intermedias ni un equipo de cuentas: hablas con quien configura la herramienta.",
+    "automatizacionesMSL lo lleva Marc Segalà, que trabaja directamente con la agencia en cada implantación. No hay capas intermedias ni un equipo de cuentas: hablas con quien configura la herramienta.",
   points: [
     {
-      title: "Un interlocutor unico",
-      body: "La misma persona hace el diagnostico, la implantacion y el seguimiento posterior."
+      title: "Un interlocutor único",
+      body: "La misma persona hace el diagnóstico, la implantación y el seguimiento posterior."
     },
     {
       title: "Por fases, no de golpe",
-      body: "Se empieza por el punto que mas duele y se amplia solo cuando aporta valor."
+      body: "Se empieza por el punto que más duele y se amplía solo cuando aporta valor."
     },
     {
       title: "Sin datos de terceros",
-      body: "Las capturas publicas de esta web usan datos inventados. Los de tu agencia no salen de aqui."
+      body: "Las capturas públicas de esta web usan datos inventados. Los datos reales de clientes se mantienen fuera del material público."
     }
   ]
 };
 
 export const faqs = [
   {
-    question: "iReViajes es el producto?",
+    question: "¿iReViajes es el producto?",
     answer:
-      "No. iReViajes es la primera agencia que compro esta herramienta y se usa como caso real de partida. El producto es automatizacionesMSL."
+      "iReViajes es la primera agencia que compró esta herramienta y se usa como caso real de partida. El producto es automatizacionesMSL."
   },
   {
-    question: "Que se contrata exactamente?",
+    question: "¿Qué se contrata exactamente?",
     answer:
-      "Herramienta, implantacion, automatizacion o una combinacion de las tres. Si no lo tienes claro, se empieza por un diagnostico y se decide despues."
+      "Herramienta, implantación, automatización o una combinación de las tres. Si no lo tienes claro, se empieza por un diagnóstico y se decide después."
   },
   {
-    question: "Cuanto hay que cambiar dentro de la agencia?",
+    question: "¿Cuánto hay que cambiar dentro de la agencia?",
     answer:
-      "Se parte de como trabajais hoy y se toca primero el punto donde mas valor aporta. No hay que rehacer la operativa para empezar."
+      "Se parte de cómo trabajáis hoy y se toca primero el punto donde más valor aporta. No hay que rehacer la operativa para empezar."
   },
   {
-    question: "Se adapta a otra forma de trabajar?",
+    question: "¿Se adapta a otra forma de trabajar?",
     answer:
-      "Si. Las fases, los estados y los campos de entrada se definen con la agencia, porque el cuello de botella no esta en el mismo sitio en todas."
+      "Sí. Las fases, los estados y los campos de entrada se definen con la agencia, porque el cuello de botella no está en el mismo sitio en todas."
   },
   {
-    question: "Cuando tiene sentido automatizar?",
+    question: "¿Cuándo tiene sentido automatizar?",
     answer:
-      "Cuando la entrada y el seguimiento ya estan ordenados. Automatizar sobre una operativa desordenada multiplica el desorden en lugar de reducirlo."
+      "Cuando la entrada y el seguimiento ya están ordenados. Automatizar sobre una operativa desordenada multiplica el desorden en lugar de reducirlo."
   },
   {
-    question: "Cuando respondeis?",
+    question: "¿Cuándo respondéis?",
     answer:
-      "En menos de 24 h laborables, con una lectura del caso y una recomendacion de punto de partida."
+      `En ${responseCommitment}, con una lectura del caso y una recomendación de punto de partida.`
   }
 ];
-
-export const contactOptions = [
-  { value: "entrada", label: "Entrada de solicitudes" },
-  { value: "seguimiento", label: "Seguimiento comercial" },
-  { value: "propuesta", label: "Propuesta al cliente" },
-  { value: "carga", label: "Carga manual" },
-  { value: "no_claro", label: "No lo tengo claro" }
-] as const;

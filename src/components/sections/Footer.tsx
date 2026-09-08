@@ -9,11 +9,11 @@ export default function Footer() {
       <div className="mx-auto max-w-[1240px] px-5 py-14 lg:px-8">
         <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
           <div>
-            <p className="font-display text-xl text-ink">
+            <p className="footer-brand font-display text-ink">
               automatizaciones<span className="italic text-accent">MSL</span>
             </p>
             <p className="mt-3 max-w-[52ch] text-sm leading-6 text-ink-soft">
-              Herramienta, implantacion y automatizacion para agencias de viajes que quieren mas
+              Herramienta, implantación y automatización para agencias de viajes que quieren más
               control y menos carga manual.
             </p>
             <a
@@ -28,7 +28,7 @@ export default function Footer() {
             href="/#contacto"
             className="inline-flex items-center justify-center whitespace-nowrap border border-ink bg-ink px-6 py-3.5 text-sm font-medium text-canvas hover:border-accent hover:bg-accent"
           >
-            Solicitar diagnostico
+            Solicitar diagnóstico
           </Link>
         </div>
 

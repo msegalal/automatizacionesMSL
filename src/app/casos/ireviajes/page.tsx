@@ -7,12 +7,13 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import { caseStudySchema } from "@/lib/schema";
 import { responseCommitment } from "@/lib/site-content";
+import ProductScreenshot from "@/components/ProductScreenshot";
 import productoPipeline from "@/../public/producto-pipeline.jpg";
 import casoWeb from "@/../public/caso-ireviajes-web.jpg";
 import casoFormulario from "@/../public/caso-ireviajes-formulario.jpg";
 
 export const metadata: Metadata = {
-  title: "Caso iReViajes: primera implantacion | automatizacionesMSL",
+  title: "Caso iReViajes: primera implantación | automatizacionesMSL",
   description:
     "Como una agencia de viajes de Barcelona ordeno la entrada de solicitudes y el seguimiento comercial. Punto de partida, que se hizo y que queda por delante.",
   alternates: { canonical: "/casos/ireviajes" },
@@ -22,15 +23,15 @@ export const metadata: Metadata = {
 const situacion = [
   {
     title: "Las consultas entraban por muchos sitios",
-    body: "Correo, telefono, formulario y mensajes sueltos. Cada via aterrizaba en un lugar distinto, asi que el contexto de cada solicitud habia que reconstruirlo a mano."
+    body: "Correo, teléfono, formulario y mensajes sueltos. Cada via aterrizaba en un lugar distinto, asi que el contexto de cada solicitud había que reconstruirlo a mano."
   },
   {
-    title: "El seguimiento dependia de acordarse",
-    body: "Sin una base comun, saber quien tenia que dar el siguiente paso y cuando exigia preguntar. Las oportunidades se enfriaban sin que nadie lo viera venir."
+    title: "El seguimiento dependía de acordarse",
+    body: "Sin una base común, saber quien tenia que dar el siguiente paso y cuando exigia preguntar. Las oportunidades se enfriaban sin que nadie lo viera venir."
   },
   {
     title: "La propuesta costaba de presentar",
-    body: "El trabajo estaba hecho, pero llegaba al cliente final en un formato que no ayudaba a decidir rapido."
+    body: "El trabajo estaba hecho, pero llegaba al cliente final en un formato que no ayudaba a decidir rápido."
   }
 ];
 
@@ -38,7 +39,7 @@ const intervencion = [
   {
     step: "01",
     title: "Ordenar la entrada",
-    body: "Un unico punto donde aterrizan las solicitudes con el contexto ya recogido, en lugar de repartidas entre bandejas."
+    body: "Un único punto donde aterrizan las solicitudes con el contexto ya recogido, en lugar de repartidas entre bandejas."
   },
   {
     step: "02",
@@ -48,19 +49,19 @@ const intervencion = [
   {
     step: "03",
     title: "Quitar los pasos repetitivos",
-    body: "Automatizacion ligera solo donde ahorraba tiempo de verdad: avisos, entradas y primeros pasos."
+    body: "Automatización ligera solo donde ahorraba tiempo de verdad: avisos, entradas y primeros pasos."
   },
   {
     step: "04",
     title: "Mejorar como se presenta",
-    body: "Web y formulario de cualificacion alineados para que la solicitud llegue completa y la propuesta se entienda antes."
+    body: "Web y formulario de cualificación alineados para que la solicitud llegue completa y la propuesta se entienda antes."
   }
 ];
 
 const antesDespues = [
   {
-    antes: "Las solicitudes llegaban por correo, telefono, formulario y mensajes.",
-    despues: "Entran por un unico punto con los datos que hacen falta.",
+    antes: "Las solicitudes llegaban por correo, teléfono, formulario y mensajes.",
+    despues: "Entran por un único punto con los datos que hacen falta.",
     cambio: "Deja de reconstruirse el contexto a mano."
   },
   {
@@ -80,7 +81,7 @@ export default function CasoIreViajesPage() {
     <>
       <JsonLd data={caseStudySchema()} />
       <SiteHeader />
-      <main id="contenido" className="border-b border-rule">
+      <main id="contenido" className="case-page border-b border-rule">
         <div className="mx-auto max-w-[1240px] px-5 py-16 lg:px-8 lg:py-20">
           <Breadcrumbs
             crumbs={[
@@ -94,23 +95,22 @@ export default function CasoIreViajesPage() {
               Caso real
             </p>
             <h1 className="mt-6 max-w-[22ch] text-balance font-display text-4xl leading-[1.06] text-ink md:text-5xl lg:text-6xl">
-              La primera agencia que implanto la herramienta
+              iReViajes.
+              Una operativa con el siguiente paso a la vista.
             </h1>
             <p className="mt-6 max-w-[54ch] text-lg leading-8 text-ink-soft">
-              iReViajes es una agencia boutique de Barcelona con mas de treinta anos organizando
+              iReViajes es una agencia boutique de Barcelona con más de treinta años organizando
               incentivos, congresos y viajes de empresa.
             </p>
           </div>
 
           <figure className="mt-14 lg:mt-16">
             <div className="border border-rule-strong">
-              <Image
+              <ProductScreenshot
                 src={productoPipeline}
                 alt="Tablero de pipeline del sistema con las fases entrada, propuesta y cierre, y una tarjeta por expediente con destino, agente y fecha de salida."
-                placeholder="blur"
                 priority
                 sizes="(max-width: 1240px) 100vw, 1176px"
-                className="block h-auto w-full"
               />
             </div>
             <figcaption className="mt-3 text-sm leading-6 text-ink-faint">
@@ -120,7 +120,7 @@ export default function CasoIreViajesPage() {
 
           <section className="mt-20 border-t border-rule-strong pt-12">
             <h2 className="max-w-[24ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
-              De donde se partia
+              De donde se partía
             </h2>
             <dl className="mt-10 grid gap-x-16 gap-y-9 md:grid-cols-3">
               {situacion.map((item) => (
@@ -138,7 +138,7 @@ export default function CasoIreViajesPage() {
             <div className="grid gap-14 lg:grid-cols-[0.45fr_0.55fr] lg:gap-16">
               <div>
                 <h2 className="max-w-[20ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
-                  Que se hizo
+                  Qué se hizo
                 </h2>
                 <p className="mt-6 max-w-[46ch] text-base leading-7 text-ink-soft">
                   El orden de las fases importa: primero se ordena la entrada, despues se hace
@@ -150,14 +150,14 @@ export default function CasoIreViajesPage() {
                   <div className="border border-rule-strong bg-canvas">
                     <Image
                       src={casoFormulario}
-                      alt="Formulario de cualificacion de iReViajes con la seleccion de destinos y los campos del proyecto de viaje."
+                      alt="Formulario de cualificación de iReViajes con la seleccion de destinos y los campos del proyecto de viaje."
                       placeholder="blur"
                       sizes="(max-width: 1024px) 100vw, 500px"
                       className="block h-auto w-full"
                     />
                   </div>
                   <figcaption className="mt-3 text-sm leading-6 text-ink-faint">
-                    El formulario de cualificacion recoge la solicitud ya ordenada.
+                    El formulario de cualificación recoge la solicitud ya ordenada.
                   </figcaption>
                 </figure>
               </div>
@@ -186,16 +186,16 @@ export default function CasoIreViajesPage() {
 
           <section className="mt-20 border-t border-rule-strong pt-12">
             <h2 className="max-w-[24ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
-              Antes y despues
+              Antes y después
             </h2>
-            <div className="mt-10 overflow-x-auto">
+            <div className="case-comparison mt-10 overflow-x-auto">
               <table className="w-full min-w-[44rem] border-collapse text-left">
                 <caption className="sr-only">
                   Comparativa del punto de partida y la situacion posterior
                 </caption>
                 <thead>
                   <tr>
-                    {["Antes", "Despues", "Cambio observado"].map((h) => (
+                    {["Antes", "Después", "Cambio observado"].map((h) => (
                       <th
                         key={h}
                         scope="col"
@@ -225,7 +225,7 @@ export default function CasoIreViajesPage() {
             </div>
             <p className="mt-6 max-w-[70ch] text-sm leading-6 text-ink-soft">
               La columna de cambio describe lo observado en la operativa. No incluye porcentajes
-              porque todavia no hay una medicion con periodo y linea base que los respalde.
+              porque todavía no hay una medición con periodo y línea base que los respalde.
             </p>
 
             <figure className="mt-12">
@@ -246,11 +246,11 @@ export default function CasoIreViajesPage() {
 
           <section className="mt-20 border-t border-rule-strong pt-12">
             <h2 className="max-w-[26ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
-              Que significa esto para otra agencia
+              Qué significa esto para otra agencia
             </h2>
             <p className="mt-6 max-w-[62ch] text-base leading-7 text-ink-soft">
               La base ya esta probada contra una operativa real, con sus excepciones y su forma
-              de trabajar. Eso reduce el riesgo de la siguiente implantacion: no se parte de una
+              de trabajar. Eso reduce el riesgo de la siguiente implantación: no se parte de una
               demo, se parte de algo que ya sostiene el dia a dia de una agencia.
             </p>
             <p className="mt-4 max-w-[62ch] text-base leading-7 text-ink-soft">

@@ -1,51 +1,8 @@
-import { NextRequest } from "next/server";
+import { NextRequest, after } from "next/server";
 import { Resend } from "resend";
-import { z } from "zod";
 import { defaultContactEmail } from "@/lib/site-content";
-
-const contactSchema = z.object({
-  nombre: z.string().min(1),
-  email: z.string().email(),
-  empresa: z.string().min(1),
-  interes: z.enum(["entrada", "seguimiento", "propuesta", "carga", "no_claro"]),
-  mensaje: z.string().min(20),
-  consentimiento: z.literal(true)
-});
-
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-}
-
-const interestLabels = {
-  entrada: "Entrada de solicitudes",
-  seguimiento: "Seguimiento comercial",
-  propuesta: "Propuesta al cliente",
-  carga: "Carga manual",
-  no_claro: "No lo tiene claro"
-} as const;
-
-function buildSummary(data: z.infer<typeof contactSchema>) {
-  return [
-    "Nuevo lead desde automatizacionesMSL",
-    "",
-    `Nombre: ${data.nombre}`,
-    `Email: ${data.email}`,
-    `Empresa: ${data.empresa}`,
-    `Interes: ${interestLabels[data.interes]}`,
-    "",
-    "Contexto:",
-    data.mensaje
-  ].join("\n");
-}
-
-function buildMailtoUrl(recipient: string, subject: string, body: string) {
-  return `mailto:${encodeURIComponent(recipient)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
+import { contactSchema, interestLabels } from "@/lib/contact";
+import { deliverContact } from "@/lib/contact-delivery";
 
 export async function POST(request: NextRequest): Promise<Response> {
   let body: unknown;
@@ -53,74 +10,43 @@ export async function POST(request: NextRequest): Promise<Response> {
     body = await request.json();
   } catch {
     return Response.json(
-      { success: false, error: "Cuerpo de la peticion invalido" },
-      { status: 400 }
+      { success: false, error: "Petición inválida" },
+      { status: 400 },
     );
   }
-
   const parsed = contactSchema.safeParse(body);
-  if (!parsed.success) {
+  if (!parsed.success)
     return Response.json(
-      { success: false, error: "Datos del formulario invalidos" },
-      { status: 422 }
+      { success: false, error: "Revisa los datos del formulario" },
+      { status: 422 },
     );
-  }
 
-  const { nombre, email, empresa, interes, mensaje } = parsed.data;
-  const summary = buildSummary(parsed.data);
-  const recipient = process.env.CONTACT_TO_EMAIL || defaultContactEmail;
-  const subject = `Nuevo lead automatizacionesMSL - ${interestLabels[interes]}`;
-  const mailtoUrl = buildMailtoUrl(recipient, subject, summary);
   const apiKey = process.env.RESEND_API_KEY;
-
-  const webhook = process.env.N8N_WEBHOOK_FORMULARIO;
-  if (webhook) {
-    fetch(webhook, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(parsed.data)
-    }).catch(() => {
-      // No bloqueamos la respuesta por integraciones secundarias.
-    });
-  }
-
-  if (!apiKey) {
-    return Response.json({
-      success: true,
-      delivery: "mailto",
-      mailtoUrl,
-      recipient,
-      summary
-    });
-  }
-
-  const resend = new Resend(apiKey);
-
-  const { error } = await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: recipient,
-    subject,
-    html: `
-      <h2>Nuevo lead desde automatizacionesMSL</h2>
-      <table cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
-        <tr><td><strong>Nombre</strong></td><td>${escapeHtml(nombre)}</td></tr>
-        <tr><td><strong>Email</strong></td><td>${escapeHtml(email)}</td></tr>
-        <tr><td><strong>Empresa</strong></td><td>${escapeHtml(empresa)}</td></tr>
-        <tr><td><strong>Interes</strong></td><td>${interestLabels[interes]}</td></tr>
-        <tr><td valign="top"><strong>Mensaje</strong></td><td>${escapeHtml(mensaje).replace(/\n/g, "<br>")}</td></tr>
-      </table>
-    `
+  const resend = apiKey ? new Resend(apiKey) : null;
+  const result = await deliverContact(parsed.data, {
+    recipient: process.env.CONTACT_TO_EMAIL || defaultContactEmail,
+    from: process.env.CONTACT_FROM_EMAIL,
+    interestLabel: interestLabels[parsed.data.interes],
+    send: resend ? (mail) => resend.emails.send(mail) : undefined,
   });
 
-  if (error) {
-    return Response.json({
-      success: true,
-      delivery: "mailto",
-      mailtoUrl,
-      recipient,
-      summary
+  const webhook = process.env.N8N_WEBHOOK_FORMULARIO;
+  // Forward accepted contacts only, so retries after email failures do not duplicate leads.
+  if (webhook && result.success) {
+    after(async () => {
+      try {
+        const response = await fetch(webhook, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(parsed.data),
+          signal: AbortSignal.timeout(5000),
+        });
+        if (!response.ok)
+          console.error("Contact webhook failed", response.status);
+      } catch {
+        console.error("Contact webhook request failed");
+      }
     });
   }
-
-  return Response.json({ success: true, delivery: "resend" });
+  return Response.json(result, { status: result.success ? 200 : 503 });
 }

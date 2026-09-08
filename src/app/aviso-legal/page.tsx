@@ -16,8 +16,8 @@ export default function AvisoLegalPage() {
     <LegalPage title="Aviso legal" href="/aviso-legal" updatedAt="2026-09-07">
       <h2>Titular del sitio</h2>
       <p>
-        En cumplimiento de la Ley 34/2002 de servicios de la sociedad de la informacion y de
-        comercio electronico, se facilitan los siguientes datos identificativos:
+        En cumplimiento de la Ley 34/2002 de servicios de la sociedad de la información y de
+        comercio electrónico, se facilitan los siguientes datos identificativos:
       </p>
       <LegalIdentityList />
 
@@ -29,8 +29,8 @@ export default function AvisoLegalPage() {
       <h2>Objeto</h2>
       <p>
         Este sitio web tiene finalidad informativa y comercial. Presenta los servicios de
-        herramienta, implantacion y automatizacion dirigidos a agencias de viajes, y permite
-        solicitar informacion mediante un formulario de contacto.
+        herramienta, implantación y automatización dirigidos a agencias de viajes, y permite
+        solicitar información mediante un formulario de contacto.
       </p>
 
       <h2>Condiciones de uso</h2>
@@ -43,7 +43,7 @@ export default function AvisoLegalPage() {
 
       <h2>Propiedad intelectual e industrial</h2>
       <p>
-        Los contenidos del sitio, incluidos textos, estructura de navegacion, diseno y codigo
+        Los contenidos del sitio, incluidos textos, estructura de navegacion, diseño y codigo
         fuente, son titularidad del responsable del sitio o cuenta con licencia para su uso. No
         se permite su reproduccion, distribucion ni transformacion sin autorizacion expresa.
       </p>
@@ -54,26 +54,26 @@ export default function AvisoLegalPage() {
 
       <h2>Responsabilidad</h2>
       <p>
-        El titular no se responsabiliza del uso que terceros hagan de la informacion publicada,
+        El titular no se responsabiliza del uso que terceros hagan de la información publicada,
         ni de los danos derivados de un uso inadecuado del sitio. Se realizan esfuerzos
-        razonables para mantener la informacion actualizada y libre de errores, sin que ello
+        razonables para mantener la información actualizada y libre de errores, sin que ello
         constituya garantia de disponibilidad ininterrumpida.
       </p>
       <p>
-        Las cifras de mejora que aparecen en la pagina de inicio se expresan como estimaciones
-        de techo y dependen del punto de partida de cada agencia. No constituyen un compromiso
-        contractual de resultado.
+        Los indicadores publicados describen aspectos de la operativa que se revisan en cada
+        proyecto. No se publican porcentajes de mejora sin una medición documentada ni se
+        garantiza un resultado cuantitativo concreto.
       </p>
 
       <h2>Enlaces a terceros</h2>
       <p>
-        El sitio puede incluir enlaces a paginas de terceros. El titular no controla ni asume
+        El sitio puede incluir enlaces a páginas de terceros. El titular no controla ni asume
         responsabilidad sobre sus contenidos ni sobre sus politicas de privacidad.
       </p>
 
-      <h2>Legislacion aplicable</h2>
+      <h2>Legislación aplicable</h2>
       <p>
-        Esta relacion se rige por la legislacion espanola. Para cualquier controversia, las
+        Esta relación se rige por la legislacion española. Para cualquier controversia, las
         partes se someten a los juzgados y tribunales que correspondan conforme a derecho.
       </p>
     </LegalPage>

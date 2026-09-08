@@ -4,21 +4,23 @@ import { defaultContactEmail, responseCommitment } from "@/lib/site-content";
 /* Familia de layout: contexto a la izquierda, formulario a la derecha. */
 export default function ContactSection() {
   return (
-    <section id="contacto" className="scroll-mt-4 border-b border-rule bg-surface">
-      <div className="mx-auto grid max-w-[1240px] gap-14 px-5 py-20 lg:grid-cols-[0.42fr_0.58fr] lg:gap-16 lg:px-8 lg:py-24">
-        <div>
-          <h2 className="max-w-[20ch] text-balance font-display text-3xl leading-[1.12] text-ink md:text-4xl">
-            Cuentanos donde se pierde hoy el seguimiento
+    <section id="contacto" className="contact-section scroll-mt-4 border-b border-rule">
+      <div className="site-container contact-layout">
+        <div className="contact-copy">
+          <p className="eyebrow mb-6">08 / Empecemos por tu caso</p>
+          <h2 className="section-title max-w-[20ch] text-balance font-display text-3xl leading-[1.12] text-ink md:text-4xl">
+            Cuéntanos dónde
+            se pierde el hilo.
           </h2>
           <p className="mt-6 max-w-[50ch] text-lg leading-8 text-ink-soft">
-            En {responseCommitment} te diremos si vemos encaje y por donde tendria sentido
+            En {responseCommitment} te diremos si vemos encaje y por dónde tendría sentido
             empezar.
           </p>
 
           <dl className="mt-10 border-t border-rule">
             <div className="border-b border-rule py-5">
               <dt className="text-xs font-medium uppercase tracking-[0.16em] text-ink-faint">
-                Que recibes en la primera respuesta
+                Qué recibes en la primera respuesta
               </dt>
               <dd className="mt-2 max-w-[46ch] text-sm leading-6 text-ink-soft">
                 Lectura del problema, recomendacion de punto de partida y siguiente paso.
@@ -26,7 +28,7 @@ export default function ContactSection() {
             </div>
             <div className="border-b border-rule py-5">
               <dt className="text-xs font-medium uppercase tracking-[0.16em] text-ink-faint">
-                Que no incluye
+                Qué no incluye
               </dt>
               <dd className="mt-2 max-w-[46ch] text-sm leading-6 text-ink-soft">
                 No es una auditoria formal ni una demo del sistema. Es una lectura de encaje.
@@ -48,7 +50,7 @@ export default function ContactSection() {
           </dl>
         </div>
 
-        <div className="border border-rule-strong bg-canvas p-6 md:p-9">
+        <div className="contact-panel border border-rule-strong bg-canvas p-6 md:p-9">
           <ContactForm />
         </div>
       </div>

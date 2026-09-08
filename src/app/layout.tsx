@@ -8,7 +8,7 @@ import "./globals.css";
 const siteUrl = getSiteUrl();
 const siteTitle = "automatizacionesMSL | Herramientas para agencias de viajes";
 const siteDescription =
-  "Herramienta, implantacion y automatizacion para agencias de viajes que quieren menos carga manual, mejor seguimiento y mas control operativo.";
+  "Herramienta, implantación y automatización para agencias de viajes que quieren menos carga manual, mejor seguimiento y más control operativo.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -46,7 +46,7 @@ export default function RootLayout({
       lang="es"
       className={`${instrumentSans.variable} ${newsreader.variable} h-full`}
     >
-      <body className="min-h-full pb-[4.25rem] lg:pb-0">
+      <body className="site-body min-h-full">
         <a href="#contenido" className="skip-link">
           Saltar al contenido
         </a>

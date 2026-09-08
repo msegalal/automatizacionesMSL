@@ -8,9 +8,9 @@ import { defaultContactEmail, responseCommitment } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Solicitud recibida | automatizacionesMSL",
   description:
-    "Hemos recibido tu solicitud. Te contamos que pasa ahora y en cuanto tiempo tendras respuesta.",
+    "Hemos recibido tu solicitud. Te contamos que pasa ahora y en cuanto tiempo tendrás respuesta.",
   alternates: { canonical: "/gracias" },
-  /* Una pagina de confirmacion no debe entrar en el indice ni salir en resultados. */
+  /* Una página de confirmacion no debe entrar en el indice ni salir en resultados. */
   robots: { index: false, follow: true }
 };
 
@@ -18,17 +18,17 @@ const nextSteps = [
   {
     step: "01",
     title: "Leemos tu contexto",
-    body: "Miramos lo que nos has contado sobre captacion, seguimiento, orden interno o carga manual."
+    body: "Miramos lo que nos has contado sobre captación, seguimiento, orden interno o carga manual."
   },
   {
     step: "02",
     title: "Te decimos si encaja",
-    body: `Recibes una respuesta en ${responseCommitment} con nuestra lectura del caso y el punto de partida que tendria mas sentido.`
+    body: `Recibes una respuesta en ${responseCommitment} con nuestra lectura del caso y el punto de partida que tendría más sentido.`
   },
   {
     step: "03",
     title: "Si encaja, propuesta",
-    body: "Concretamos si hablamos de herramienta, implantacion, automatizacion o pack completo, y con que alcance."
+    body: "Concretamos si hablamos de herramienta, implantación, automatización o pack completo, y con que alcance."
   }
 ];
 
@@ -45,7 +45,7 @@ export default function GraciasPage() {
             ]}
           />
 
-          <div className="mt-10 max-w-[46rem]">
+          <div className="thanks-heading mt-10 max-w-[46rem]">
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-accent">
               Solicitud recibida
             </p>
@@ -80,7 +80,7 @@ export default function GraciasPage() {
 
           <div className="mt-14 border-t border-rule-strong pt-8">
             <p className="max-w-[54ch] text-base leading-7 text-ink-soft">
-              Mientras tanto, puedes ver con detalle la primera implantacion real.
+              Mientras tanto, puedes ver con detalle la primera implantación real.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Link

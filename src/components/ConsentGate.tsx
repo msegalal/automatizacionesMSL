@@ -2,7 +2,13 @@
 
 import Link from "next/link";
 import Script from "next/script";
-import { writeConsent, type ConsentValue } from "@/lib/consent";
+import { useEffect } from "react";
+import {
+  writeConsent,
+  disableAnalytics,
+  enableAnalytics,
+  type ConsentValue,
+} from "@/lib/consent";
 import { useConsent } from "@/components/useConsent";
 
 /*
@@ -12,6 +18,11 @@ import { useConsent } from "@/components/useConsent";
 export default function ConsentGate() {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
   const consent = useConsent();
+
+  useEffect(() => {
+    if (consent !== "granted") disableAnalytics(gaId);
+    else if (gaId) enableAnalytics(gaId);
+  }, [consent, gaId]);
 
   const decide = (value: ConsentValue): void => {
     writeConsent(value);
@@ -47,10 +58,14 @@ export default function ConsentGate() {
         >
           <div className="mx-auto flex max-w-[1240px] flex-col gap-4 px-5 py-5 lg:flex-row lg:items-center lg:justify-between lg:px-8">
             <p className="max-w-[68ch] text-sm leading-6 text-ink-soft">
-              Usamos analitica para saber que partes de la web se leen. Sin tu consentimiento no
-              se carga ninguna cookie de medicion. Puedes consultar el detalle en la{" "}
-              <Link href="/cookies" className="text-accent underline underline-offset-2">
-                politica de cookies
+              Usamos analítica para saber que partes de la web se leen. Sin tu
+              consentimiento no se carga ninguna cookie de medición. Puedes
+              consultar el detalle en la{" "}
+              <Link
+                href="/cookies"
+                className="text-accent underline underline-offset-2"
+              >
+                política de cookies
               </Link>
               .
             </p>

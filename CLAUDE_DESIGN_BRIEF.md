@@ -1,142 +1,29 @@
-# Claude Design Brief
+# automatizacionesMSL · Brief de diseño vigente
 
-## Marca
+Actualizado: 2026-09-07. Sustituye el brief anterior; no reutilizar sus fuentes ni sus porcentajes.
 
-- Nombre de la marca: `automatizacionesMSL`
-- Nombre de la empresa: `automatizacionesMSL`
+## Producto y objetivo
 
-## Descripcion del producto
+Web B2B de herramienta, implantación y automatización para agencias de viajes. iReViajes es la primera implantación real y el caso de estudio. Objetivo: que la agencia comprenda el servicio y solicite un diagnóstico de encaje.
 
-`automatizacionesMSL` es una herramienta pensada para agencias de viajes que quieren reducir trabajo manual, responder antes, ordenar mejor su seguimiento comercial y tener mas control operativo.
+## Dirección visual
 
-No se vende como un sistema tecnico complejo. Se presenta como una solucion clara, util y facil de entender para mejorar la productividad del equipo y hacer mas eficiente la gestion diaria.
+Editorial, cálida y centrada en el producto. Titulares grandes con Newsreader, énfasis en cursiva y cuerpo Instrument Sans. El sistema de marca tiene cuatro tonos con funciones precisas: marfil cálido `#f5f0e8` para lectura y superficies, verde bosque `#203b35` para estructura, verde oliva `#7a8152` para acentos secundarios y rosa empolvado oscuro `#9f4d62` para llamadas a la acción. No crear colores de sección ni variantes cromáticas adicionales. Composiciones asimétricas, separadores finos y capturas reales ampliables. Cada sección conserva un patrón distinto: portada partida, flujo, comparación, método, tabla de oferta, caso, indicadores, persona, FAQ y contacto.
 
-## Que resuelve
+## Restricciones de Marc
 
-- Menos tareas manuales repetitivas
-- Mejor seguimiento de cada oportunidad o solicitud
-- Mas orden interno para el equipo
-- Respuestas mas rapidas a clientes y leads
-- Una propuesta mas clara y facil de vender
+Sin gradientes, sombras, glass/backdrop-filter, radios de esquina, orbes radiales, rejillas decorativas, hover animado, tres tarjetas en fila, bento, blanco puro, pasteles, morado, neón, em dash, emojis, iconos Lucide, sparkle, flechas animadas, franja lateral de color, testimonios falsos, terminales, construcciones «no es X, es Y», bullets con check, tres planes de precios ni tipografías Inter, Geist o Space Grotesk.
 
-## Publico objetivo
+Excepciones aceptadas: bloques en verde bosque para marcar estructura y FAQ mediante acordeón nativo. Las capturas del producto conservan la interfaz del CRM; las restricciones se aplican a la web comercial. No alterar capturas para fingir funciones.
 
-Agencias de viajes que ya notan alguno de estos problemas:
+Requisitos positivos: evidencia real del producto, skeletons de carga, aviso legal y privacidad. Mantener foco visible, teclado, reducción de movimiento, contraste y tamaños táctiles.
 
-- demasiada carga manual
-- seguimiento irregular
-- desorden operativo
-- lentitud al responder
-- dificultad para escalar la parte comercial
+## Contenido
 
-## Contexto importante
+Español de España con ortografía correcta. Sin métricas ni testimonios inventados, promesas comerciales nuevas ni datos legales deducidos. Los antiguos 40/65/3x/30 se retiraron por falta de medición documentada. Las capturas usan datos inventados; nunca acceder al CRM de producción para generarlas.
 
-`iReViajes` fue la primera agencia que compro esta solucion.
+Compromiso confirmado: respuesta en menos de 24 h laborables, definido en `src/lib/site-content.ts`. Identidad en `src/lib/legal.ts`. Las secciones conservan sus anchors.
 
-Importante:
+## Estado de este trabajo
 
-- `iReViajes` no es el producto
-- `iReViajes` es el primer caso real validado
-- la web debe usarlo como prueba social, no como mensaje principal
-
-## Objetivo de la web
-
-Crear una web comercial moderna, visual y profesional que transmita confianza y haga que una agencia de viajes quiera informarse mas y pedir una propuesta.
-
-La web debe vender mejor la idea en los primeros segundos de lectura.
-
-## Mensaje principal
-
-`automatizacionesMSL` ayuda a agencias de viajes a trabajar mas rapido, con menos tareas manuales y mejor seguimiento, mediante una herramienta ya validada en un caso real.
-
-## Oferta
-
-La propuesta puede incluir:
-
-- herramienta
-- implantacion
-- automatizacion
-- pack completo
-
-Debe quedar claro que no es solo software generico ni solo consultoria. Es una solucion adaptada a negocio.
-
-## CTA principal
-
-- `Quiero ver si encaja con mi agencia`
-
-## CTA secundarios
-
-- `Ver el caso real`
-- `Ver como funciona`
-- `Pedir propuesta para mi agencia`
-
-## Tono de marca
-
-- profesional
-- claro
-- directo
-- orientado a negocio
-- nada demasiado tecnico
-
-La sensacion general debe transmitir:
-
-- productividad
-- orden
-- control
-- confianza
-- mejora comercial
-
-## Tipografia de marca
-
-- Titulares: `Fraunces`
-- Texto y UI: `Space Grotesk`
-
-Si Claude Design no puede usar estas fuentes exactas, mantener esta direccion:
-
-- titulares con serif editorial y personalidad
-- cuerpo con grotesk limpia y moderna
-
-Fallbacks recomendados:
-
-- titulares: `DM Serif Display` o `Georgia`
-- cuerpo: `Inter` o `system-ui`
-
-## Direccion visual
-
-- apariencia premium B2B
-- moderna y visual
-- elegante pero cercana
-- nada fria ni excesivamente corporativa
-- evitar look de software generico
-
-La home debe ser muy escaneable y dar impacto rapido.
-
-## Elementos clave de la home
-
-- hero con beneficio directo
-- bloque de resultados/metricas visible muy arriba
-- prueba social con `iReViajes`
-- seccion clara de oferta
-- seccion que explique que hace exactamente
-- proceso simple
-- contacto claro
-
-## Ideas de metricas visuales
-
-- `Hasta 40% menos carga manual`
-- `Hasta 65% menos tiempo de respuesta`
-- `Hasta 3x mas capacidad de seguimiento`
-- `Hasta 30% mas estabilidad comercial`
-
-## Que NO queremos
-
-- lenguaje tecnico excesivo
-- diseño frio o anodino
-- mensaje ambiguo
-- protagonismo excesivo de la tecnologia
-- apariencia de CRM generico
-- explicaciones largas antes del beneficio
-
-## Instruccion final para Claude Design
-
-Diseña una landing page para `automatizacionesMSL` orientada a conversion B2B para agencias de viajes. Prioriza claridad en menos de 5 segundos, impacto visual temprano, prueba social visible y una sensacion de herramienta premium, util y ya validada.
+Cambios locales en `feat/visual-polish-contact`, pendientes de publicación. Base previa `87d3950`. No confundir esta implementación local con el despliegue de producción.

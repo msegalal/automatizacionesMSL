@@ -23,16 +23,16 @@ export default function StickyMobileCta() {
   }
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-ink bg-canvas lg:hidden">
+    <div className="mobile-cta fixed inset-x-0 bottom-0 z-40 border-t border-ink bg-canvas lg:hidden">
       <div className="flex items-center justify-between gap-4 px-5 py-3">
-        <p className="text-xs leading-5 text-ink-soft">
+        <p className="max-w-[12rem] text-xs leading-5 text-ink-soft">
           Respuesta en {responseCommitment}
         </p>
         <Link
           href="/#contacto"
           className="inline-flex shrink-0 items-center justify-center whitespace-nowrap border border-ink bg-ink px-5 py-3 text-sm font-medium text-canvas"
         >
-          Solicitar diagnostico
+          Ver si encaja
         </Link>
       </div>
     </div>

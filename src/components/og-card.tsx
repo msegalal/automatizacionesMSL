@@ -22,10 +22,10 @@ export function ogCard(): ReactElement {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        background: "#faf8f4",
-        color: "#171310",
+        background: "#f5f0e8",
+        color: "#203b35",
         padding: 72,
-        borderTop: "16px solid #b4471f"
+        borderTop: "16px solid #9f4d62"
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
@@ -36,8 +36,8 @@ export function ogCard(): ReactElement {
             justifyContent: "center",
             width: 44,
             height: 44,
-            background: "#b4471f",
-            color: "#faf8f4",
+            background: "#203b35",
+            color: "#f5f0e8",
             fontSize: 26,
             fontWeight: 700
           }}
@@ -67,11 +67,11 @@ export function ogCard(): ReactElement {
             marginTop: 28,
             fontSize: 30,
             lineHeight: 1.4,
-            color: "#4a423b",
+            color: "#43554d",
             maxWidth: 820
           }}
         >
-          Herramienta, implantacion y automatizacion para agencias de viajes.
+          Herramienta, implantación y automatización para agencias de viajes.
         </div>
       </div>
 
@@ -80,14 +80,14 @@ export function ogCard(): ReactElement {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "flex-end",
-          borderTop: "2px solid #ddd5c8",
+          borderTop: "2px solid #c9c1b2",
           paddingTop: 24,
           fontSize: 24,
-          color: "#6f665d"
+          color: "#718078"
         }}
       >
         <div style={{ display: "flex" }}>automatizacionesmsl.com</div>
-        <div style={{ display: "flex", color: "#b4471f" }}>Caso real: iReViajes</div>
+        <div style={{ display: "flex", color: "#9f4d62" }}>Caso real: iReViajes</div>
       </div>
     </div>
   );

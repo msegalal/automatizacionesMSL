@@ -11,7 +11,7 @@ export default function NotFound() {
         <div className="mx-auto max-w-[1240px] px-5 py-24 lg:px-8 lg:py-32">
           <p className="tabular font-display text-sm text-accent">404</p>
           <h1 className="mt-5 max-w-[20ch] text-balance font-display text-4xl leading-tight text-ink md:text-5xl">
-            Esta pagina no existe
+            Esta página no existe
           </h1>
           <p className="mt-5 max-w-[56ch] text-lg leading-8 text-ink-soft">
             Puede que el enlace este mal copiado o que el contenido haya cambiado de sitio.
@@ -26,7 +26,7 @@ export default function NotFound() {
             <Link href="/#contacto"
               className="inline-flex items-center justify-center whitespace-nowrap border border-rule-strong px-7 py-4 text-sm font-medium text-ink hover:border-accent hover:text-accent"
             >
-              Solicitar diagnostico
+              Solicitar diagnóstico
             </Link>
           </div>
 

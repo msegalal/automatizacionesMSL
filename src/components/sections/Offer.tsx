@@ -2,7 +2,7 @@ import Link from "next/link";
 import { offerColumns, offerFallback, offerRows } from "@/lib/site-content";
 
 /*
-  Familia de layout: tabla de decision.
+  Familia de layout: tabla de decisión.
   En movil se convierte en una tarjeta por columna con las mismas filas,
   no en una tabla horizontal ilegible.
 */
@@ -10,19 +10,21 @@ export default function Offer() {
   return (
     <section id="servicios" className="scroll-mt-4 border-b border-rule bg-surface">
       <div className="mx-auto max-w-[1240px] px-5 py-20 lg:px-8 lg:py-24">
-        <h2 className="max-w-[26ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
-          Tres formas de empezar, segun el cuello de botella
+        <p className="eyebrow mb-6">03 / Qué incluye</p>
+        <h2 className="section-title max-w-[26ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
+          El apoyo que necesitas.
+          El alcance, claro desde el inicio.
         </h2>
         <p className="mt-5 max-w-[58ch] text-base leading-7 text-ink-soft">
-          Cada columna dice tambien que no cubre. Es mas util saber donde acaba el alcance que
-          leer una lista de ventajas.
+          Herramienta, implantación y automatización. Combinamos lo que tenga sentido para
+          tu agencia y dejamos claro qué incluye cada parte.
         </p>
 
         {/* Escritorio: tabla real, con encabezados de columna. */}
-        <div className="mt-14 hidden overflow-x-auto lg:block">
+        <div className="offer-table mt-14 hidden overflow-x-auto lg:block">
           <table className="w-full border-collapse text-left">
             <caption className="sr-only">
-              Comparativa de herramienta, implantacion y automatizacion
+              Comparativa de herramienta, implantación y automatización
             </caption>
             <thead>
               <tr>
@@ -93,7 +95,7 @@ export default function Offer() {
             href="#contacto"
             className="mt-6 inline-flex items-center border border-ink bg-ink px-6 py-3.5 text-sm font-medium text-canvas hover:border-accent hover:bg-accent"
           >
-            Solicitar diagnostico
+            Solicitar diagnóstico
           </Link>
         </div>
       </div>

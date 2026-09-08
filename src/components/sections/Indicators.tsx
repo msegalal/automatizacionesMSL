@@ -3,31 +3,32 @@ import { indicators, indicatorsNote } from "@/lib/site-content";
 /*
   Familia de layout: banda de indicadores separada por filetes.
   Sustituye a los porcentajes anteriores, que no tenian fuente,
-  periodo ni linea base. La nota metodologica va visible, no en letra pequena.
+  periodo ni línea base. La nota metodologica va visible, no en letra pequena.
 */
 export default function Indicators() {
   return (
-    <section className="border-b border-rule bg-surface">
-      <div className="mx-auto max-w-[1240px] px-5 py-20 lg:px-8 lg:py-24">
-        <h2 className="max-w-[26ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
+    <section className="indicators-section border-b border-rule">
+      <div className="site-container py-20 lg:py-24">
+        <p className="eyebrow mb-6">05 / Qué cambia en el día a día</p>
+        <h2 className="section-title max-w-[26ch] text-balance font-display text-3xl leading-tight text-ink md:text-4xl">
           Lo que se mide depende del punto de partida
         </h2>
 
-        <dl className="mt-12 grid gap-x-10 gap-y-9 border-t-2 border-ink pt-8 sm:grid-cols-2 lg:grid-cols-4">
+        <dl className="indicator-grid">
           {indicators.map((item, index) => (
-            <div key={item.title}>
-              <dt className="flex items-baseline gap-3">
-                <span className="tabular font-display text-sm text-accent">
+            <div key={item.title} className={`indicator-card indicator-card-${index + 1}`}>
+              <dt>
+                <span className="tabular indicator-index">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className="font-display text-xl leading-snug text-ink">{item.title}</span>
+                <span>{item.title}</span>
               </dt>
-              <dd className="mt-3 max-w-[36ch] text-sm leading-6 text-ink-soft">{item.body}</dd>
+              <dd>{item.body}</dd>
             </div>
           ))}
         </dl>
 
-        <p className="mt-12 max-w-[70ch] border-t border-rule pt-6 text-sm leading-6 text-ink-soft">
+        <p className="indicator-note">
           {indicatorsNote}
         </p>
       </div>
