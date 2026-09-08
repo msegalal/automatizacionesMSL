@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { fraunces, spaceGrotesk } from "@/lib/fonts";
 import { getSiteUrl } from "@/lib/site-url";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import ConsentGate from "@/components/ConsentGate";
 import "./globals.css";
 
 const siteUrl = getSiteUrl();
@@ -44,7 +44,7 @@ export default function RootLayout({
     <html lang="es" className={`${spaceGrotesk.variable} ${fraunces.variable} h-full antialiased`}>
       <body className="min-h-full font-sans">
         {children}
-        <GoogleAnalytics />
+        <ConsentGate />
       </body>
     </html>
   );

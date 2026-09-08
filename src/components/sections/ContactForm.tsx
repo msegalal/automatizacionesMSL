@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -15,7 +16,11 @@ const contactSchema = z.object({
   interes: z.enum(["producto", "web", "automatizacion", "pack"], {
     error: "Selecciona el tipo de interes"
   }),
-  mensaje: z.string().min(20, "Necesito un poco mas de contexto")
+  mensaje: z.string().min(20, "Necesito un poco mas de contexto"),
+  /* La politica de privacidad declara que el consentimiento se da marcando esta casilla. */
+  privacidad: z.literal(true, {
+    error: "Necesito tu consentimiento para tratar los datos del formulario"
+  })
 });
 
 type ContactFormValues = z.infer<typeof contactSchema>;
@@ -230,6 +235,30 @@ export default function ContactForm() {
             <p className="mt-2 text-xs text-rose-700">{errors.mensaje.message}</p>
           ) : null}
         </div>
+      </div>
+
+      <div>
+        <label htmlFor="privacidad" className="flex items-start gap-3 text-sm leading-6 text-slate-600">
+          <input
+            id="privacidad"
+            type="checkbox"
+            {...register("privacidad")}
+            className="mt-1 h-4 w-4 shrink-0 accent-orange-500"
+          />
+          <span>
+            He leido y acepto la{" "}
+            <Link
+              href="/privacidad"
+              className="font-semibold text-slate-950 underline underline-offset-2 hover:text-orange-500"
+            >
+              politica de privacidad
+            </Link>{" "}
+            y consiento el tratamiento de mis datos para responder a esta solicitud.
+          </span>
+        </label>
+        {errors.privacidad ? (
+          <p className="mt-2 text-xs text-rose-700">{errors.privacidad.message}</p>
+        ) : null}
       </div>
 
       <button

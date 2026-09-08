@@ -11,3 +11,9 @@ yarn-error.log*
 pnpm-debug.log*
 dist
 coverage
+
+# capturas y salidas de revision, no forman parte del sitio
+artifacts/
+
+# build info de TypeScript
+tsconfig.tsbuildinfo

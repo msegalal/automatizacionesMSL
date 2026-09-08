@@ -84,3 +84,71 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/*
+  Tipografia de las paginas legales. Se define aqui, y no repitiendo
+  clases en cada parrafo, porque el contenido legal es prosa larga y
+  cambia con mas frecuencia que su presentacion.
+*/
+.legal-body {
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.legal-body h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-ink);
+}
+
+.legal-body h2:first-child {
+  margin-top: 0;
+}
+
+.legal-body p {
+  margin-bottom: 1.15rem;
+  max-width: 72ch;
+}
+
+.legal-body ul {
+  margin-bottom: 1.15rem;
+  max-width: 72ch;
+  list-style: disc;
+  padding-left: 1.35rem;
+}
+
+.legal-body li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-body strong {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.legal-body a {
+  color: var(--color-ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-body a:hover {
+  color: var(--color-brand);
+}
+
+/*
+  Marca visible de dato identificativo que todavia falta. Se ve en
+  pantalla a proposito: un aviso legal incompleto es un incumplimiento,
+  no un detalle pendiente de maquetacion.
+*/
+.pendiente {
+  background: rgba(255, 110, 64, 0.16);
+  color: #9a3412;
+  font-weight: 600;
+  padding: 0.1rem 0.4rem;
+}
