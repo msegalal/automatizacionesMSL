@@ -62,7 +62,7 @@ export function ogCard(): ReactElement {
             maxWidth: 940
           }}
         >
-          Menos tareas manuales y mejor seguimiento
+          CRM y automatización a medida
         </div>
         <div
           style={{
@@ -74,7 +74,7 @@ export function ogCard(): ReactElement {
             maxWidth: 820
           }}
         >
-          Herramienta, implantacion y automatizacion para agencias de viajes.
+          Soluciones personalizadas para agencias de viajes en España.
         </div>
       </div>
 
@@ -90,7 +90,7 @@ export function ogCard(): ReactElement {
         }}
       >
         <div style={{ display: "flex" }}>automatizacionesmsl.com</div>
-        <div style={{ display: "flex", color: "#ff6e40" }}>Caso real: iReViajes</div>
+        <div style={{ display: "flex", color: "#ff6e40" }}>A medida para cada agencia</div>
       </div>
     </div>
   );

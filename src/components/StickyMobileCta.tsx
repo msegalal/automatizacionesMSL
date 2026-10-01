@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { CONSENT_UNKNOWN } from "@/lib/consent";
 import { useConsent } from "@/components/useConsent";
 import { responseCommitment } from "@/lib/site-content";
@@ -12,13 +14,36 @@ import { responseCommitment } from "@/lib/site-content";
  * tapa el pie ni el ultimo campo del formulario.
  */
 export default function StickyMobileCta() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
   const consent = useConsent();
+  const [heroCtaVisible, setHeroCtaVisible] = useState(true);
+
+  useEffect(() => {
+    if (!isHome) {
+      return;
+    }
+
+    const heroCta = document.getElementById("hero-contact-cta");
+
+    if (!heroCta) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setHeroCtaVisible(entry.isIntersecting),
+      { threshold: 0.01 }
+    );
+
+    observer.observe(heroCta);
+    return () => observer.disconnect();
+  }, [isHome]);
 
   const bannerVisible = Boolean(gaId) && consent === null;
   const consentPending = consent === CONSENT_UNKNOWN;
 
-  if (bannerVisible || consentPending) {
+  if (bannerVisible || consentPending || (isHome && heroCtaVisible)) {
     return null;
   }
 

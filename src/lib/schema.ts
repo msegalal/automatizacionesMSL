@@ -25,14 +25,15 @@ export function organizationSchema(): Record<string, unknown> {
     url: siteUrl,
     email: defaultContactEmail,
     description:
-      "Herramienta, implantacion y automatizacion para agencias de viajes que quieren menos carga manual, mejor seguimiento y mas control operativo.",
+      "CRM, automatizaciones y bots personalizados para agencias de viajes en España, ajustados a su forma de trabajar.",
     areaServed: { "@type": "Country", name: "Espana" },
     availableLanguage: "es",
     knowsAbout: [
       "Automatizacion de procesos comerciales",
       "CRM para agencias de viajes",
       "Seguimiento de oportunidades",
-      "Gestion operativa de solicitudes"
+      "Gestión operativa de solicitudes",
+      "Diseño de bots para agencias de viajes"
     ],
     logo: `${siteUrl}/icon`
   };
@@ -79,21 +80,5 @@ export function breadcrumbSchema(crumbs: readonly Crumb[]): Record<string, unkno
       name: crumb.label,
       item: `${siteUrl}${crumb.href === "/" ? "" : crumb.href}`
     }))
-  };
-}
-
-export function caseStudySchema(): Record<string, unknown> {
-  const siteUrl = getSiteUrl();
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "Primera implantacion en iReViajes",
-    description:
-      "Como una agencia de viajes de Barcelona ordeno la entrada de solicitudes y el seguimiento comercial con la herramienta de automatizacionesMSL.",
-    inLanguage: "es-ES",
-    image: `${siteUrl}/caso-ireviajes-web.jpg`,
-    publisher: { "@id": `${siteUrl}/#organizacion` },
-    mainEntityOfPage: `${siteUrl}/casos/ireviajes`
   };
 }

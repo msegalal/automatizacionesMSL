@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
-import { navItems } from "@/lib/site-content";
+import { serviceCards } from "@/lib/site-content";
 
 export const metadata: Metadata = {
-  title: "Pagina no encontrada | automatizacionesMSL",
+  title: "Página no encontrada | automatizacionesMSL",
   description:
-    "La pagina que buscas no existe. Vuelve al inicio o consulta las secciones principales del sitio.",
+    "La página que buscas no existe. Vuelve al inicio o consulta los servicios para agencias de viajes.",
   robots: { index: false, follow: true }
 };
 
@@ -20,10 +20,10 @@ export default function NotFound() {
             error 404
           </p>
           <h1 className="mt-4 max-w-[20ch] text-balance text-4xl font-semibold leading-[1.06] text-slate-950 sm:text-5xl">
-            Esta pagina no existe
+            Esta página no existe
           </h1>
           <p className="mt-5 max-w-[56ch] text-lg leading-8 text-slate-600">
-            Puede que el enlace este mal copiado o que el contenido haya cambiado de sitio.
+            Puede que el enlace esté mal copiado o que el contenido haya cambiado de sitio.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -43,24 +43,16 @@ export default function NotFound() {
 
           <nav aria-label="Secciones" className="mt-14 border-t border-slate-200 pt-6">
             <ul className="flex flex-wrap gap-x-8 gap-y-3">
-              {navItems.map((item) => (
+              {serviceCards.map((item) => (
                 <li key={item.href}>
                   <Link
-                    href={`/${item.href}`}
+                    href={item.href}
                     className="text-sm text-slate-600 transition-colors hover:text-orange-500"
                   >
-                    {item.label}
+                    {item.kicker}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/casos/ireviajes"
-                  className="text-sm text-slate-600 transition-colors hover:text-orange-500"
-                >
-                  Caso de iReViajes
-                </Link>
-              </li>
             </ul>
           </nav>
         </div>

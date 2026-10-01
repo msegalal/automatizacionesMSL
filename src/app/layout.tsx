@@ -6,9 +6,9 @@ import StickyMobileCta from "@/components/StickyMobileCta";
 import "./globals.css";
 
 const siteUrl = getSiteUrl();
-const siteTitle = "automatizacionesMSL | Herramientas para agencias de viajes";
+const siteTitle = "CRM y automatización para agencias de viajes | automatizacionesMSL";
 const siteDescription =
-  "AutomatizacionesMSL ofrece herramienta, implantacion y automatizacion util para agencias de viajes que quieren menos carga manual, mejor seguimiento y mas control operativo.";
+  "CRM, automatizaciones y bots para agencias de viajes en España. Soluciones personalizadas para ordenar solicitudes, seguir oportunidades y reducir tareas manuales.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -23,12 +23,21 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "automatizacionesMSL",
     locale: "es_ES",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "CRM y automatización a medida para agencias de viajes"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: siteTitle,
-    description: siteDescription
+    description: siteDescription,
+    images: ["/twitter-image"]
   },
   robots: {
     index: true,
@@ -44,6 +53,9 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${spaceGrotesk.variable} ${fraunces.variable} h-full antialiased`}>
       <body className="tiene-cta-movil min-h-full font-sans">
+        <a className="skip-link" href="#contenido">
+          Saltar al contenido
+        </a>
         {children}
         <StickyMobileCta />
         <ConsentGate />

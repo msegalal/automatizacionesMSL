@@ -17,17 +17,17 @@ const nextSteps = [
   {
     step: "01",
     title: "Leemos tu contexto",
-    body: "Miramos lo que nos has contado sobre captacion, seguimiento, orden interno o carga manual."
+    body: "Revisamos lo que nos has contado sobre solicitudes, seguimiento y tareas repetitivas."
   },
   {
     step: "02",
     title: "Te decimos si encaja",
-    body: `Recibes una respuesta en ${responseCommitment} con nuestra lectura del caso y el punto de partida que tendria mas sentido.`
+    body: `Recibirás una respuesta en ${responseCommitment} con nuestra lectura del caso y el punto de partida que tenga más sentido.`
   },
   {
     step: "03",
     title: "Si encaja, propuesta",
-    body: "Concretamos si hablamos de herramienta, implantacion, automatizacion o pack completo, y con que alcance."
+    body: "Concretamos si hablamos de CRM, automatización o bots, y con qué alcance."
   }
 ];
 
@@ -81,20 +81,20 @@ export default function GraciasPage() {
 
           <div className="mt-14 border-t border-slate-200 pt-8">
             <p className="max-w-[54ch] text-base leading-8 text-slate-600">
-              Mientras tanto, puedes ver con detalle la primera implantacion real.
+              Mientras tanto, puedes consultar los servicios para agencias de viajes.
             </p>
             <div className="mt-6 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="/casos/ireviajes"
+                href="/crm-para-agencias-de-viajes"
                 className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-orange-500"
               >
-                Ver el caso de iReViajes
+                CRM para agencias de viajes
               </Link>
               <Link
-                href="/"
+                href="/automatizacion-para-agencias-de-viajes"
                 className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3.5 text-sm font-semibold text-slate-950 transition-colors hover:border-orange-500 hover:text-orange-500"
               >
-                Volver al inicio
+                Ver automatización
               </Link>
             </div>
           </div>

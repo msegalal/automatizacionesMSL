@@ -4,11 +4,11 @@ import { z } from "zod";
 import { defaultContactEmail } from "@/lib/site-content";
 
 const contactSchema = z.object({
-  nombre: z.string().min(1),
-  email: z.string().email(),
-  empresa: z.string().min(1),
-  interes: z.enum(["producto", "web", "automatizacion", "pack"]),
-  mensaje: z.string().min(20),
+  nombre: z.string().trim().min(1),
+  email: z.string().trim().email(),
+  empresa: z.string().trim().min(1),
+  interes: z.enum(["crm", "automatizacion", "bots", "otro"]),
+  mensaje: z.string().trim().min(20),
   /* El consentimiento tambien se verifica en servidor, no solo en el navegador. */
   privacidad: z.literal(true)
 });
@@ -23,10 +23,10 @@ function escapeHtml(value: string): string {
 }
 
 const interestLabels = {
-  producto: "Propuesta y producto",
-  web: "Web comercial",
-  automatizacion: "Automatizacion",
-  pack: "Pack completo"
+  crm: "CRM y seguimiento de oportunidades",
+  automatizacion: "Automatización de tareas",
+  bots: "Bots",
+  otro: "Otro proceso o consulta general"
 } as const;
 
 function buildSummary(data: z.infer<typeof contactSchema>) {
@@ -36,7 +36,7 @@ function buildSummary(data: z.infer<typeof contactSchema>) {
     `Nombre: ${data.nombre}`,
     `Email: ${data.email}`,
     `Empresa: ${data.empresa}`,
-    `Interes: ${interestLabels[data.interes]}`,
+    `Interés: ${interestLabels[data.interes]}`,
     "",
     "Contexto:",
     data.mensaje
@@ -69,7 +69,7 @@ export async function POST(request: NextRequest): Promise<Response> {
   const { nombre, email, empresa, interes, mensaje } = parsed.data;
   const summary = buildSummary(parsed.data);
   const recipient = process.env.CONTACT_TO_EMAIL || defaultContactEmail;
-  const subject = `Nuevo lead automatizacionesMSL - ${interestLabels[interes]}`;
+  const subject = `Nueva solicitud automatizacionesMSL - ${interestLabels[interes]}`;
   const mailtoUrl = buildMailtoUrl(recipient, subject, summary);
   const apiKey = process.env.RESEND_API_KEY;
 
@@ -106,7 +106,7 @@ export async function POST(request: NextRequest): Promise<Response> {
         <tr><td><strong>Nombre</strong></td><td>${escapeHtml(nombre)}</td></tr>
         <tr><td><strong>Email</strong></td><td>${escapeHtml(email)}</td></tr>
         <tr><td><strong>Empresa</strong></td><td>${escapeHtml(empresa)}</td></tr>
-        <tr><td><strong>Interes</strong></td><td>${interestLabels[interes]}</td></tr>
+        <tr><td><strong>Interés</strong></td><td>${interestLabels[interes]}</td></tr>
         <tr><td valign="top"><strong>Mensaje</strong></td><td>${escapeHtml(mensaje).replace(/\n/g, "<br>")}</td></tr>
       </table>
     `

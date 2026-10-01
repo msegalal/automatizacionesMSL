@@ -1,12 +1,16 @@
 import Link from "next/link";
 import { legalIdentity } from "@/lib/legal";
 
-const siteLinks = [{ href: "/casos/ireviajes", label: "Caso iReViajes" }];
+const siteLinks = [
+  { href: "/crm-para-agencias-de-viajes", label: "CRM para agencias de viajes" },
+  { href: "/automatizacion-para-agencias-de-viajes", label: "Automatización" },
+  { href: "/bots-para-agencias-de-viajes", label: "Bots para agencias de viajes" }
+];
 
 const legalLinks = [
   { href: "/aviso-legal", label: "Aviso legal" },
-  { href: "/privacidad", label: "Politica de privacidad" },
-  { href: "/cookies", label: "Politica de cookies" }
+  { href: "/privacidad", label: "Política de privacidad" },
+  { href: "/cookies", label: "Política de cookies" }
 ];
 
 export default function Footer() {
@@ -19,8 +23,8 @@ export default function Footer() {
           <div>
             <p className="text-lg font-semibold text-slate-950">automatizacionesMSL</p>
             <p className="mt-1 max-w-2xl text-sm text-slate-600">
-              Herramienta, implantacion y automatizacion util para agencias de viajes que quieren
-              mas control y menos carga manual.
+              CRM, automatizaciones y bots personalizados para agencias de viajes que quieren
+              ordenar solicitudes, seguir oportunidades y reducir tareas manuales.
             </p>
           </div>
           <Link

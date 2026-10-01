@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={[organizationSchema(), websiteSchema(), faqSchema()]} />
-      <main className="overflow-hidden">
+      <main id="contenido" className="overflow-hidden">
         <Hero />
         <ImpactStats />
         <Services />

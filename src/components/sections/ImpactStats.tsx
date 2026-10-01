@@ -8,16 +8,16 @@ export default function ImpactStats() {
           <div>
             <div className="mb-6 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-orange-500">
-              impacto
+              posibles puntos de mejora
             </p>
             <h2 className="mt-4 max-w-xl text-balance text-4xl font-semibold text-slate-950 md:text-5xl">
-              Lo que cambia en la operativa desde las primeras semanas.
+              Dónde puede tener sentido empezar.
             </h2>
           </div>
 
           <p className="max-w-2xl text-base leading-8 text-slate-600 lg:justify-self-end">
-            No vendemos automatizacion por postureo. Estos son los cambios concretos que se notan
-            en el dia a dia de la agencia.
+            Son áreas para revisar con cada agencia, no resultados garantizados. El alcance se
+            concreta según su proceso y sus herramientas.
           </p>
         </div>
 

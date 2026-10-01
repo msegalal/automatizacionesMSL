@@ -1,191 +1,196 @@
 export const defaultContactEmail = "hola@automatizacionesmsl.com";
 
 export const navItems = [
-  { label: "Oferta", href: "#servicios" },
-  { label: "Caso real", href: "#prueba" },
-  { label: "Que hace", href: "#producto" },
+  { label: "CRM", href: "/crm-para-agencias-de-viajes" },
+  { label: "Automatización", href: "/automatizacion-para-agencias-de-viajes" },
+  { label: "Bots", href: "/bots-para-agencias-de-viajes" },
   { label: "Proceso", href: "#proceso" },
-  { label: "FAQ", href: "#faq" }
-];
-
-export const caseStudy = {
-  kicker: "caso real",
-  title: "Primera implantacion en iReViajes",
-  body:
-    "La herramienta no nace en frio. La primera venta fue a una agencia de viajes real y el punto de partida fue claro: reducir carga manual, ordenar seguimiento y presentar mejor la propuesta.",
-  bullets: [
-    "Caso del sector viajes, no una demo generica",
-    "Validacion real antes de salir a otras agencias",
-    "Base lista para adaptarse a operativas diferentes"
-  ]
-};
-
-export const trustPoints = [
-  {
-    value: "01",
-    title: "Primera implantacion real",
-    body: "La primera agencia ya existe y sirve como prueba de que la herramienta responde a un problema de negocio real."
-  },
-  {
-    value: "02",
-    title: "Problema concreto",
-    body: "Se plantea para atacar tres fricciones habituales: tareas manuales, seguimiento irregular y operativa dispersa."
-  },
-  {
-    value: "03",
-    title: "Pensado para negocio",
-    body: "El mensaje se entiende desde gerencia porque habla de tiempo, control y conversion, no de tecnologia por tecnologia."
-  },
-  {
-    value: "04",
-    title: "Base adaptable",
-    body: "No se vende como una pieza rigida. Se adapta a la forma real de trabajar de cada agencia y puede crecer por fases."
-  }
+  { label: "Preguntas", href: "#faq" }
 ];
 
 export const serviceCards = [
   {
-    kicker: "Herramienta",
-    title: "La base para ordenar operativa y seguimiento",
-    body: "La herramienta concentra lo importante para que consultas, siguientes pasos y trabajo interno no dependan de mensajes sueltos o memoria.",
+    href: "/crm-para-agencias-de-viajes",
+    kicker: "CRM para agencias de viajes",
+    title: "Sigue cada solicitud y oportunidad con contexto",
+    body:
+      "Definimos cómo registrar una petición de viaje, en qué punto está y cuál es el siguiente paso comercial, según la forma de trabajar de tu agencia.",
     bullets: [
-      "Mas claridad sobre cada solicitud y su estado",
-      "Menos dependencia de chats, notas y recordatorios manuales",
-      "Una base facil de entender para el equipo"
+      "Acordar etapas que reflejen vuestro proceso de venta",
+      "Identificar qué datos de la solicitud necesita el equipo",
+      "Dar contexto al seguimiento de cada oportunidad"
     ]
   },
   {
-    kicker: "Implantacion",
-    title: "Adaptada a la forma real de trabajar de tu agencia",
-    body: "No se trata de enchufar algo generico. Bajamos la herramienta a tu operativa, tu ritmo de trabajo y la parte del proceso que hoy mas te frena.",
+    href: "/automatizacion-para-agencias-de-viajes",
+    kicker: "Automatización de procesos",
+    title: "Reduce tareas repetitivas donde tenga sentido",
+    body:
+      "Revisamos qué pasos se repiten, qué reglas los gobiernan y si compensa automatizarlos. El alcance se concreta antes de proponer herramientas o conexiones.",
     bullets: [
-      "Detectamos donde hoy se pierde mas tiempo",
-      "Aterrizamos el mensaje y la forma de uso",
-      "La propuesta se entiende rapido desde negocio"
+      "Localizar trabajo manual que se repite en la operativa",
+      "Acordar qué debe ocurrir y en qué condiciones",
+      "Empezar por un proceso acotado y revisable"
     ]
   },
   {
-    kicker: "Automatizacion",
-    title: "Automatizaciones ligeras donde de verdad ahorran tiempo",
-    body: "Activamos automatizacion util solo en los puntos donde quita carga manual y mejora la respuesta sin complicar mas al equipo.",
+    href: "/bots-para-agencias-de-viajes",
+    kicker: "Bots para agencias de viajes",
+    title: "Valora un bot para una tarea concreta",
+    body:
+      "Un bot puede ayudar a resolver una consulta o recoger información si el canal y el alcance son viables. Primero definimos su cometido y cuándo debe intervenir una persona.",
     bullets: [
-      "Avisos, entradas y pasos iniciales mejor resueltos",
-      "Menos tareas repetitivas que no aportan valor",
-      "Un pack completo si quieres herramienta, implantacion y automatizacion"
+      "Elegir una tarea útil y delimitar qué cubre",
+      "Precisar qué información puede ofrecer o solicitar",
+      "Confirmar el canal y las condiciones antes de plantearlo"
     ]
+  }
+];
+
+export const trustPoints = [
+  {
+    value: "01",
+    title: "Entender la operativa",
+    body: "Revisamos cómo entran las consultas, quién las atiende y cómo se hace hoy el seguimiento."
+  },
+  {
+    value: "02",
+    title: "Acordar el alcance",
+    body: "La propuesta concreta qué se configura o automatiza y qué requisitos deben confirmarse."
+  },
+  {
+    value: "03",
+    title: "Priorizar lo útil",
+    body: "Empezamos por el problema acordado, sin añadir pasos o funciones que no necesita el equipo."
+  },
+  {
+    value: "04",
+    title: "Revisar el resultado",
+    body: "El efecto se valora con la agencia y con los datos que estén disponibles para ese proceso."
   }
 ];
 
 export const productModules = [
   {
-    title: "Recoger mejor cada solicitud",
-    body: "La entrada de consultas queda mas clara para que el equipo entienda antes el contexto y responda mejor."
+    title: "La entrada de las solicitudes",
+    body:
+      "Definimos qué información ayuda a entender una consulta de viaje y cómo llega hoy al equipo."
   },
   {
-    title: "Responder con menos friccion",
-    body: "La operativa se organiza para que no se pierda tiempo entre mensajes, notas sueltas y pasos poco claros."
+    title: "El recorrido de cada oportunidad",
+    body:
+      "Acordamos qué etapas describen vuestro seguimiento comercial y quién necesita intervenir en cada una."
   },
   {
-    title: "Seguir cada oportunidad",
-    body: "Los siguientes pasos quedan mas visibles para que el seguimiento no dependa de recordar quien tenia que hacer que."
+    title: "Las tareas que se repiten",
+    body:
+      "Buscamos pasos manuales con reglas claras y comprobamos si su automatización encaja en el alcance."
   },
   {
-    title: "Explicar mejor la propuesta",
-    body: "La solucion se presenta como una herramienta util y vendible, no como una automatizacion abstracta o tecnica."
+    title: "La atención con un bot",
+    body:
+      "Si hay un caso adecuado, delimitamos propósito, información, canal viable y momento de derivación a una persona."
   }
 ];
 
-/*
-  Indicadores sin cifra. Los antiguos 40, 65, 3x y 30 se retiran porque no
-  tienen periodo, linea base ni fuente, y el aviso legal afirma que no se
-  publican porcentajes sin medicion documentada. No reincorporarlos sin ella.
-*/
 export const impactStats = [
   {
-    prefix: "entrada",
-    title: "Solicitudes completas",
-    body: "Los datos que hacen falta se piden en la entrada, no tres correos despues."
+    prefix: "solicitudes",
+    title: "Información de partida",
+    body: "Definir qué contexto necesita el equipo para valorar una petición de viaje."
   },
   {
-    prefix: "seguimiento",
-    title: "Siguiente paso visible",
-    body: "Cada oportunidad muestra en que fase esta y que accion queda pendiente."
+    prefix: "oportunidades",
+    title: "Seguimiento trazable",
+    body: "Acordar cómo revisar la fase y el siguiente paso de cada oportunidad."
   },
   {
-    prefix: "reparto",
-    title: "Responsable asignado",
-    body: "Nadie tiene que preguntar a quien le toca mover un expediente."
+    prefix: "operativa",
+    title: "Menos repetición manual",
+    body: "Identificar tareas rutinarias que se puedan simplificar con reglas claras."
   },
   {
-    prefix: "automatizacion",
-    title: "Avisos pertinentes",
-    body: "Solo se automatiza el paso que quita trabajo manual, no todo el proceso."
+    prefix: "atención",
+    title: "Bots con un cometido definido",
+    body: "Estudiar si un bot sirve para una consulta concreta y si el canal es viable."
   }
 ];
 
 export const impactNote =
-  "No publicamos porcentajes de mejora porque todavia no tenemos una medicion con periodo y linea base que los respalde.";
+  "Son objetivos de diseño, no resultados garantizados. Cada cambio se concreta con la agencia; no publicamos porcentajes sin periodo, línea base y evidencia.";
 
-/* Compromiso de respuesta, confirmado por Marc el 2026-09-07. Fuente unica. */
+/* Compromiso de respuesta, confirmado por Marc el 2026-09-07. Fuente única. */
 export const responseCommitment = "menos de 24 h laborables";
 
 export const fitCards = [
   {
-    title: "Si hoy respondes mas tarde de lo que te gustaria",
-    body: "Cuando las solicitudes entran sin orden, la velocidad de respuesta cae y la oportunidad se enfria."
+    title: "Las consultas quedan repartidas",
+    body:
+      "Revisamos por dónde llegan y qué contexto necesita el equipo para trabajar cada solicitud."
   },
   {
-    title: "Si el seguimiento depende demasiado de acordarse",
-    body: "Cuando no hay una base clara, el seguimiento se dispersa y se pierden pasos comerciales importantes."
+    title: "Cuesta saber qué seguimiento toca",
+    body:
+      "Mapeamos las etapas y los siguientes pasos que tienen sentido en vuestro proceso comercial."
   },
   {
-    title: "Si la propuesta cuesta explicar o vender",
-    body: "Cuando la herramienta no se entiende rapido, la agencia tarda mas en ver valor y en dar el siguiente paso."
+    title: "Hay trabajo manual que se repite",
+    body:
+      "Comprobamos si el proceso tiene reglas claras y si automatizarlo resulta práctico."
   }
 ];
 
 export const processSteps = [
   {
     step: "01",
-    title: "Vemos donde se atasca la operativa",
-    body: "Identificamos si el cuello de botella esta en captacion, seguimiento, orden interno o carga manual."
+    title: "Entendemos vuestro recorrido",
+    body:
+      "Revisamos cómo una consulta se convierte en oportunidad y qué tareas acompañan ese proceso."
   },
   {
     step: "02",
-    title: "Definimos que encaja mejor",
-    body: "Aterrizamos si necesitas la herramienta, implantacion, automatizacion o un pack completo."
+    title: "Delimitamos el problema",
+    body:
+      "Acordamos qué conviene resolver primero: CRM y seguimiento, automatización, un bot o una combinación."
   },
   {
     step: "03",
-    title: "Ordenamos mensaje y experiencia",
-    body: "La propuesta, la web y los CTA se alinean para que la agencia entienda rapido que compra y que gana."
+    title: "Confirmamos el alcance",
+    body:
+      "Concretamos reglas, datos necesarios y requisitos técnicos antes de plantear conexiones o canales."
   },
   {
     step: "04",
-    title: "Dejamos la captacion operativa",
-    body: "Formulario, email y automatizaciones basicas quedan listos para mover interes real desde el primer dia."
+    title: "Implantamos lo acordado",
+    body:
+      "Trabajamos sobre el alcance definido y revisamos con el equipo si responde a la necesidad inicial."
   }
 ];
 
 export const faqs = [
   {
-    question: "iReViajes es el producto?",
-    answer: "No. iReViajes es la primera agencia que compro esta herramienta. Se usa como caso real de partida, no como nombre del producto."
+    question: "¿Qué es un CRM para una agencia de viajes?",
+    answer:
+      "Es una herramienta para registrar solicitudes y oportunidades y dar contexto a su seguimiento. El alcance depende de los datos y del proceso comercial de cada agencia."
   },
   {
-    question: "Que se contrata exactamente?",
-    answer: "Puedes contratar la herramienta, la implantacion, la automatizacion o un pack completo. La idea es ajustar la propuesta a lo que mas sentido tenga para tu agencia."
+    question: "¿La solución es igual para todas las agencias?",
+    answer:
+      "No partimos de una configuración cerrada. Primero revisamos la operativa y después concretamos qué adaptar; cualquier requisito pendiente de confirmar queda fuera del alcance hasta validarlo."
   },
   {
-    question: "Cuanto hay que cambiar dentro de la agencia?",
-    answer: "La idea no es romper la operativa. La herramienta se adapta a la forma de trabajar actual y se empieza por el punto donde mas valor aporta."
+    question: "¿Qué se puede automatizar?",
+    answer:
+      "Depende de las tareas, las reglas y las herramientas que ya use la agencia. Analizamos un proceso concreto y confirmamos su viabilidad antes de proponer una automatización."
   },
   {
-    question: "Se puede adaptar a otra forma de trabajar?",
-    answer: "Si. La base ya esta validada en una primera agencia y se plantea para ajustarse a equipos, volumenes y ritmos diferentes."
+    question: "¿El bot funciona en WhatsApp u otro canal?",
+    answer:
+      "No damos por hecho ningún canal. Antes de incluir un bot, definimos su cometido y comprobamos qué canal puede utilizarse con el alcance acordado."
   },
   {
-    question: "Que pasa si aun no quiero automatizaciones avanzadas?",
-    answer: "No pasa nada. La base puede arrancar con herramienta e implantacion, y el contacto seguir funcionando por email hasta que tenga sentido automatizar mas."
+    question: "¿Puedo pedir solo uno de los servicios?",
+    answer:
+      "Sí. Podemos valorar CRM, automatización o bots por separado o combinados, según la necesidad y la viabilidad del proyecto."
   }
 ];

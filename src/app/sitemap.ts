@@ -1,31 +1,22 @@
 import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/site-url";
 
-/* Solo rutas indexables. /gracias y cualquier pagina noindex no entran aqui. */
+/* Solo rutas indexables. No se declaran fechas que no se puedan mantener. */
 const legalRoutes = ["/aviso-legal", "/privacidad", "/cookies"];
+const serviceRoutes = [
+  "/crm-para-agencias-de-viajes",
+  "/automatizacion-para-agencias-de-viajes",
+  "/bots-para-agencias-de-viajes"
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl();
-  const lastModified = new Date();
 
   return [
     {
-      url: siteUrl,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 1
+      url: siteUrl
     },
-    {
-      url: `${siteUrl}/casos/ireviajes`,
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.8
-    },
-    ...legalRoutes.map((route) => ({
-      url: `${siteUrl}${route}`,
-      lastModified,
-      changeFrequency: "yearly" as const,
-      priority: 0.3
-    }))
+    ...serviceRoutes.map((route) => ({ url: `${siteUrl}${route}` })),
+    ...legalRoutes.map((route) => ({ url: `${siteUrl}${route}` }))
   ];
 }

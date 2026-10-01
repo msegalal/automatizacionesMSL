@@ -8,14 +8,14 @@ export default function ProductBlueprint() {
           <div>
             <div className="mb-6 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-orange-300">
-              encaje
+              diseño del alcance
             </p>
             <h2 className="mt-4 text-balance text-4xl font-semibold text-white md:text-5xl">
-              Encaja especialmente cuando la agencia ya nota estas fricciones.
+              Cada proyecto se define alrededor de la operativa de la agencia.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-white/72">
-              Si hoy el problema ya se nota en el dia a dia, la herramienta tiene una forma clara
-              de entrar y generar valor sin complicar mas la operativa.
+              No partimos de una lista fija de funciones. Revisamos el proceso comercial y
+              operativo, y acordamos qué merece la pena cambiar.
             </p>
 
             <div className="mt-8 grid gap-4">
@@ -31,10 +31,10 @@ export default function ProductBlueprint() {
           <div className="grid gap-5">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.32em] text-orange-300">
-                que hace exactamente
+              qué concretamos contigo
               </p>
               <h3 className="mt-4 max-w-xl text-balance text-3xl font-semibold text-white md:text-4xl">
-                Asi se traduce la herramienta en la operativa diaria.
+                Antes de hablar de configuración o automatización.
               </h3>
             </div>
 

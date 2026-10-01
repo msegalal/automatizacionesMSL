@@ -1,24 +1,30 @@
 import Link from "next/link";
-import { caseStudy, trustPoints } from "@/lib/site-content";
+import { trustPoints } from "@/lib/site-content";
 
 export default function TrustGrid() {
   return (
-    <section id="prueba" className="scroll-mt-24 px-6 pb-6">
+    <section id="personalizacion" className="scroll-mt-24 px-6 pb-6">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
           <article className="rounded-[2.3rem] bg-slate-950 px-6 py-8 text-white shadow-[0_24px_80px_rgba(8,19,33,0.14)] md:px-8">
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-orange-300">
-              {caseStudy.kicker}
+              cómo trabajamos
             </p>
             <h2 className="mt-4 max-w-xl text-balance text-4xl font-semibold md:text-5xl">
-              {caseStudy.title}
+              Una solución debe encajar en la forma real de trabajar de la agencia.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-8 text-white/74">
-              {caseStudy.body}
+              Por eso empezamos por el recorrido de las solicitudes, las tareas del equipo y los
+              puntos donde se pierde contexto. Con esa información concretamos si tiene sentido un
+              CRM, una automatización, un bot o una combinación.
             </p>
 
             <ul className="mt-8 grid gap-3 md:grid-cols-3">
-              {caseStudy.bullets.map((bullet) => (
+              {[
+                "Entendemos la operativa antes de proponer una solución.",
+                "Acordamos el alcance y las dependencias técnicas.",
+                "No damos por hechas funciones, canales ni resultados."
+              ].map((bullet) => (
                 <li
                   key={bullet}
                   className="rounded-[1.6rem] border border-white/12 bg-white/7 px-4 py-4 text-sm leading-7 text-white/82"
@@ -30,16 +36,16 @@ export default function TrustGrid() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/casos/ireviajes"
+                href="#proceso"
                 className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition-transform hover:-translate-y-0.5 hover:text-orange-500"
               >
-                Ver el caso completo
+                Ver el proceso
               </Link>
               <a
                 href="#servicios"
                 className="inline-flex items-center justify-center rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-orange-300 hover:text-orange-300"
               >
-                Ver que incluye
+                Explorar los servicios
               </a>
             </div>
           </article>
