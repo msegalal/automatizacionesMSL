@@ -16,6 +16,8 @@ const content: ServicePageContent = {
   audienceLabel: "Automatización para agencias y otros negocios",
   ctaLabel: "Cuéntanos qué tarea quieres simplificar",
   title: "Automatiza tareas repetitivas de tu agencia de viajes",
+  visualVariant: "automation",
+  heroPoints: ["Tareas que se repiten", "Reglas y excepciones", "Viabilidad técnica"],
   introduction:
     "Copiar información, avisar de un cambio o comprobar varias veces si una tarea se ha completado consume tiempo cuando se repite a diario. Revisamos esos pasos con el equipo y concretamos cuáles tienen reglas suficientemente claras para simplificarlos. Este trabajo puede tener sentido en una agencia de viajes, una tienda u otro negocio.",
   explanationTitle: "No todos los procesos conviene automatizarlos",
@@ -45,13 +47,25 @@ const content: ServicePageContent = {
     "La propuesta concreta qué dispara el proceso, qué resultado debe producir y cómo se detecta una excepción. La agencia valida el alcance antes de implantarlo."
   ],
   related: [
-    { title: "CRM para agencias de viajes", href: "/crm-para-agencias-de-viajes" },
-    { title: "Voz y chat para negocios", href: "/voz-y-chat-para-negocios" },
+    {
+      title: "CRM para agencias de viajes",
+      href: "/crm-para-agencias-de-viajes",
+      description: "Ordena solicitudes, oportunidades y próximos pasos según el proceso comercial."
+    },
+    {
+      title: "Voz y chat para negocios",
+      href: "/voz-y-chat-para-negocios",
+      description: "Define una atención conversacional que aclare cuándo responde una solución y cuándo el equipo."
+    },
     {
       title: "Aplicaciones a medida para negocios",
-      href: "/aplicaciones-a-medida-para-negocios"
+      href: "/aplicaciones-a-medida-para-negocios",
+      description: "Explora una aplicación diseñada en torno a las tareas y datos de tu negocio."
     }
-  ]
+  ],
+  closingTitle: "Empecemos por la tarea que más se repite",
+  closingDescription:
+    "Descríbenos qué la inicia, qué información interviene y dónde requiere revisión. Así podremos valorar si automatizarla es una opción razonable."
 };
 
 export default function AutomatizacionParaAgenciasDeViajesPage() {

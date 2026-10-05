@@ -16,6 +16,8 @@ const content: ServicePageContent = {
   audienceLabel: "Aplicaciones a medida para negocios",
   ctaLabel: "Cuéntanos qué aplicación necesita tu equipo",
   title: "Una aplicación creada alrededor de tu forma de trabajar",
+  visualVariant: "application",
+  heroPoints: ["Necesidad concreta", "Personas y tareas", "Alcance definido"],
   introduction:
     "Cuando las herramientas disponibles no encajan con el proceso, diseñamos una aplicación para la necesidad concreta del negocio. Somos especialistas en crear soluciones a medida: primero entendemos el trabajo que hay que resolver y después delimitamos qué debe hacer la aplicación.",
   explanationTitle: "La necesidad guía la aplicación",
@@ -45,13 +47,25 @@ const content: ServicePageContent = {
     "La propuesta recoge el alcance acordado y sus dependencias. Cualquier integración o requisito externo se valida antes de incluirlo."
   ],
   related: [
-    { title: "CRM para agencias de viajes", href: "/crm-para-agencias-de-viajes" },
+    {
+      title: "CRM para agencias de viajes",
+      href: "/crm-para-agencias-de-viajes",
+      description: "Organiza la información y los siguientes pasos de solicitudes y oportunidades."
+    },
     {
       title: "Automatización para agencias de viajes",
-      href: "/automatizacion-para-agencias-de-viajes"
+      href: "/automatizacion-para-agencias-de-viajes",
+      description: "Reduce tareas repetidas cuando las reglas y las herramientas lo permiten."
     },
-    { title: "Voz y chat para negocios", href: "/voz-y-chat-para-negocios" }
-  ]
+    {
+      title: "Voz y chat para negocios",
+      href: "/voz-y-chat-para-negocios",
+      description: "Diseña conversaciones por llamadas, WhatsApp o chat web según las necesidades del negocio."
+    },
+  ],
+  closingTitle: "¿Qué herramienta le falta a tu equipo?",
+  closingDescription:
+    "Explícanos la tarea, quién necesita hacerla y qué información utiliza. Empezaremos por aclarar si una aplicación a medida encaja con esa necesidad."
 };
 
 export default function AplicacionesAMedidaParaNegociosPage() {

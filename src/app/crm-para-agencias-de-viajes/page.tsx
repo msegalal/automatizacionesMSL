@@ -16,6 +16,8 @@ const content: ServicePageContent = {
   audienceLabel: "CRM para agencias de viajes y negocios",
   ctaLabel: "Cuéntanos cómo trabaja tu equipo",
   title: "Un CRM para seguir solicitudes y oportunidades de viaje",
+  visualVariant: "crm",
+  heroPoints: ["Solicitudes con contexto", "Etapas de seguimiento", "Responsable y próximo paso"],
   introduction:
     "Cuando una petición pasa entre formularios, correos, hojas y conversaciones, cuesta recuperar el contexto y saber qué hacer después. Diseñamos el alcance del CRM con la operativa de tu agencia: qué registra el equipo, cómo evoluciona una oportunidad y quién da el siguiente paso. El mismo enfoque sirve para ordenar clientes y oportunidades en una tienda u otro negocio.",
   explanationTitle: "El contexto de un viaje necesita algo más que un contacto",
@@ -47,14 +49,23 @@ const content: ServicePageContent = {
   related: [
     {
       title: "Automatización para agencias de viajes",
-      href: "/automatizacion-para-agencias-de-viajes"
+      href: "/automatizacion-para-agencias-de-viajes",
+      description: "Revisa tareas repetidas y define qué pasos pueden simplificarse con reglas claras."
     },
-    { title: "Voz y chat para negocios", href: "/voz-y-chat-para-negocios" },
+    {
+      title: "Voz y chat para negocios",
+      href: "/voz-y-chat-para-negocios",
+      description: "Diseña cómo atender consultas por llamadas, WhatsApp o chat web, con límites acordados."
+    },
     {
       title: "Aplicaciones a medida para negocios",
-      href: "/aplicaciones-a-medida-para-negocios"
+      href: "/aplicaciones-a-medida-para-negocios",
+      description: "Plantea una herramienta propia cuando las opciones disponibles no encajan con el trabajo."
     }
-  ]
+  ],
+  closingTitle: "¿Cómo sigue hoy una solicitud en tu agencia?",
+  closingDescription:
+    "Cuéntanos cómo entra, quién la atiende y dónde se suele perder el contexto. Con esa información podremos hablar de un alcance adecuado para tu equipo."
 };
 
 export default function CrmParaAgenciasDeViajesPage() {

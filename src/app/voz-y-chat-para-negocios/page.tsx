@@ -16,6 +16,8 @@ const content: ServicePageContent = {
   audienceLabel: "Voz, WhatsApp y chat para negocios",
   ctaLabel: "Cuéntanos qué conversación quieres atender",
   title: "Atención por llamadas y chat diseñada para tu negocio",
+  visualVariant: "voice",
+  heroPoints: ["Llamadas de voz", "WhatsApp", "Chat web"],
   introduction:
     "Una llamada o un mensaje puede ser una consulta comercial, una pregunta frecuente o una petición de ayuda. Diseñamos soluciones de voz para llamadas y atención conversacional para WhatsApp o chat web, de acuerdo con la tarea y el papel que debe tener el equipo.",
   explanationTitle: "El canal es solo una parte de la solución",
@@ -45,16 +47,25 @@ const content: ServicePageContent = {
     "Validamos el canal y los requisitos técnicos antes de cerrar la propuesta. No damos por hecho el acceso a sistemas, funciones o conexiones que no estén confirmados."
   ],
   related: [
-    { title: "CRM para agencias de viajes", href: "/crm-para-agencias-de-viajes" },
+    {
+      title: "CRM para agencias de viajes",
+      href: "/crm-para-agencias-de-viajes",
+      description: "Da estructura a las solicitudes y al seguimiento que continúa después de la conversación."
+    },
     {
       title: "Automatización para agencias de viajes",
-      href: "/automatizacion-para-agencias-de-viajes"
+      href: "/automatizacion-para-agencias-de-viajes",
+      description: "Analiza pasos repetitivos y las condiciones necesarias para automatizarlos con sentido."
     },
     {
       title: "Aplicaciones a medida para negocios",
-      href: "/aplicaciones-a-medida-para-negocios"
+      href: "/aplicaciones-a-medida-para-negocios",
+      description: "Considera una aplicación propia si las herramientas actuales no resuelven una tarea concreta."
     }
-  ]
+  ],
+  closingTitle: "¿Qué consultas te gustaría atender mejor?",
+  closingDescription:
+    "Hablemos del tipo de conversación, el canal que tienes en mente y los casos que necesitan a una persona. La solución y su viabilidad se definen para cada proyecto."
 };
 
 export default function VozYChatParaNegociosPage() {

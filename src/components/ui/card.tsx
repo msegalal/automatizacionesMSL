@@ -1,20 +1,21 @@
 import type { ComponentPropsWithoutRef } from "react";
 
-type CardProps = ComponentPropsWithoutRef<"article">;
+type CardProps = ComponentPropsWithoutRef<"article"> & { interactive?: boolean };
 type DivProps = ComponentPropsWithoutRef<"div">;
 type HeadingProps = ComponentPropsWithoutRef<"h3">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
 
-function classes(...values: Array<string | undefined>) {
+function classes(...values: Array<string | false | undefined>) {
   return values.filter(Boolean).join(" ");
 }
 
-export function Card({ className, ...props }: CardProps) {
+export function Card({ className, interactive = true, ...props }: CardProps) {
   return (
     <article
       data-slot="card"
       className={classes(
-        "rounded-[1.8rem] border border-slate-200/80 bg-white/82 text-slate-950 shadow-[0_16px_48px_rgba(8,19,33,0.055)] backdrop-blur-xl transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-orange-300 hover:shadow-[0_26px_64px_rgba(8,19,33,0.1)] motion-reduce:transition-none motion-reduce:hover:translate-y-0",
+        "rounded-[1.8rem] border border-slate-200/80 bg-white/82 text-slate-950 shadow-[0_16px_48px_rgba(8,19,33,0.055)] backdrop-blur-xl",
+        interactive && "transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-orange-300 hover:shadow-[0_26px_64px_rgba(8,19,33,0.1)] motion-reduce:transition-none motion-reduce:hover:translate-y-0",
         className
       )}
       {...props}
