@@ -8,7 +8,7 @@ import "./globals.css";
 const siteUrl = getSiteUrl();
 const siteTitle = "CRM y automatización para agencias de viajes | automatizacionesMSL";
 const siteDescription =
-  "CRM, automatizaciones y bots para agencias de viajes en España. Soluciones personalizadas para ordenar solicitudes, seguir oportunidades y reducir tareas manuales.";
+  "CRM, automatización, voz y aplicaciones a medida para agencias de viajes y otros negocios. Soluciones diseñadas según la operativa de cada equipo.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "CRM y automatización a medida para agencias de viajes"
+        alt: "CRM, automatización y soluciones a medida para agencias de viajes y otros negocios"
       }
     ]
   },

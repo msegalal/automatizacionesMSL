@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function PrivacidadPage() {
   return (
-    <LegalPage title="Política de privacidad" href="/privacidad" updatedAt="2026-09-07">
+    <LegalPage title="Política de privacidad" href="/privacidad" updatedAt="2026-10-05">
       <h2>Responsable del tratamiento</h2>
       <LegalIdentityList />
 
@@ -30,7 +30,7 @@ export default function PrivacidadPage() {
 
       <h2>Para qué los usamos</h2>
       <ul>
-        <li>Responder a tu solicitud y valorar si el servicio encaja con tu agencia.</li>
+        <li>Responder a tu solicitud y valorar si el servicio encaja con tu negocio.</li>
         <li>Preparar y enviarte una propuesta comercial si la pides.</li>
         <li>Medir de forma agregada que partes del sitio se consultan, solo con consentimiento.</li>
       </ul>

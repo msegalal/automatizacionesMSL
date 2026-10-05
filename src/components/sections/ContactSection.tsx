@@ -2,9 +2,10 @@ import ContactForm from "@/components/sections/ContactForm";
 import { defaultContactEmail } from "@/lib/site-content";
 
 const discussionPoints = [
-  { label: "Solicitudes", body: "Cómo llegan hoy las consultas de viaje." },
+  { label: "Solicitudes", body: "Cómo llegan hoy las consultas y quién las atiende." },
   { label: "Seguimiento", body: "Qué necesita ver y recordar el equipo." },
-  { label: "Tareas", body: "Qué pasos se repiten en la operativa." }
+  { label: "Tareas", body: "Qué pasos se repiten en la operativa." },
+  { label: "Herramientas", body: "Si hace falta CRM, voz y chat o una aplicación propia." }
 ];
 
 export default function ContactSection() {
@@ -24,7 +25,7 @@ export default function ContactSection() {
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-white/75">
               Cuéntanos cómo funciona hoy el proceso. Revisaremos contigo si encaja un CRM, una
-              automatización, un bot o una combinación.
+              automatización, atención por voz o chat, una aplicación a medida o una combinación.
             </p>
 
             <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">

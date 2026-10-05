@@ -10,7 +10,7 @@ export default function Faq() {
             preguntas frecuentes
           </p>
           <h2 className="max-w-2xl text-balance text-4xl font-semibold text-slate-950 md:text-5xl">
-            Dudas habituales sobre CRM, automatizaciones y bots.
+            Dudas sobre CRM, automatización, voz y aplicaciones a medida.
           </h2>
         </div>
 

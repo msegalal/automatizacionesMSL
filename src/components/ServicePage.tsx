@@ -15,6 +15,8 @@ export interface RelatedService {
 
 export interface ServicePageContent {
   serviceName: string;
+  audienceLabel: string;
+  ctaLabel: string;
   title: string;
   introduction: string;
   explanationTitle: string;
@@ -48,7 +50,7 @@ export default function ServicePage({
             <section className="rounded-[2.2rem] border border-white/65 bg-white/52 px-6 py-8 sm:px-8 sm:py-10 lg:px-10">
               <div className="mb-6 h-0.5 w-20 bg-gradient-to-r from-orange-500 to-transparent" />
               <p className="text-xs font-semibold uppercase tracking-[0.27em] text-orange-700">
-                {content.serviceName} para agencias de viajes
+                {content.audienceLabel}
               </p>
               <h1 className="mt-4 max-w-[19ch] text-balance text-4xl font-semibold leading-[1.04] text-slate-950 sm:text-5xl lg:text-6xl">
                 {content.title}
@@ -60,7 +62,7 @@ export default function ServicePage({
                 href="/#contacto"
                 className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-orange-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-600 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
               >
-                Cuéntanos cómo trabaja tu agencia
+                {content.ctaLabel}
                 <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" className="ml-2 h-4 w-4">
                   <path d="M4.5 10h10m0 0-4-4m4 4-4 4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -87,7 +89,7 @@ export default function ServicePage({
                 <div className="mt-8 flex items-start gap-3 rounded-[1.3rem] border border-white/12 bg-white/[0.06] px-4 py-4">
                   <span className="mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-orange-400" aria-hidden="true" />
                   <p className="text-sm leading-6 text-white/80">
-                    Acordamos el alcance antes de plantear configuraciones, canales o conexiones.
+                    Acordamos el alcance antes de plantear configuraciones, canales o desarrollo.
                   </p>
                 </div>
               </div>

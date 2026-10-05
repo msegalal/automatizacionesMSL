@@ -27,7 +27,7 @@ const nextSteps = [
   {
     step: "03",
     title: "Si encaja, propuesta",
-    body: "Concretamos si hablamos de CRM, automatización o bots, y con qué alcance."
+    body: "Concretamos si hablamos de CRM, automatización, voz y chat o una aplicación a medida."
   }
 ];
 
@@ -81,9 +81,9 @@ export default function GraciasPage() {
 
           <div className="mt-14 border-t border-slate-200 pt-8">
             <p className="max-w-[54ch] text-base leading-8 text-slate-600">
-              Mientras tanto, puedes consultar los servicios para agencias de viajes.
+              Mientras tanto, puedes consultar las soluciones para agencias de viajes y otros negocios.
             </p>
-            <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <Link
                 href="/crm-para-agencias-de-viajes"
                 className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-orange-500"
@@ -95,6 +95,18 @@ export default function GraciasPage() {
                 className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3.5 text-sm font-semibold text-slate-950 transition-colors hover:border-orange-500 hover:text-orange-500"
               >
                 Ver automatización
+              </Link>
+              <Link
+                href="/voz-y-chat-para-negocios"
+                className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3.5 text-sm font-semibold text-slate-950 transition-colors hover:border-orange-500 hover:text-orange-500"
+              >
+                Voz y chat
+              </Link>
+              <Link
+                href="/aplicaciones-a-medida-para-negocios"
+                className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3.5 text-sm font-semibold text-slate-950 transition-colors hover:border-orange-500 hover:text-orange-500"
+              >
+                Aplicaciones a medida
               </Link>
             </div>
           </div>

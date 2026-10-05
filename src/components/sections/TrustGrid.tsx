@@ -11,12 +11,13 @@ export default function TrustGrid() {
               cómo trabajamos
             </p>
             <h2 className="mt-4 max-w-xl text-balance text-4xl font-semibold md:text-5xl">
-              Una solución debe encajar en la forma real de trabajar de la agencia.
+              Una solución debe encajar en la forma real de trabajar de cada negocio.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-8 text-white/74">
-              Por eso empezamos por el recorrido de las solicitudes, las tareas del equipo y los
-              puntos donde se pierde contexto. Con esa información concretamos si tiene sentido un
-              CRM, una automatización, un bot o una combinación.
+              Las agencias de viajes son nuestra especialidad, aunque cada proyecto empieza por
+              entender su propio proceso: cómo llegan las consultas, qué tareas hace el equipo y
+              dónde se pierde contexto. Después concretamos si encaja un CRM, una automatización,
+              una solución de voz o chat o una aplicación a medida.
             </p>
 
             <ul className="mt-8 grid gap-3 md:grid-cols-3">

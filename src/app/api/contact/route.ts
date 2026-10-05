@@ -7,7 +7,8 @@ const contactSchema = z.object({
   nombre: z.string().trim().min(1),
   email: z.string().trim().email(),
   empresa: z.string().trim().min(1),
-  interes: z.enum(["crm", "automatizacion", "bots", "otro"]),
+  /* "bots" se conserva para formularios antiguos que sigan abiertos en el navegador. */
+  interes: z.enum(["crm", "automatizacion", "voz", "aplicacion", "bots", "otro"]),
   mensaje: z.string().trim().min(20),
   /* El consentimiento tambien se verifica en servidor, no solo en el navegador. */
   privacidad: z.literal(true)
@@ -25,7 +26,9 @@ function escapeHtml(value: string): string {
 const interestLabels = {
   crm: "CRM y seguimiento de oportunidades",
   automatizacion: "Automatización de tareas",
-  bots: "Bots",
+  voz: "Voz para llamadas, WhatsApp o chat",
+  aplicacion: "Aplicación a medida",
+  bots: "Voz y chat",
   otro: "Otro proceso o consulta general"
 } as const;
 

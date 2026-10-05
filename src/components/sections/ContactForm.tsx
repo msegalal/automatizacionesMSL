@@ -15,7 +15,7 @@ const contactSchema = z.object({
     .min(1, "El email es obligatorio")
     .email("Introduce un correo electrónico válido"),
   empresa: z.string().trim().min(1, "Indica la agencia o el negocio"),
-  interes: z.enum(["crm", "automatizacion", "bots", "otro"], {
+  interes: z.enum(["crm", "automatizacion", "voz", "aplicacion", "otro"], {
     error: "Selecciona un servicio o indica que aún no lo tienes claro"
   }),
   mensaje: z.string().trim().min(20, "Cuéntanos al menos 20 caracteres de contexto"),
@@ -127,7 +127,7 @@ export default function ContactForm() {
           contacto
         </p>
         <h2 id="form-title" className="mt-3 max-w-[22ch] text-balance text-3xl font-semibold leading-tight text-slate-950">
-          Cuéntanos qué quieres mejorar en tu agencia o negocio.
+          Cuéntanos qué quieres mejorar en tu negocio.
         </h2>
         <p className="mt-3 text-sm leading-6 text-slate-600">
           Los campos marcados como obligatorios nos ayudan a entender el contexto.
@@ -255,7 +255,8 @@ export default function ContactForm() {
               </option>
               <option value="crm">CRM y seguimiento de oportunidades</option>
               <option value="automatizacion">Automatización de tareas</option>
-              <option value="bots">Bots</option>
+              <option value="voz">Voz para llamadas, WhatsApp o chat</option>
+              <option value="aplicacion">Aplicación a medida</option>
               <option value="otro">Otro proceso o aún no lo tengo claro</option>
             </select>
             <svg

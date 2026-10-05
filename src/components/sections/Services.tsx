@@ -16,6 +16,12 @@ function ServiceIcon({ index }: { index: number }) {
     <>
       <path d="M5 5.75h14a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2h-7l-5 3v-3H5a2 2 0 0 1-2-2v-8.5a2 2 0 0 1 2-2Z" />
       <path d="M8 11h8M8 14h5" />
+    </>,
+    <>
+      <rect x="4" y="4" width="6" height="6" rx="1.25" />
+      <rect x="14" y="4" width="6" height="6" rx="1.25" />
+      <rect x="4" y="14" width="6" height="6" rx="1.25" />
+      <path d="M14 17h6M17 14v6" />
     </>
   ];
 
@@ -37,20 +43,20 @@ export default function Services() {
           <div>
             <div className="mb-6 h-0.5 w-20 bg-gradient-to-r from-orange-500 to-transparent" />
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-700">
-              Soluciones para agencias de viajes
+              Soluciones a medida para agencias y otros negocios
             </p>
             <h2 className="mt-4 max-w-xl text-balance text-4xl font-semibold leading-tight text-slate-950 md:text-5xl">
-              Tres formas de ordenar mejor el trabajo.
+              Cuatro soluciones, diseñadas alrededor de tu operativa.
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-8 text-slate-700 lg:justify-self-end">
-            El punto de partida es siempre el mismo: entender la operativa de la agencia y acordar
-            qué conviene resolver. Después definimos si encaja un CRM, una automatización, un bot o
-            una combinación.
+            Las agencias de viajes son nuestra especialidad. También adaptamos CRM, automatizaciones,
+            voz y chat y aplicaciones a medida a las necesidades de tiendas y otros negocios.
+            Primero entendemos la operativa; después concretamos qué solución encaja.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {serviceCards.map((card, index) => (
             <Card key={card.title} className="flex h-full flex-col">
               <CardHeader className="flex flex-1 flex-col">
@@ -95,6 +101,17 @@ export default function Services() {
             </Card>
           ))}
         </div>
+
+        <aside className="mt-7 rounded-[1.7rem] border border-orange-200/80 bg-orange-50/80 px-5 py-5 sm:flex sm:items-center sm:gap-5 sm:px-6">
+          <p className="shrink-0 text-sm font-semibold text-slate-950">
+            Especialidad en viajes, experiencia en otros sectores
+          </p>
+          <p className="mt-2 max-w-3xl text-sm leading-7 text-slate-700 sm:mt-0">
+            Nuestro foco principal son las agencias de viajes. También hemos trabajado con
+            restaurantes y clínicas dentales. Adaptamos cada proyecto a cómo funciona cada negocio,
+            sin reutilizar una solución genérica.
+          </p>
+        </aside>
       </div>
     </section>
   );

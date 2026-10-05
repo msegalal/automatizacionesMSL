@@ -6,19 +6,21 @@ const path = "/crm-para-agencias-de-viajes";
 export const metadata = serviceMetadata({
   title: "CRM para agencias de viajes",
   description:
-    "Organiza solicitudes y oportunidades de viaje con un CRM adaptado al proceso comercial de tu agencia. Define etapas, datos útiles y siguientes pasos.",
+    "Organiza solicitudes y oportunidades con un CRM a medida para agencias de viajes. Diseñamos el seguimiento según cada equipo y también para tiendas y otros negocios.",
   path,
   imageAlt: "CRM adaptado al seguimiento comercial de una agencia de viajes"
 });
 
 const content: ServicePageContent = {
   serviceName: "CRM",
+  audienceLabel: "CRM para agencias de viajes y negocios",
+  ctaLabel: "Cuéntanos cómo trabaja tu equipo",
   title: "Un CRM para seguir solicitudes y oportunidades de viaje",
   introduction:
-    "Cuando una petición pasa entre formularios, correos, hojas y conversaciones, cuesta recuperar el contexto y saber qué hacer después. Diseñamos el alcance del CRM con la operativa de tu agencia: qué registra el equipo, cómo evoluciona una oportunidad y quién da el siguiente paso.",
+    "Cuando una petición pasa entre formularios, correos, hojas y conversaciones, cuesta recuperar el contexto y saber qué hacer después. Diseñamos el alcance del CRM con la operativa de tu agencia: qué registra el equipo, cómo evoluciona una oportunidad y quién da el siguiente paso. El mismo enfoque sirve para ordenar clientes y oportunidades en una tienda u otro negocio.",
   explanationTitle: "El contexto de un viaje necesita algo más que un contacto",
   explanation:
-    "Una solicitud puede incluir destino, fechas, viajeros, presupuesto y preferencias. No todas las agencias necesitan los mismos datos ni trabajan con las mismas etapas. El CRM debe reflejar lo que ayuda al equipo a valorar y seguir cada oportunidad, sin llenar las fichas de campos que nadie utiliza.",
+    "Una solicitud puede incluir destino, fechas, viajeros, presupuesto y preferencias. No todas las agencias necesitan los mismos datos ni trabajan con las mismas etapas. El CRM debe reflejar lo que ayuda al equipo a valorar y seguir cada oportunidad, sin llenar las fichas de campos que nadie utiliza. En una tienda, las etapas y los datos serán otros: los definimos según su actividad.",
   detailTitle: "Qué definimos con tu equipo",
   details: [
     {
@@ -47,7 +49,11 @@ const content: ServicePageContent = {
       title: "Automatización para agencias de viajes",
       href: "/automatizacion-para-agencias-de-viajes"
     },
-    { title: "Bots para agencias de viajes", href: "/bots-para-agencias-de-viajes" }
+    { title: "Voz y chat para negocios", href: "/voz-y-chat-para-negocios" },
+    {
+      title: "Aplicaciones a medida para negocios",
+      href: "/aplicaciones-a-medida-para-negocios"
+    }
   ]
 };
 

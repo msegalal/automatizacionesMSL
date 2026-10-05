@@ -6,16 +6,18 @@ const path = "/automatizacion-para-agencias-de-viajes";
 export const metadata = serviceMetadata({
   title: "Automatización para agencias de viajes",
   description:
-    "Identifica tareas repetitivas en tu agencia de viajes y define qué automatizar, con qué reglas y tras confirmar los requisitos técnicos.",
+    "Automatiza tareas repetitivas en agencias de viajes y otros negocios. Acordamos reglas, excepciones y requisitos técnicos antes de definir cada proceso.",
   path,
   imageAlt: "Automatización de tareas y procesos para agencias de viajes"
 });
 
 const content: ServicePageContent = {
   serviceName: "Automatización",
+  audienceLabel: "Automatización para agencias y otros negocios",
+  ctaLabel: "Cuéntanos qué tarea quieres simplificar",
   title: "Automatiza tareas repetitivas de tu agencia de viajes",
   introduction:
-    "Copiar información, avisar de un cambio o comprobar varias veces si una tarea se ha completado consume tiempo cuando se repite a diario. Revisamos esos pasos con el equipo y concretamos cuáles tienen reglas suficientemente claras para simplificarlos.",
+    "Copiar información, avisar de un cambio o comprobar varias veces si una tarea se ha completado consume tiempo cuando se repite a diario. Revisamos esos pasos con el equipo y concretamos cuáles tienen reglas suficientemente claras para simplificarlos. Este trabajo puede tener sentido en una agencia de viajes, una tienda u otro negocio.",
   explanationTitle: "No todos los procesos conviene automatizarlos",
   explanation:
     "Una automatización depende de entender qué la inicia, qué condiciones debe cumplir y cómo se tratan las excepciones. Si una tarea cambia según cada solicitud o las herramientas no permiten conectarla de forma fiable, se plantea otra forma de reducir trabajo o se deja fuera del alcance.",
@@ -44,7 +46,11 @@ const content: ServicePageContent = {
   ],
   related: [
     { title: "CRM para agencias de viajes", href: "/crm-para-agencias-de-viajes" },
-    { title: "Bots para agencias de viajes", href: "/bots-para-agencias-de-viajes" }
+    { title: "Voz y chat para negocios", href: "/voz-y-chat-para-negocios" },
+    {
+      title: "Aplicaciones a medida para negocios",
+      href: "/aplicaciones-a-medida-para-negocios"
+    }
   ]
 };
 

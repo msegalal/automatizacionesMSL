@@ -62,7 +62,7 @@ export function ogCard(): ReactElement {
             maxWidth: 940
           }}
         >
-          CRM y automatización a medida
+          CRM, automatización y soluciones a medida
         </div>
         <div
           style={{
@@ -74,7 +74,7 @@ export function ogCard(): ReactElement {
             maxWidth: 820
           }}
         >
-          Soluciones personalizadas para agencias de viajes en España.
+          Especialidad en agencias de viajes y soluciones para otros negocios.
         </div>
       </div>
 
@@ -90,7 +90,7 @@ export function ogCard(): ReactElement {
         }}
       >
         <div style={{ display: "flex" }}>automatizacionesmsl.com</div>
-        <div style={{ display: "flex", color: "#ff6e40" }}>A medida para cada agencia</div>
+        <div style={{ display: "flex", color: "#ff6e40" }}>A medida para cada negocio</div>
       </div>
     </div>
   );

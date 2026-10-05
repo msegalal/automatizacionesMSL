@@ -25,15 +25,19 @@ export function organizationSchema(): Record<string, unknown> {
     url: siteUrl,
     email: defaultContactEmail,
     description:
-      "CRM, automatizaciones y bots personalizados para agencias de viajes en España, ajustados a su forma de trabajar.",
+      "CRM, automatizaciones, soluciones de voz y chat y aplicaciones a medida para agencias de viajes y otros negocios, adaptados a su forma de trabajar.",
     areaServed: { "@type": "Country", name: "Espana" },
     availableLanguage: "es",
     knowsAbout: [
-      "Automatizacion de procesos comerciales",
+      "Automatización de procesos comerciales",
       "CRM para agencias de viajes",
+      "CRM para tiendas y comercios",
       "Seguimiento de oportunidades",
       "Gestión operativa de solicitudes",
-      "Diseño de bots para agencias de viajes"
+      "Automatización de tareas para negocios",
+      "Soluciones de voz para llamadas",
+      "Atención conversacional para WhatsApp y chat",
+      "Aplicaciones a medida para negocios"
     ],
     logo: `${siteUrl}/icon`
   };

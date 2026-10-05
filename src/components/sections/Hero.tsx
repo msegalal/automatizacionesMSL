@@ -2,7 +2,7 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import WorkflowIllustration from "@/components/sections/WorkflowIllustration";
 
-const principles = ["Agencias de viajes", "Soluciones a medida", "Seguimiento claro"];
+const principles = ["Especialidad en viajes", "Otros negocios", "Aplicaciones a medida"];
 
 export default function Hero() {
   return (
@@ -27,15 +27,16 @@ export default function Hero() {
           <div className="max-w-3xl">
             <div className="mb-6 h-0.5 w-20 bg-gradient-to-r from-orange-500 to-transparent" />
             <p className="mb-5 max-w-xl text-xs font-semibold uppercase tracking-[0.25em] text-orange-700 sm:text-sm sm:tracking-[0.3em]">
-              CRM y automatizaciones personalizadas para agencias de viajes
+              CRM y automatizaciones a medida para agencias de viajes
             </p>
             <h1 className="max-w-[15ch] text-balance text-[2.65rem] font-semibold leading-[1.04] text-slate-950 sm:text-6xl xl:text-[4.35rem]">
               Menos tareas manuales. Más claridad en cada oportunidad.
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-700 sm:text-lg">
-              Diseñamos CRM y automatizaciones según cómo tu equipo recibe y sigue cada solicitud.
-              La solución parte de la operativa de tu agencia, no de un paquete genérico. Los bots
-              se valoran cuando el cometido y el canal están confirmados.
+              Nos especializamos en agencias de viajes y también trabajamos con otros negocios.
+              Diseñamos CRM, automatizaciones, soluciones de voz para llamadas, atención por
+              WhatsApp o chat y aplicaciones a medida. Cada proyecto parte de cómo trabaja el
+              equipo, no de un paquete genérico.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -44,7 +45,7 @@ export default function Hero() {
                 href="#contacto"
                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(8,19,33,0.16)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-orange-600 hover:shadow-[0_16px_36px_rgba(8,19,33,0.2)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-600 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
               >
-                Cuéntanos cómo trabaja tu agencia
+                Cuéntanos qué necesita tu negocio
                 <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" className="ml-2 h-4 w-4">
                   <path d="M4.5 10h10m0 0-4-4m4 4-4 4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

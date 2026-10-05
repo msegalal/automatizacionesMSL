@@ -3,7 +3,8 @@ export const defaultContactEmail = "hola@automatizacionesmsl.com";
 export const navItems = [
   { label: "CRM", href: "/crm-para-agencias-de-viajes" },
   { label: "Automatización", href: "/automatizacion-para-agencias-de-viajes" },
-  { label: "Bots", href: "/bots-para-agencias-de-viajes" },
+  { label: "Voz y chat", href: "/voz-y-chat-para-negocios" },
+  { label: "Aplicaciones a medida", href: "/aplicaciones-a-medida-para-negocios" },
   { label: "Proceso", href: "#proceso" },
   { label: "Preguntas", href: "#faq" }
 ];
@@ -11,38 +12,50 @@ export const navItems = [
 export const serviceCards = [
   {
     href: "/crm-para-agencias-de-viajes",
-    kicker: "CRM para agencias de viajes",
-    title: "Sigue cada solicitud y oportunidad con contexto",
+    kicker: "CRM para agencias y comercios",
+    title: "Cada solicitud, cliente y oportunidad en su sitio",
     body:
-      "Definimos cómo registrar una petición de viaje, en qué punto está y cuál es el siguiente paso comercial, según la forma de trabajar de tu agencia.",
+      "Organizamos contactos, solicitudes y seguimiento según la actividad del negocio. Para una agencia de viajes, el CRM parte del recorrido de cada petición y de la forma de vender del equipo.",
     bullets: [
-      "Acordar etapas que reflejen vuestro proceso de venta",
-      "Identificar qué datos de la solicitud necesita el equipo",
-      "Dar contexto al seguimiento de cada oportunidad"
+      "Acordar qué información necesita el equipo",
+      "Definir etapas que reflejen el proceso real",
+      "Dejar claro quién da el siguiente paso"
     ]
   },
   {
     href: "/automatizacion-para-agencias-de-viajes",
-    kicker: "Automatización de procesos",
-    title: "Reduce tareas repetitivas donde tenga sentido",
+    kicker: "Automatización para negocios",
+    title: "Simplifica las tareas que se repiten",
     body:
-      "Revisamos qué pasos se repiten, qué reglas los gobiernan y si compensa automatizarlos. El alcance se concreta antes de proponer herramientas o conexiones.",
+      "Analizamos los pasos manuales y sus reglas antes de automatizarlos. La propuesta se adapta al proceso y a las herramientas que use cada negocio.",
     bullets: [
-      "Localizar trabajo manual que se repite en la operativa",
-      "Acordar qué debe ocurrir y en qué condiciones",
-      "Empezar por un proceso acotado y revisable"
+      "Localizar trabajo manual que se repite",
+      "Acordar condiciones y casos excepcionales",
+      "Comprobar los requisitos antes de proponer conexiones"
     ]
   },
   {
-    href: "/bots-para-agencias-de-viajes",
-    kicker: "Bots para agencias de viajes",
-    title: "Valora un bot para una tarea concreta",
+    href: "/voz-y-chat-para-negocios",
+    kicker: "Voz, WhatsApp y chat",
+    title: "Atención conversacional con un propósito claro",
     body:
-      "Un bot puede ayudar a resolver una consulta o recoger información si el canal y el alcance son viables. Primero definimos su cometido y cuándo debe intervenir una persona.",
+      "Diseñamos soluciones para llamadas, WhatsApp o chat web. Definimos qué tarea cubren, qué información pueden usar y cuándo debe intervenir una persona.",
     bullets: [
-      "Elegir una tarea útil y delimitar qué cubre",
-      "Precisar qué información puede ofrecer o solicitar",
-      "Confirmar el canal y las condiciones antes de plantearlo"
+      "Valorar llamadas de voz y atención por chat",
+      "Delimitar respuestas, información y límites",
+      "Confirmar canal y alcance para cada proyecto"
+    ]
+  },
+  {
+    href: "/aplicaciones-a-medida-para-negocios",
+    kicker: "Aplicaciones a medida",
+    title: "Una herramienta diseñada para la necesidad real",
+    body:
+      "Cuando el proceso necesita algo más específico, diseñamos una aplicación alrededor de las tareas, las personas y la información que intervienen.",
+    bullets: [
+      "Entender qué necesita resolver el equipo",
+      "Definir quién la usará y con qué información",
+      "Acordar el alcance antes de construir"
     ]
   }
 ];
@@ -51,22 +64,22 @@ export const trustPoints = [
   {
     value: "01",
     title: "Entender la operativa",
-    body: "Revisamos cómo entran las consultas, quién las atiende y cómo se hace hoy el seguimiento."
+    body: "Revisamos cómo llegan las consultas, quién las atiende y cómo se hace hoy el seguimiento."
   },
   {
     value: "02",
     title: "Acordar el alcance",
-    body: "La propuesta concreta qué se configura o automatiza y qué requisitos deben confirmarse."
+    body: "La propuesta concreta qué se diseña o automatiza y qué requisitos deben confirmarse."
   },
   {
     value: "03",
     title: "Priorizar lo útil",
-    body: "Empezamos por el problema acordado, sin añadir pasos o funciones que no necesita el equipo."
+    body: "Empezamos por el problema acordado, sin añadir pasos o funciones innecesarios."
   },
   {
     value: "04",
     title: "Revisar el resultado",
-    body: "El efecto se valora con la agencia y con los datos que estén disponibles para ese proceso."
+    body: "El efecto se valora con el negocio y con los datos disponibles para ese proceso."
   }
 ];
 
@@ -74,12 +87,12 @@ export const productModules = [
   {
     title: "La entrada de las solicitudes",
     body:
-      "Definimos qué información ayuda a entender una consulta de viaje y cómo llega hoy al equipo."
+      "Definimos qué información ayuda a entender cada consulta y cómo llega hoy al equipo."
   },
   {
     title: "El recorrido de cada oportunidad",
     body:
-      "Acordamos qué etapas describen vuestro seguimiento comercial y quién necesita intervenir en cada una."
+      "Acordamos qué etapas describen el seguimiento y quién necesita intervenir en cada una."
   },
   {
     title: "Las tareas que se repiten",
@@ -87,9 +100,14 @@ export const productModules = [
       "Buscamos pasos manuales con reglas claras y comprobamos si su automatización encaja en el alcance."
   },
   {
-    title: "La atención con un bot",
+    title: "La atención por voz y chat",
     body:
-      "Si hay un caso adecuado, delimitamos propósito, información, canal viable y momento de derivación a una persona."
+      "Si es adecuada para el caso, definimos el propósito, el canal, la información y cuándo pasa a una persona."
+  },
+  {
+    title: "Una aplicación para el equipo",
+    body:
+      "Si las herramientas habituales no resuelven la necesidad, definimos una aplicación según el trabajo real."
   }
 ];
 
@@ -97,7 +115,7 @@ export const impactStats = [
   {
     prefix: "solicitudes",
     title: "Información de partida",
-    body: "Definir qué contexto necesita el equipo para valorar una petición de viaje."
+    body: "Definir qué contexto necesita el equipo para valorar una petición."
   },
   {
     prefix: "oportunidades",
@@ -111,13 +129,13 @@ export const impactStats = [
   },
   {
     prefix: "atención",
-    title: "Bots con un cometido definido",
-    body: "Estudiar si un bot sirve para una consulta concreta y si el canal es viable."
+    title: "Conversaciones bien delimitadas",
+    body: "Definir qué puede atender una solución de voz o chat y cuándo interviene una persona."
   }
 ];
 
 export const impactNote =
-  "Son objetivos de diseño, no resultados garantizados. Cada cambio se concreta con la agencia; no publicamos porcentajes sin periodo, línea base y evidencia.";
+  "Son objetivos de diseño, no resultados garantizados. Cada cambio se concreta con el negocio; no publicamos porcentajes sin periodo, línea base y evidencia.";
 
 /* Compromiso de respuesta, confirmado por Marc el 2026-09-07. Fuente única. */
 export const responseCommitment = "menos de 24 h laborables";
@@ -131,7 +149,7 @@ export const fitCards = [
   {
     title: "Cuesta saber qué seguimiento toca",
     body:
-      "Mapeamos las etapas y los siguientes pasos que tienen sentido en vuestro proceso comercial."
+      "Mapeamos las etapas y los siguientes pasos que tienen sentido en el proceso comercial."
   },
   {
     title: "Hay trabajo manual que se repite",
@@ -151,13 +169,13 @@ export const processSteps = [
     step: "02",
     title: "Delimitamos el problema",
     body:
-      "Acordamos qué conviene resolver primero: CRM y seguimiento, automatización, un bot o una combinación."
+      "Acordamos qué conviene resolver primero: CRM, automatización, voz y chat o una aplicación a medida."
   },
   {
     step: "03",
     title: "Confirmamos el alcance",
     body:
-      "Concretamos reglas, datos necesarios y requisitos técnicos antes de plantear conexiones o canales."
+      "Concretamos reglas, datos y requisitos técnicos antes de plantear configuraciones o canales."
   },
   {
     step: "04",
@@ -169,28 +187,38 @@ export const processSteps = [
 
 export const faqs = [
   {
-    question: "¿Qué es un CRM para una agencia de viajes?",
+    question: "¿Trabajáis solo con agencias de viajes?",
     answer:
-      "Es una herramienta para registrar solicitudes y oportunidades y dar contexto a su seguimiento. El alcance depende de los datos y del proceso comercial de cada agencia."
+      "Las agencias de viajes son nuestra especialidad y el foco principal de esta web. También hemos trabajado con restaurantes y clínicas dentales. En cada proyecto adaptamos la solución al sector y a la forma de trabajar del negocio, sin reutilizar una configuración genérica."
+  },
+  {
+    question: "¿Podéis hacer un CRM para una tienda?",
+    answer:
+      "Sí. El CRM puede organizar clientes, consultas y oportunidades de una tienda u otro negocio. Primero definimos qué información necesita el equipo, cómo hace el seguimiento y qué pasos debe reflejar la herramienta."
   },
   {
     question: "¿La solución es igual para todas las agencias?",
     answer:
-      "No partimos de una configuración cerrada. Primero revisamos la operativa y después concretamos qué adaptar; cualquier requisito pendiente de confirmar queda fuera del alcance hasta validarlo."
+      "No partimos de una configuración cerrada. Revisamos la operativa de cada agencia y concretamos qué adaptar; cualquier requisito pendiente de confirmar queda fuera del alcance hasta validarlo."
   },
   {
     question: "¿Qué se puede automatizar?",
     answer:
-      "Depende de las tareas, las reglas y las herramientas que ya use la agencia. Analizamos un proceso concreto y confirmamos su viabilidad antes de proponer una automatización."
+      "Se pueden estudiar tareas repetitivas en distintos tipos de negocio. Analizamos sus reglas, excepciones y herramientas y confirmamos la viabilidad antes de proponer una automatización."
   },
   {
-    question: "¿El bot funciona en WhatsApp u otro canal?",
+    question: "¿Qué opciones de voz y chat podéis plantear?",
     answer:
-      "No damos por hecho ningún canal. Antes de incluir un bot, definimos su cometido y comprobamos qué canal puede utilizarse con el alcance acordado."
+      "Podemos valorar atención de voz para llamadas y soluciones conversacionales para WhatsApp o chat web. Antes concretamos qué tarea cubrirían, qué información podrían usar, el canal y cuándo tendría que intervenir una persona."
+  },
+  {
+    question: "¿Desarrolláis aplicaciones a medida?",
+    answer:
+      "Sí. Diseñamos aplicaciones según una necesidad concreta del negocio: qué trabajo debe resolver, quién la usará y qué información necesita. El alcance y los requisitos técnicos se acuerdan antes de plantear el desarrollo."
   },
   {
     question: "¿Puedo pedir solo uno de los servicios?",
     answer:
-      "Sí. Podemos valorar CRM, automatización o bots por separado o combinados, según la necesidad y la viabilidad del proyecto."
+      "Sí. Podemos valorar CRM, automatización, voz y chat o una aplicación por separado o combinados, según la necesidad y la viabilidad del proyecto."
   }
 ];

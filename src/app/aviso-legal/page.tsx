@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function AvisoLegalPage() {
   return (
-    <LegalPage title="Aviso legal" href="/aviso-legal" updatedAt="2026-09-07">
+    <LegalPage title="Aviso legal" href="/aviso-legal" updatedAt="2026-10-05">
       <h2>Titular del sitio</h2>
       <p>
         En cumplimiento de la Ley 34/2002 de servicios de la sociedad de la información y de
@@ -28,9 +28,10 @@ export default function AvisoLegalPage() {
 
       <h2>Objeto</h2>
       <p>
-        Este sitio web tiene finalidad informativa y comercial. Presenta los servicios de
-        herramienta, implantación y automatización dirigidos a agencias de viajes, y permite
-        solicitar información mediante un formulario de contacto.
+        Este sitio web tiene finalidad informativa y comercial. Presenta servicios de CRM,
+        automatización, soluciones de voz y chat y desarrollo de aplicaciones a medida. Su
+        especialidad son las agencias de viajes, aunque también trabaja con otros negocios. El
+        sitio permite solicitar información mediante un formulario de contacto.
       </p>
 
       <h2>Condiciones de uso</h2>

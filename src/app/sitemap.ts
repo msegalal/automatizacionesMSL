@@ -6,7 +6,8 @@ const legalRoutes = ["/aviso-legal", "/privacidad", "/cookies"];
 const serviceRoutes = [
   "/crm-para-agencias-de-viajes",
   "/automatizacion-para-agencias-de-viajes",
-  "/bots-para-agencias-de-viajes"
+  "/voz-y-chat-para-negocios",
+  "/aplicaciones-a-medida-para-negocios"
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

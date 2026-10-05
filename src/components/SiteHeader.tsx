@@ -3,7 +3,8 @@ import Link from "next/link";
 const serviceLinks = [
   { href: "/crm-para-agencias-de-viajes", label: "CRM" },
   { href: "/automatizacion-para-agencias-de-viajes", label: "Automatización" },
-  { href: "/bots-para-agencias-de-viajes", label: "Bots" }
+  { href: "/voz-y-chat-para-negocios", label: "Voz y chat" },
+  { href: "/aplicaciones-a-medida-para-negocios", label: "Aplicaciones a medida" }
 ];
 
 const sectionLinks = [

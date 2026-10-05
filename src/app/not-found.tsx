@@ -6,7 +6,7 @@ import { serviceCards } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Página no encontrada | automatizacionesMSL",
   description:
-    "La página que buscas no existe. Vuelve al inicio o consulta los servicios para agencias de viajes.",
+    "La página que buscas no existe. Vuelve al inicio o consulta las soluciones para agencias de viajes y otros negocios.",
   robots: { index: false, follow: true }
 };
 

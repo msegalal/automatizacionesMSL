@@ -3,8 +3,9 @@ import { legalIdentity } from "@/lib/legal";
 
 const siteLinks = [
   { href: "/crm-para-agencias-de-viajes", label: "CRM para agencias de viajes" },
-  { href: "/automatizacion-para-agencias-de-viajes", label: "Automatización" },
-  { href: "/bots-para-agencias-de-viajes", label: "Bots para agencias de viajes" }
+  { href: "/automatizacion-para-agencias-de-viajes", label: "Automatización para agencias" },
+  { href: "/voz-y-chat-para-negocios", label: "Voz y chat" },
+  { href: "/aplicaciones-a-medida-para-negocios", label: "Aplicaciones a medida" }
 ];
 
 const legalLinks = [
@@ -23,8 +24,8 @@ export default function Footer() {
           <div>
             <p className="text-lg font-semibold text-slate-950">automatizacionesMSL</p>
             <p className="mt-1 max-w-2xl text-sm text-slate-600">
-              CRM, automatizaciones y bots personalizados para agencias de viajes que quieren
-              ordenar solicitudes, seguir oportunidades y reducir tareas manuales.
+              CRM, automatizaciones, voz, chat y aplicaciones a medida. Nos especializamos en
+              agencias de viajes y adaptamos cada proyecto a la forma de trabajar de cada negocio.
             </p>
           </div>
           <Link

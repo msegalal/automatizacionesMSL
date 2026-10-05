@@ -11,11 +11,12 @@ export default function ProductBlueprint() {
               diseño del alcance
             </p>
             <h2 className="mt-4 text-balance text-4xl font-semibold text-white md:text-5xl">
-              Cada proyecto se define alrededor de la operativa de la agencia.
+              Cada proyecto se define alrededor de la operativa del negocio.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-white/72">
-              No partimos de una lista fija de funciones. Revisamos el proceso comercial y
-              operativo, y acordamos qué merece la pena cambiar.
+              Nuestra especialidad son las agencias de viajes, y también trabajamos con otros
+              sectores. No partimos de una lista fija de funciones: revisamos el proceso comercial
+              y operativo para acordar qué merece la pena cambiar.
             </p>
 
             <div className="mt-8 grid gap-4">
