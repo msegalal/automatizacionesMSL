@@ -33,6 +33,20 @@ export function enableAnalytics(gaId: string): void {
   (window as unknown as Record<string, unknown>)[`ga-disable-${gaId}`] = false;
 }
 
+/* Registra solo la conversión confirmada y nunca adjunta datos del formulario. */
+export function trackSuccessfulLeadConversion(): void {
+  if (typeof window === "undefined" || readConsent() !== "granted") return;
+
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  if (!gaId) return;
+
+  const gtag = (window as Window & {
+    gtag?: (command: "event", eventName: "generate_lead") => void;
+  }).gtag;
+
+  if (typeof gtag === "function") gtag("event", "generate_lead");
+}
+
 /*
  * El consentimiento vive solo en el navegador de quien visita.
  * Cualquier acceso va envuelto porque en modo privado o con el

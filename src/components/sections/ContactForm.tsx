@@ -6,6 +6,7 @@ import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { trackSuccessfulLeadConversion } from "@/lib/consent";
 
 const contactSchema = z.object({
   nombre: z.string().trim().min(1, "El nombre es obligatorio"),
@@ -72,11 +73,12 @@ export default function ContactForm() {
         setStatus("success");
 
         /*
-         * Con envio real llevamos a /gracias, que explica que pasa ahora.
-         * Con la alternativa manual no: ahi el usuario todavia tiene que
-         * abrir su correo, asi que la pantalla debe quedarse donde esta.
+         * Con envío real, llevamos a /gracias, donde se explica qué ocurre después.
+         * Con la alternativa manual, el usuario todavía tiene que abrir su correo,
+         * así que la pantalla debe quedarse donde está.
          */
         if (json.delivery === "resend") {
+          trackSuccessfulLeadConversion();
           reset();
           router.push("/gracias");
           return;
