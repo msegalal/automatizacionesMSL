@@ -7,7 +7,7 @@ import { defaultContactEmail } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Política de cookies | automatizacionesMSL",
   description:
-    "Que cookies utiliza automatizacionesMSL, para que sirven y como revocar el consentimiento.",
+    "Qué cookies utiliza automatizacionesMSL, para qué sirven y cómo revocar el consentimiento.",
   alternates: { canonical: "/cookies" },
   robots: { index: true, follow: true }
 };
@@ -34,27 +34,27 @@ export default function CookiesPage() {
       <ul>
         <li>
           <strong>Google Analytics</strong>, cookies del tipo <strong>_ga</strong> y{" "}
-          <strong>_ga_*</strong>. Miden de forma agregada que páginas se consultan y por que via
-          se llega al sitio. Caducidad habitual de hasta dos años. La direccion IP se trata de
+          <strong>_ga_*</strong>. Miden de forma agregada qué páginas se consultan y por qué vía
+          se llega al sitio. Caducidad habitual de hasta dos años. La dirección IP se trata de
           forma anonimizada.
         </li>
       </ul>
 
       <h2>Cómo cambiar tu decisión</h2>
       <p>
-        Puedes revocar o volver a otorgar el consentimiento cuando quieras desde aqui. Al
+        Puedes revocar o volver a otorgar el consentimiento cuando quieras desde aquí. Al
         hacerlo se recarga la página y vuelve a aparecer el aviso.
       </p>
       <ConsentReset />
       <p>
-        Tambien puedes bloquear o eliminar cookies desde la configuración de tu navegador. Ten
-        en cuenta que el bloqueo total de almacenamiento hara que el aviso reaparezca en cada
+        También puedes bloquear o eliminar cookies desde la configuración de tu navegador. Ten
+        en cuenta que el bloqueo total de almacenamiento hará que el aviso reaparezca en cada
         visita.
       </p>
 
-      <h2>Mas información</h2>
+      <h2>Más información</h2>
       <p>
-        El detalle sobre responsable, finalidades, plazos y derechos esta en la{" "}
+        El detalle sobre responsable, finalidades, plazos y derechos está en la{" "}
         <Link href="/privacidad">política de privacidad</Link>. Para cualquier duda puedes escribir a{" "}
         {defaultContactEmail}.
       </p>

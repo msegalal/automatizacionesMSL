@@ -12,7 +12,7 @@ import {
 import { useConsent } from "@/components/useConsent";
 
 /*
- * Google Analytics solo se carga si hay consentimiento explicito.
+ * Google Analytics solo se carga si hay consentimiento explícito.
  * Antes se cargaba siempre, que en la UE no es defendible.
  */
 export default function ConsentGate() {
@@ -58,10 +58,10 @@ export default function ConsentGate() {
         >
           <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-5 lg:flex-row lg:items-center lg:justify-between">
             <p className="max-w-[68ch] text-sm leading-7 text-slate-700">
-              Usamos analitica para saber que partes de la web se leen. Sin tu consentimiento no
-              se carga ninguna cookie de medicion. Puedes consultar el detalle en la{" "}
+              Usamos analítica para saber qué partes de la web se leen. Sin tu consentimiento no
+              se carga ninguna cookie de medición. Puedes consultar el detalle en la{" "}
               <Link href="/cookies" className="font-semibold text-slate-950 underline underline-offset-2 hover:text-orange-500">
-                politica de cookies
+                política de cookies
               </Link>
               .
             </p>

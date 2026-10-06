@@ -22,8 +22,8 @@ export default function AvisoLegalPage() {
       <LegalIdentityList />
 
       <p>
-        Nombre comercial: {legalIdentity.nombreComercial}. El titular es persona fisica y
-        ejerce como profesional autonomo.
+        Nombre comercial: {legalIdentity.nombreComercial}. El titular es persona física y
+        ejerce como profesional autónomo.
       </p>
 
       <h2>Objeto</h2>
@@ -36,29 +36,29 @@ export default function AvisoLegalPage() {
 
       <h2>Condiciones de uso</h2>
       <p>
-        El acceso al sitio es gratuito y atribuye la condicion de usuario. El usuario se
+        El acceso al sitio es gratuito y atribuye la condición de usuario. El usuario se
         compromete a hacer un uso adecuado de los contenidos y a no emplearlos para actividades
-        ilicitas, lesivas de derechos de terceros o que puedan danar el sitio o impedir su uso
+        ilícitas, lesivas de derechos de terceros o que puedan dañar el sitio o impedir su uso
         normal.
       </p>
 
       <h2>Propiedad intelectual e industrial</h2>
       <p>
-        Los contenidos del sitio, incluidos textos, estructura de navegacion, diseño y codigo
+        Los contenidos del sitio, incluidos textos, estructura de navegación, diseño y código
         fuente, son titularidad del responsable del sitio o cuenta con licencia para su uso. No
-        se permite su reproduccion, distribucion ni transformacion sin autorizacion expresa.
+        se permite su reproducción, distribución ni transformación sin autorización expresa.
       </p>
       <p>
         Las marcas y nombres comerciales de terceros citados en el sitio, entre ellos iReViajes,
-        pertenecen a sus respectivos titulares y se mencionan a titulo informativo.
+        pertenecen a sus respectivos titulares y se mencionan a título informativo.
       </p>
 
       <h2>Responsabilidad</h2>
       <p>
         El titular no se responsabiliza del uso que terceros hagan de la información publicada,
-        ni de los danos derivados de un uso inadecuado del sitio. Se realizan esfuerzos
+        ni de los daños derivados de un uso inadecuado del sitio. Se realizan esfuerzos
         razonables para mantener la información actualizada y libre de errores, sin que ello
-        constituya garantia de disponibilidad ininterrumpida.
+        constituya garantía de disponibilidad ininterrumpida.
       </p>
       <p>
         Los indicadores publicados describen aspectos de la operativa que se revisan en cada
@@ -69,12 +69,12 @@ export default function AvisoLegalPage() {
       <h2>Enlaces a terceros</h2>
       <p>
         El sitio puede incluir enlaces a páginas de terceros. El titular no controla ni asume
-        responsabilidad sobre sus contenidos ni sobre sus politicas de privacidad.
+        responsabilidad sobre sus contenidos ni sobre sus políticas de privacidad.
       </p>
 
       <h2>Legislación aplicable</h2>
       <p>
-        Esta relación se rige por la legislacion española. Para cualquier controversia, las
+        Esta relación se rige por la legislación española. Para cualquier controversia, las
         partes se someten a los juzgados y tribunales que correspondan conforme a derecho.
       </p>
     </LegalPage>

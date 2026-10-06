@@ -3,8 +3,8 @@ import { defaultContactEmail } from "@/lib/site-content";
 
 /*
  * Bloque identificativo compartido por el aviso legal y la privacidad.
- * Lo que falta se marca en pantalla a proposito: un dato identificativo
- * ausente es un incumplimiento, no un detalle de maquetacion.
+ * Lo que falta se marca en pantalla a propósito: un dato identificativo
+ * ausente es un incumplimiento, no un detalle de maquetación.
  */
 export default function LegalIdentityList() {
   const { denominacion, nif, domicilio, domicilioCompleto } = legalIdentity;
@@ -12,7 +12,7 @@ export default function LegalIdentityList() {
   return (
     <ul>
       <li>
-        Denominacion:{" "}
+        Denominación:{" "}
         {denominacion ? (
           denominacion
         ) : (
@@ -25,7 +25,7 @@ export default function LegalIdentityList() {
         {domicilioCompleto ? null : (
           <>
             {" "}
-            <span className="pendiente">PENDIENTE codigo postal y municipio</span>
+            <span className="pendiente">PENDIENTE código postal y municipio</span>
           </>
         )}
       </li>

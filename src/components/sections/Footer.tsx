@@ -51,7 +51,7 @@ export default function Footer() {
               ))}
             </ul>
           </nav>
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-700">
             {year} {legalIdentity.denominacion ?? "automatizacionesMSL"}
           </p>
         </div>

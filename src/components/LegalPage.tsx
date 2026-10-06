@@ -25,12 +25,12 @@ export default function LegalPage({ title, href, updatedAt, children }: LegalPag
 
           <div className="mt-8 h-0.5 w-18 bg-[linear-gradient(90deg,#ff6e40,rgba(255,110,64,0.08))]" />
           <p className="mt-6 text-xs font-semibold uppercase tracking-[0.34em] text-orange-500">
-            Informacion y transparencia
+            Información y transparencia
           </p>
           <h1 className="mt-4 text-balance text-4xl font-semibold leading-[1.06] text-slate-950 sm:text-5xl">
             {title}
           </h1>
-          <p className="mt-4 text-sm text-slate-500">Ultima actualizacion: {updatedAt}</p>
+          <p className="mt-4 text-sm text-slate-500">Última actualización: {updatedAt}</p>
 
           <div className="legal-body mt-12">{children}</div>
 

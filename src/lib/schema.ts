@@ -26,7 +26,7 @@ export function organizationSchema(): Record<string, unknown> {
     email: defaultContactEmail,
     description:
       "CRM, automatizaciones, soluciones de voz y chat y aplicaciones a medida para agencias de viajes y otros negocios, adaptados a su forma de trabajar.",
-    areaServed: { "@type": "Country", name: "Espana" },
+    areaServed: { "@type": "Country", name: "España" },
     availableLanguage: "es",
     knowsAbout: [
       "Automatización de procesos comerciales",

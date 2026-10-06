@@ -10,7 +10,7 @@ const contactSchema = z.object({
   /* "bots" se conserva para formularios antiguos que sigan abiertos en el navegador. */
   interes: z.enum(["crm", "automatizacion", "voz", "aplicacion", "bots", "otro"]),
   mensaje: z.string().trim().min(20),
-  /* El consentimiento tambien se verifica en servidor, no solo en el navegador. */
+  /* El consentimiento también se verifica en servidor, no solo en el navegador. */
   privacidad: z.literal(true)
 });
 
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest): Promise<Response> {
     body = await request.json();
   } catch {
     return Response.json(
-      { success: false, error: "Cuerpo de la peticion invalido" },
+      { success: false, error: "Cuerpo de la petición inválido" },
       { status: 400 }
     );
   }
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest): Promise<Response> {
   const parsed = contactSchema.safeParse(body);
   if (!parsed.success) {
     return Response.json(
-      { success: false, error: "Datos del formulario invalidos" },
+      { success: false, error: "Datos del formulario inválidos" },
       { status: 422 }
     );
   }
