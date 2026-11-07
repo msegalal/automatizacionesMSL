@@ -1,0 +1,271 @@
+/* Demo CRM · Viajes Ejemplo
+   Estilo editorial para un CRM B2B de agencias boutique: fondo cálido, navegación
+   azul tinta, acento coral y estados legibles. Solo fuentes del sistema: sin recursos externos.
+   Contrastes comprobados para WCAG AA en modo claro y oscuro. */
+
+:root {
+  color-scheme: light;
+  --fondo: #f6f1e9;
+  --superficie: #fffcf7;
+  --superficie-2: #f9f4ec;
+  --linea: #e4dccf;
+  --linea-fuerte: #d3c8b7;
+  --tinta: #1b2433;
+  --suave: #5a6170;
+  --marino: #16213e;
+  --marino-2: #22325a;
+  --sobre-marino: #f4efe6;
+  --sobre-marino-suave: #c9cfdb;
+  --coral: #b4462b;
+  --coral-texto: #a63f26;
+  --coral-vivo: #c8553d;
+  --coral-suave: #fbe9df;
+  --enlace: #1f3a6b;
+  --foco: #c8553d;
+  --rojo: #9b2c1a;    --rojo-fondo: #fbe4df;
+  --ambar: #7a4b00;   --ambar-fondo: #fbefd5;
+  --verde: #25613a;   --verde-fondo: #e2efe5;
+  --neutro: #3d4554;  --neutro-fondo: #ece5da;
+  --ocupada: #22325a; --bloqueada: #d4704f; --libre: #e6ddcf;
+  --sombra: 0 1px 2px rgba(27, 36, 51, .05), 0 8px 24px rgba(27, 36, 51, .06);
+  --radio: 12px;
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --fondo: #14171c; --superficie: #1c2027; --superficie-2: #20252d;
+    --linea: #2f353f; --linea-fuerte: #3b424d;
+    --tinta: #ece7df; --suave: #a9b0bb;
+    --marino: #0f1729; --marino-2: #1a2540; --sobre-marino: #f4efe6; --sobre-marino-suave: #c9cfdb;
+    --coral: #ef8a6b; --coral-texto: #f39c80; --coral-vivo: #ef8a6b; --coral-suave: #3a231b;
+    --enlace: #9cbcf0; --foco: #ef8a6b;
+    --rojo: #ffb4a3; --rojo-fondo: #3d1f1a;
+    --ambar: #f5c977; --ambar-fondo: #3a2e14;
+    --verde: #9fd8ad; --verde-fondo: #1d3324;
+    --neutro: #d6d9df; --neutro-fondo: #2b3039;
+    --ocupada: #7f9bd1; --bloqueada: #ef8a6b; --libre: #343b46;
+    --sombra: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+  }
+}
+
+/* ── Base ───────────────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--fondo); color: var(--tinta);
+  font: 15px/1.5 var(--sans); -webkit-font-smoothing: antialiased;
+}
+a { color: var(--enlace); text-underline-offset: 2px; }
+a:hover { color: var(--coral-texto); }
+h2, h3, h4 { font-family: var(--serif); font-weight: 600; letter-spacing: -.005em; color: var(--tinta); }
+h2 { margin: 0 0 14px; font-size: 22px; line-height: 1.2; }
+h3 { margin: 22px 0 10px; font-size: 17px; }
+h4 { margin: 4px 0 8px; font-size: 15px; }
+
+/* Foco visible y coherente en todo lo interactivo */
+:where(a, button, select, input, summary, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--foco); outline-offset: 2px; border-radius: 6px;
+}
+
+/* ── Aviso de demo y barra de navegación ────────────────────────── */
+.aviso-demo {
+  background: var(--coral-suave); color: var(--coral-texto); text-align: center;
+  padding: 7px 16px; font-size: 13px; font-weight: 600; letter-spacing: .01em;
+}
+.barra-nav {
+  background: var(--marino); color: var(--sobre-marino);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; padding: 14px 24px;
+}
+.marca { display: flex; align-items: baseline; gap: 10px; }
+.marca-nombre { font-family: var(--serif); font-size: 21px; font-weight: 600; }
+.marca-sub { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--sobre-marino-suave); }
+.barra-nav nav { display: flex; gap: 4px; }
+.barra-nav nav a {
+  color: var(--sobre-marino-suave); text-decoration: none; font-weight: 500;
+  padding: 8px 14px; border-radius: 8px; border-bottom: 2px solid transparent;
+}
+.barra-nav nav a:hover { color: var(--sobre-marino); background: var(--marino-2); }
+.barra-nav nav a.activa { color: var(--sobre-marino); background: var(--marino-2); border-bottom-color: var(--coral-vivo); }
+.barra-nav :focus-visible { outline-color: #f39c80; }
+
+/* ── Barra de herramientas de la demo ───────────────────────────── */
+.herramientas {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 28px;
+  padding: 12px 24px; background: var(--superficie-2); border-bottom: 1px solid var(--linea);
+  font-size: 13px; color: var(--suave);
+}
+.reloj, .recorridos { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.reloj strong { color: var(--tinta); font-variant-numeric: tabular-nums; }
+.etiqueta-grupo { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; color: var(--suave); }
+details.valores { flex-basis: 100%; }
+details.valores summary { cursor: pointer; width: fit-content; color: var(--enlace); font-weight: 600; padding: 2px 0; }
+.config { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 10px; }
+
+/* ── Botones y controles ────────────────────────────────────────── */
+button {
+  font: inherit; font-size: 13px; font-weight: 600; line-height: 1.2;
+  min-height: 36px; padding: 8px 14px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--coral); background: var(--coral); color: #fff;
+}
+@media (prefers-color-scheme: dark) { button { color: #1a0f0a; } }
+button:hover { filter: brightness(1.06); }
+button.secundario { background: transparent; color: var(--tinta); border-color: var(--linea-fuerte); }
+button.secundario:hover { border-color: var(--tinta); filter: none; }
+button.mini { min-height: 28px; padding: 4px 10px; margin-left: 8px; }
+.recorridos button { background: var(--superficie); color: var(--tinta); border-color: var(--linea-fuerte); }
+.recorridos button:hover { border-color: var(--coral); color: var(--coral-texto); filter: none; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 600; color: var(--suave); }
+label.linea { flex-direction: row; align-items: center; gap: 8px; }
+select, input {
+  font: inherit; font-size: 14px; font-weight: 400; color: var(--tinta);
+  min-height: 36px; padding: 6px 10px; border-radius: 8px;
+  border: 1px solid var(--linea-fuerte); background: var(--superficie);
+}
+input[aria-invalid="true"], select[aria-invalid="true"] { border-color: var(--rojo); box-shadow: 0 0 0 1px var(--rojo); }
+
+/* ── Disposición ────────────────────────────────────────────────── */
+main { max-width: 1360px; margin: 0 auto; padding: 24px 24px 48px; }
+.rejilla { display: grid; grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr); gap: 20px; align-items: start; }
+.panel {
+  background: var(--superficie); border: 1px solid var(--linea); border-radius: var(--radio);
+  box-shadow: var(--sombra); padding: 20px 22px; min-width: 0;
+}
+.nota, .vacio { color: var(--suave); font-size: 13px; margin: 4px 0 10px; }
+
+/* ── Tabla de solicitudes ───────────────────────────────────────── */
+.tabla-env { overflow-x: auto; margin: 0 -6px; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--linea); vertical-align: top; }
+th { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; font-weight: 600; color: var(--suave); white-space: nowrap; border-bottom-color: var(--linea-fuerte); }
+td:first-child { white-space: nowrap; font-weight: 600; }
+tr.fila { cursor: pointer; }
+tr.fila:hover td { background: var(--superficie-2); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ── Chips de estado ────────────────────────────────────────────── */
+.chip {
+  display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 600;
+  background: var(--neutro-fondo); color: var(--neutro); white-space: nowrap; line-height: 1.5;
+}
+.chip.cerrada { font-weight: 500; opacity: .85; }
+.chip.vencida, .chip.completa { background: var(--rojo-fondo); color: var(--rojo); }
+.chip.pronto, .chip.últimas-plazas, .chip.aviso { background: var(--ambar-fondo); color: var(--ambar); }
+.chip.abierta { background: var(--verde-fondo); color: var(--verde); }
+.chip.hipotetico { background: var(--marino); color: var(--sobre-marino); letter-spacing: .06em; font-size: 11px; }
+
+/* ── Tareas internas ────────────────────────────────────────────── */
+.tareas { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.tarea {
+  background: var(--superficie); border: 1px solid var(--linea); border-left: 4px solid var(--linea-fuerte);
+  border-radius: 10px; padding: 10px 12px;
+}
+.tarea.vencida { border-left-color: var(--rojo); }
+.tarea.pronto, .tarea.aviso { border-left-color: var(--bloqueada); }
+.tarea-cab { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+.tarea-cab strong { font-weight: 600; }
+.tarea-pie { margin-top: 4px; font-size: 12px; color: var(--suave); }
+
+/* ── Alta manual ────────────────────────────────────────────────── */
+details.alta { margin-top: 18px; border-top: 1px solid var(--linea); padding-top: 14px; }
+details.alta summary { cursor: pointer; width: fit-content; font-weight: 600; color: var(--enlace); }
+form.nueva { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; align-items: end; }
+form.proxima { display: grid; gap: 10px; }
+.error { color: var(--rojo); font-size: 13px; font-weight: 600; margin: 0; grid-column: 1 / -1; }
+.error:empty { display: none; }
+
+/* ── Detalle ────────────────────────────────────────────────────── */
+.volver { margin: 0 0 8px; font-size: 13px; }
+.etapas { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0 0 18px; }
+.etapas li {
+  font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 999px;
+  background: var(--neutro-fondo); color: var(--suave); border: 1px solid transparent;
+}
+.etapas li.hecha { color: var(--tinta); border-color: var(--linea-fuerte); background: transparent; }
+.etapas li.actual { background: var(--marino); color: var(--sobre-marino); }
+.ficha { display: grid; grid-template-columns: max-content 1fr; gap: 8px 18px; margin: 0; font-size: 14px; }
+.ficha dt { color: var(--suave); }
+.ficha dd { margin: 0; }
+.aparte {
+  margin: 18px 0 4px; padding: 12px 14px; border-radius: 10px; font-size: 14px;
+  background: var(--superficie-2); border: 1px dashed var(--linea-fuerte);
+}
+.aparte .nota { margin: 4px 0 0; }
+.acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.grupo-accion { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.historial { padding-left: 20px; margin: 0; font-size: 13px; display: grid; gap: 10px; }
+.historial .cuando { display: block; color: var(--suave); font-size: 12px; font-variant-numeric: tabular-nums; }
+
+/* ── Salidas, plazas y lista de espera ──────────────────────────── */
+.salida { border: 1px solid var(--linea); border-radius: 10px; padding: 16px; margin-bottom: 16px; background: var(--superficie); }
+.salida-cab { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 14px; }
+.salida-cab h3 { margin: 0; }
+.salida-cab > span:not(.chip) { color: var(--suave); font-size: 13px; }
+.barra { display: flex; gap: 2px; height: 14px; margin: 14px 0 6px; border-radius: 999px; overflow: hidden; background: var(--libre); }
+.seg.ocupada, .punto.ocupada { background: var(--ocupada); }
+.seg.bloqueada, .punto.bloqueada { background: var(--bloqueada); }
+.seg.libre, .punto.libre { background: var(--libre); box-shadow: inset 0 0 0 1px var(--linea-fuerte); }
+.punto { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.leyenda { font-size: 12px; color: var(--suave); margin: 0 0 10px; font-variant-numeric: tabular-nums; }
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 13px; }
+.dos ol, .dos ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+
+/* ── Panel de escenario hipotético ──────────────────────────────── */
+/* Va en el flujo, encima de la vista: ocupa su propio espacio y nunca tapa el contenido. */
+#recorrido {
+  max-width: 1312px; margin: 24px auto 0; padding: 14px 18px;
+  background: var(--superficie); border: 1px solid var(--linea-fuerte); border-left: 4px solid var(--coral-vivo);
+  border-radius: var(--radio); box-shadow: var(--sombra);
+}
+@media (max-width: 1360px) { #recorrido { margin-left: 24px; margin-right: 24px; } }
+#recorrido:not([hidden]) + main { padding-top: 16px; }
+.rec-cab { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.rec-cab strong { font-family: var(--serif); font-size: 16px; }
+.rec-aviso { font-size: 12px; color: var(--suave); margin: 8px 0; }
+.rec-paso { margin: 8px 0 12px; }
+.rec-paso .num { font-weight: 700; color: var(--coral-texto); }
+.rec-botones { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .rejilla { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .barra-nav, .herramientas { padding-left: 16px; padding-right: 16px; }
+  .barra-nav { gap: 10px; }
+  main { padding: 16px 16px 32px; }
+  .panel { padding: 16px; }
+  .dos { grid-template-columns: 1fr; }
+  .ficha { grid-template-columns: 1fr; gap: 2px; }
+  .ficha dd { margin-bottom: 8px; }
+  #recorrido { margin: 16px 16px 0; padding: 12px 14px; }
+
+  /* Solicitudes como tarjetas compactas: sin desplazamiento horizontal. */
+  .tabla-env { overflow: visible; margin: 0; }
+  .tabla-env table, .tabla-env tbody, .tabla-env tr, .tabla-env td { display: block; }
+  .tabla-env thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .tabla-env tbody { display: grid; gap: 10px; }
+  .tabla-env tr.fila {
+    display: grid; grid-template-columns: 1fr auto; gap: 4px 12px;
+    grid-template-areas: "id etapa" "destino destino" "entrada canal" "tipo viajeros" "responsable responsable" "proxima proxima";
+    padding: 12px 14px; border: 1px solid var(--linea); border-radius: 10px; background: var(--superficie);
+  }
+  .tabla-env tr.fila:hover td { background: transparent; }
+  .tabla-env td { padding: 0; border: 0; font-size: 13px; min-width: 0; }
+  .tabla-env td:nth-child(1) { grid-area: id; font-size: 14px; }
+  .tabla-env td:nth-child(2) { grid-area: entrada; }
+  .tabla-env td:nth-child(3) { grid-area: canal; text-align: right; }
+  .tabla-env td:nth-child(4) { grid-area: tipo; }
+  .tabla-env td:nth-child(5) { grid-area: destino; font-family: var(--serif); font-size: 16px; font-weight: 600; }
+  .tabla-env td:nth-child(6) { grid-area: viajeros; text-align: right; }
+  .tabla-env td:nth-child(7) { grid-area: etapa; justify-self: end; }
+  .tabla-env td:nth-child(8) { grid-area: responsable; }
+  .tabla-env td:nth-child(9) { grid-area: proxima; padding-top: 6px; margin-top: 4px; border-top: 1px solid var(--linea); }
+  .tabla-env td:is(:nth-child(2), :nth-child(3), :nth-child(4), :nth-child(6), :nth-child(8), :nth-child(9))::before {
+    content: attr(data-label) " · "; color: var(--suave); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+}
