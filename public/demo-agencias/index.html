@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Demostración de CRM para agencias de viajes de automatizacionesMSL, con datos inventados. No está conectada a ninguna agencia ni a sus sistemas.">
+  <title>Demo de CRM para agencias de viajes · automatizacionesMSL</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="aviso-demo" role="note">
+    Demostración de automatizacionesMSL · Datos inventados · No está conectada a ninguna agencia ni a sus sistemas · No envía ni guarda datos
+  </div>
+  <header class="barra-nav">
+    <div class="marca">
+      <span class="marca-nombre">Viajes Ejemplo</span>
+      <span class="marca-sub">CRM de demostración</span>
+    </div>
+    <nav aria-label="Vistas">
+      <a href="#/solicitudes" data-vista="solicitudes">Solicitudes</a>
+      <a href="#/salidas" data-vista="salidas">Salidas y plazas</a>
+    </nav>
+  </header>
+  <section class="herramientas" aria-label="Controles de la demo">
+    <div class="reloj">
+      <span class="etiqueta-grupo">Hora simulada</span>
+      <strong id="reloj"></strong>
+      <button type="button" id="mas12" class="secundario">+12&nbsp;h</button>
+      <button type="button" id="mas24" class="secundario">+1&nbsp;día</button>
+      <button type="button" id="reiniciar" class="secundario">Reiniciar</button>
+    </div>
+    <div class="recorridos">
+      <span class="etiqueta-grupo">Escenarios hipotéticos</span>
+      <button type="button" id="recT">A · consulta a medida</button>
+      <button type="button" id="recV">B · salida con plazas</button>
+    </div>
+    <details class="valores">
+      <summary>Valores de ejemplo</summary>
+      <div id="config"></div>
+    </details>
+  </section>
+  <aside id="recorrido" hidden aria-live="polite" aria-label="Escenario hipotético"></aside>
+  <main id="vista"></main>
+  <script src="datos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
